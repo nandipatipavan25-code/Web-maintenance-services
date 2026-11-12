@@ -1,0 +1,590 @@
+const fs = require('fs');
+
+const origHtml = fs.readFileSync('original_maintenance_page.html', 'utf8');
+
+// Let's create the modern scoped CSS for the redesign
+const modernCss = `
+<style id="gads-maintenance-redesign-css">
+  /* Modern CSS scoped to the maintenance page */
+  :root {
+    --gads-primary: #126db2;
+    --gads-primary-dark: #0d4e80;
+    --gads-primary-light: #e0f2fe;
+    --gads-accent: #0284c7;
+    --gads-success: #10b981;
+    --gads-amber: #f59e0b;
+    --gads-danger: #ef4444;
+    --gads-text-dark: #0f172a;
+    --gads-text-muted: #475569;
+    --gads-bg-light: #f8fafc;
+    --gads-card-bg: #ffffff;
+    --gads-border: #e2e8f0;
+    --gads-shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --gads-shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --gads-shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+    --gads-radius: 12px;
+  }
+
+  /* Reset container styles */
+  .gads-maint-wrapper {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    color: var(--gads-text-dark);
+    line-height: 1.65;
+    font-size: 16px;
+    background-color: #ffffff;
+    padding-bottom: 40px;
+  }
+  .gads-maint-wrapper h1, 
+  .gads-maint-wrapper h2, 
+  .gads-maint-wrapper h3, 
+  .gads-maint-wrapper h4 {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    color: var(--gads-text-dark);
+    font-weight: 700;
+  }
+  .gads-maint-wrapper p {
+    font-size: 16px;
+    color: var(--gads-text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .gads-maint-wrapper strong {
+    color: var(--gads-text-dark);
+  }
+
+  /* Quick-Nav Sticky Bar */
+  .gads-quick-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--gads-border);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    margin-bottom: 25px;
+  }
+  .gads-quick-nav-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 0 15px;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+    scrollbar-width: thin;
+  }
+  .gads-quick-nav-list li a {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gads-text-muted);
+    background: var(--gads-bg-light);
+    border: 1px solid var(--gads-border);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .gads-quick-nav-list li a:hover,
+  .gads-quick-nav-list li a.active {
+    background: var(--gads-primary);
+    color: #ffffff;
+    border-color: var(--gads-primary);
+  }
+  .gads-quick-nav-list li a.nav-highlight {
+    background: #e0f2fe;
+    color: var(--gads-primary);
+    border-color: #bae6fd;
+    font-weight: 700;
+  }
+
+  /* Hero Section */
+  .gads-hero-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 35px;
+    align-items: flex-start;
+  }
+  .gads-hero-left {
+    flex: 1 1 58%;
+    min-width: 320px;
+  }
+  .gads-hero-right {
+    flex: 1 1 38%;
+    min-width: 300px;
+  }
+
+  .gads-hero-img-wrap {
+    border-radius: var(--gads-radius);
+    overflow: hidden;
+    box-shadow: var(--gads-shadow-md);
+    margin-bottom: 20px;
+    border: 1px solid var(--gads-border);
+  }
+  .gads-hero-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .gads-hero-left h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    color: #0f172a;
+    margin-top: 10px;
+    margin-bottom: 18px;
+  }
+  @media (min-width: 768px) {
+    .gads-hero-left h1 {
+      font-size: 34px;
+    }
+  }
+
+  .gads-trust-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 25px;
+  }
+  .gads-trust-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f0f9ff;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Hero Lead Capture Card */
+  .gads-lead-card {
+    background: #ffffff;
+    border: 2px solid #bae6fd;
+    border-radius: var(--gads-radius);
+    padding: 24px 22px;
+    box-shadow: var(--gads-shadow-lg);
+    position: sticky;
+    top: 60px;
+  }
+  .gads-lead-badge {
+    background: #e0f2fe;
+    color: var(--gads-primary);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .gads-lead-card h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: var(--gads-text-dark);
+  }
+  .gads-lead-card p.lead-sub {
+    font-size: 13px;
+    color: var(--gads-text-muted);
+    margin-bottom: 16px;
+  }
+  .gads-lead-form .form-group {
+    margin-bottom: 12px;
+  }
+  .gads-lead-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+  .gads-lead-form input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid var(--gads-border);
+    border-radius: 6px;
+    background: #f8fafc;
+    transition: all 0.2s;
+    box-sizing: border-box;
+  }
+  .gads-lead-form input:focus {
+    outline: none;
+    border-color: var(--gads-primary);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(18, 109, 178, 0.15);
+  }
+  .gads-lead-btn {
+    width: 100%;
+    background: var(--gads-primary);
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    display: block;
+    margin-top: 12px;
+    text-decoration: none !important;
+  }
+  .gads-lead-btn:hover {
+    background: var(--gads-primary-dark);
+  }
+  .gads-wa-btn {
+    width: 100%;
+    background: #25d366;
+    color: #ffffff !important;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    text-decoration: none !important;
+    box-sizing: border-box;
+  }
+  .gads-wa-btn:hover {
+    background: #1eb956;
+  }
+
+  /* Deliverables 10-Grid */
+  .gads-deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    margin: 25px 0 35px;
+  }
+  .gads-deliverable-card {
+    background: #ffffff;
+    border: 1px solid var(--gads-border);
+    border-radius: var(--gads-radius);
+    padding: 22px;
+    box-shadow: var(--gads-shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    border-top: 4px solid var(--gads-primary);
+  }
+  .gads-deliverable-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--gads-shadow-md);
+  }
+  .gads-deliverable-card h2, 
+  .gads-deliverable-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: var(--gads-primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .gads-deliv-num {
+    background: #f1f5f9;
+    color: #0f172a;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* Content Cards & Section Containers */
+  .gads-content-card {
+    background: #ffffff;
+    border: 1px solid var(--gads-border);
+    border-radius: var(--gads-radius);
+    padding: 28px 24px;
+    margin-bottom: 30px;
+    box-shadow: var(--gads-shadow-sm);
+  }
+  .gads-content-card.highlight-card {
+    background: #f8fafc;
+    border-left: 5px solid var(--gads-primary);
+  }
+  .gads-content-card.warning-card {
+    background: #fffbeb;
+    border-left: 5px solid var(--gads-amber);
+  }
+  .gads-content-card h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #0f172a;
+  }
+
+  /* 4 Pillars Impact Grid */
+  .gads-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin: 20px 0;
+  }
+  .gads-impact-card {
+    background: #ffffff;
+    border: 1px solid var(--gads-border);
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: var(--gads-shadow-sm);
+  }
+  .gads-impact-card h2,
+  .gads-impact-card h3 {
+    font-size: 17px;
+    color: #0f172a;
+    margin: 0 0 8px;
+  }
+
+  /* Pricing / Plans Elevated Section */
+  .gads-plans-container {
+    background: #f8fafc;
+    border: 1px solid var(--gads-border);
+    border-radius: var(--gads-radius);
+    padding: 30px 24px;
+    margin: 35px 0;
+  }
+  .gads-plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+  }
+  .gads-plan-box {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--gads-radius);
+    overflow: hidden;
+    box-shadow: var(--gads-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .gads-plan-box:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--gads-shadow-lg);
+  }
+  .gads-plan-box.recommended {
+    border: 2px solid var(--gads-primary);
+    position: relative;
+    box-shadow: 0 8px 25px rgba(18, 109, 178, 0.12);
+  }
+  .gads-plan-ribbon {
+    background: var(--gads-primary);
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .gads-plan-header {
+    background: #1e529b;
+    color: #ffffff;
+    padding: 18px 20px;
+    text-align: center;
+  }
+  .gads-plan-header h3 {
+    color: #ffffff !important;
+    margin: 0;
+    font-size: 22px;
+  }
+  .gads-plan-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .gads-plan-body p {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  .gads-plan-actions {
+    margin-top: auto;
+    padding-top: 15px;
+  }
+
+  /* FAQs Interactive Accordion */
+  .gads-faq-accordion {
+    border: 1px solid var(--gads-border);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .gads-faq-accordion[open] {
+    border-color: #bae6fd;
+    box-shadow: var(--gads-shadow-sm);
+  }
+  .gads-faq-summary {
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gads-text-dark);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    user-select: none;
+  }
+  .gads-faq-summary::-webkit-details-marker {
+    display: none;
+  }
+  .gads-faq-summary::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gads-primary);
+    transition: transform 0.2s;
+  }
+  .gads-faq-accordion[open] .gads-faq-summary::after {
+    content: '−';
+  }
+  .gads-faq-content {
+    padding: 18px 20px;
+    background: #ffffff;
+    border-top: 1px solid var(--gads-border);
+  }
+  .gads-faq-content p {
+    margin: 0;
+    color: var(--gads-text-muted);
+  }
+
+  /* Audit Final Section */
+  .gads-audit-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    border-radius: var(--gads-radius);
+    padding: 35px 30px;
+    margin: 40px 0;
+    box-shadow: var(--gads-shadow-lg);
+  }
+  .gads-audit-section h2 {
+    color: #38bdf8 !important;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .gads-audit-section p {
+    color: #cbd5e1;
+    font-size: 16px;
+  }
+  .gads-audit-section strong {
+    color: #ffffff;
+  }
+  .gads-audit-list li {
+    color: #f1f5f9;
+    padding: 4px 0;
+  }
+  .gads-audit-form-inner {
+    background: #ffffff;
+    color: var(--gads-text-dark);
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 25px;
+  }
+
+  /* Mobile Sticky Bottom Action Bar */
+  .gads-mobile-sticky-bar {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .gads-mobile-sticky-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      border-top: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      z-index: 99999;
+      box-shadow: 0 -3px 12px rgba(0,0,0,0.1);
+      gap: 10px;
+      box-sizing: border-box;
+    }
+    .gads-mobile-sticky-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 6px;
+      text-decoration: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .gads-mobile-call {
+      background: #f1f5f9;
+      color: #0f172a !important;
+      border: 1px solid #cbd5e1;
+    }
+    .gads-mobile-wa {
+      background: #25d366;
+      color: #ffffff !important;
+    }
+    /* Add padding so footer isn't covered */
+    body {
+      padding-bottom: 60px !important;
+    }
+  }
+
+  /* Related Articles Grid */
+  .gads-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .gads-related-col {
+    background: #f8fafc;
+    border: 1px solid var(--gads-border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .gads-related-col h2,
+  .gads-related-col h3 {
+    font-size: 16px;
+    color: var(--gads-primary);
+    margin: 0 0 10px;
+    border-bottom: 1px solid var(--gads-border);
+    padding-bottom: 6px;
+  }
+  .gads-related-col ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+  .gads-related-col li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .gads-related-col li a {
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .gads-related-col li a:hover {
+    color: var(--gads-primary);
+    text-decoration: underline;
+  }
+</style>
+`;
+
+fs.writeFileSync('modern_css.html', modernCss, 'utf8');
+console.log('Saved modern_css.html');

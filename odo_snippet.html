@@ -1,0 +1,160 @@
+<section class="speed-odometer-box" id="speed-odometer" style="margin-top: 40px; margin-bottom: 25px;">
+          <!-- Header Bar -->
+          <div class="odo-header">
+            <div class="odo-title-wrap">
+              <div class="odo-icon-badge">⚡</div>
+              <div>
+                <h2 class="odo-title" style="font-size: 22px;">Interactive Website Speed Odometer</h2>
+                <p class="odo-subtitle">Test any domain and see real-time Google Core Web Vitals speed score</p>
+              </div>
+            </div>
+            <div style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px;">
+              ⚡ Live Diagnostic
+            </div>
+          </div>
+
+          <!-- URL Input Bar & Enter Button (DISPLAYED INITIALLY) -->
+          <div class="odo-input-bar">
+            <input 
+              type="url" 
+              id="odoUrlInput" 
+              class="odo-url-input" 
+              placeholder="Enter your website URL (e.g. https://yourcompany.com)" 
+              value="" 
+              autocomplete="url"
+              onkeydown="if(event.key==='Enter'){ event.preventDefault(); runSpeedScan(); }"
+            >
+            <button type="button" class="odo-scan-btn" id="odoEnterBtn" onclick="runSpeedScan()">
+              <span>⚡ Enter</span>
+            </button>
+          </div>
+          <div style="font-size: 12px; color: #94a3b8; margin-top: 8px; display: flex; align-items: center; gap: 6px;">
+            <span>ℹ️</span> <span>Enter your website URL and click <strong>Enter</strong> to launch the interactive speedometer.</span>
+          </div>
+
+          <!-- Scanning Animation Progress Bar (Hidden initially) -->
+          <div class="odo-scanning-bar" id="odoScanningBar" style="display: none;">
+            <div class="odo-scanning-fill"></div>
+          </div>
+
+          <!-- =========================================================
+               SPEEDOMETER CLUSTER (HIDDEN BY DEFAULT UNTIL ENTER IS CLICKED)
+               ========================================================= -->
+          <div class="odo-results-wrapper" id="odoResultsWrapper" style="display: none; opacity: 0; transition: opacity 0.4s ease, transform 0.4s ease; transform: translateY(12px);">
+            
+            <!-- Quick Preset Toggles for testing comparisons -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+              <span style="font-size: 12px; font-weight: 700; color: #cbd5e1;">Test Speed Comparison:</span>
+              <div class="speed-mode-toggle" style="margin: 0;">
+                <button type="button" class="speed-toggle-btn active" id="btnModeLive" onclick="toggleOdoMode('live')">
+                  🔍 Current Scan
+                </button>
+                <button type="button" class="speed-toggle-btn" id="btnModeUnmaintained" onclick="toggleOdoMode('unmaintained')">
+                  🔴 Unmaintained Site
+                </button>
+                <button type="button" class="speed-toggle-btn" id="btnModeOptimized" onclick="toggleOdoMode('optimized')">
+                  🟢 GA Digital Maintained
+                </button>
+              </div>
+            </div>
+
+            <!-- Odometer Gauge & Metrics Cluster -->
+            <div class="odo-cluster">
+              <!-- Left: SVG Odometer Instrument Dial -->
+              <div class="gauge-wrapper">
+                <svg class="gauge-svg" viewBox="0 0 270 160">
+                  <defs>
+                    <linearGradient id="gaugeArcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#ef4444" />
+                      <stop offset="35%" stop-color="#f97316" />
+                      <stop offset="65%" stop-color="#eab308" />
+                      <stop offset="85%" stop-color="#10b981" />
+                      <stop offset="100%" stop-color="#06b6d4" />
+                    </linearGradient>
+                    <filter id="needleGlow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="3" result="glow" />
+                      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+                    </filter>
+                  </defs>
+
+                  <!-- Dial Background Track -->
+                  <path d="M 30 135 A 105 105 0 0 1 240 135" fill="none" stroke="#1e293b" stroke-width="18" stroke-linecap="round" />
+
+                  <!-- Color Performance Speed Arc -->
+                  <path d="M 30 135 A 105 105 0 0 1 240 135" fill="none" stroke="url(#gaugeArcGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="330" stroke-dashoffset="0" opacity="0.9" />
+
+                  <!-- Tick Marks & Numerical Labels -->
+                  <line x1="30" y1="135" x2="42" y2="135" stroke="#ffffff" stroke-width="2.5" opacity="0.7" />
+                  <text x="36" y="152" fill="#94a3b8" font-size="10" font-weight="700" text-anchor="middle">0</text>
+
+                  <line x1="56" y1="68" x2="65" y2="76" stroke="#ffffff" stroke-width="1.8" opacity="0.5" />
+                  <text x="62" y="60" fill="#94a3b8" font-size="9" font-weight="600" text-anchor="middle">25</text>
+
+                  <line x1="135" y1="30" x2="135" y2="42" stroke="#ffffff" stroke-width="2.5" opacity="0.7" />
+                  <text x="135" y="24" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">50</text>
+
+                  <line x1="214" y1="68" x2="205" y2="76" stroke="#ffffff" stroke-width="1.8" opacity="0.5" />
+                  <text x="208" y="60" fill="#94a3b8" font-size="9" font-weight="600" text-anchor="middle">75</text>
+
+                  <line x1="240" y1="135" x2="228" y2="135" stroke="#ffffff" stroke-width="2.5" opacity="0.7" />
+                  <text x="234" y="152" fill="#34d399" font-size="10" font-weight="700" text-anchor="middle">100</text>
+
+                  <!-- Needle Pivot Center -->
+                  <circle cx="135" cy="135" r="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+                  <circle cx="135" cy="135" r="5" fill="#38bdf8" />
+
+                  <!-- Animated Needle Group (Starts at 0 / -90deg) -->
+                  <g id="odoNeedleGroup" class="gauge-needle-poly" style="transform: rotate(-90deg); transition: transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);">
+                    <polygon points="133,135 137,135 136,36 134,36" fill="#38bdf8" filter="url(#needleGlow)" />
+                    <circle cx="135" cy="36" r="3.5" fill="#ffffff" />
+                  </g>
+                </svg>
+
+                <!-- Digital Readout HUD -->
+                <div class="odo-digital-hud">
+                  <div class="odo-score-num" id="odoScoreNum">0</div>
+                  <div class="odo-score-label">SPEED SCORE / 100</div>
+                  <div class="odo-speed-badge" id="odoSpeedBadge">⚡ READY</div>
+                </div>
+              </div>
+
+              <!-- Right: Core Web Vitals Metrics Grid -->
+              <div class="odo-metrics-wrap">
+                <div class="odo-metrics-grid">
+                  <div class="odo-metric-card">
+                    <span class="odo-metric-label">⏱️ Total Load Time</span>
+                    <span class="odo-metric-val" id="odoLoadTime">--</span>
+                    <span class="odo-metric-status" id="odoLoadTimeStatus">Awaiting Enter...</span>
+                  </div>
+                  <div class="odo-metric-card">
+                    <span class="odo-metric-label">⚡ First Paint (FCP)</span>
+                    <span class="odo-metric-val" id="odoFcp">--</span>
+                    <span class="odo-metric-status" id="odoFcpStatus">Awaiting Enter...</span>
+                  </div>
+                  <div class="odo-metric-card">
+                    <span class="odo-metric-label">🖼️ Largest Paint (LCP)</span>
+                    <span class="odo-metric-val" id="odoLcp">--</span>
+                    <span class="odo-metric-status" id="odoLcpStatus">Awaiting Enter...</span>
+                  </div>
+                  <div class="odo-metric-card">
+                    <span class="odo-metric-label">📐 Layout Shift (CLS)</span>
+                    <span class="odo-metric-val" id="odoCls">--</span>
+                    <span class="odo-metric-status" id="odoClsStatus">Awaiting Enter...</span>
+                  </div>
+                </div>
+
+                <!-- Actionable Diagnosis Alert -->
+                <div class="odo-alert-box">
+                  <div class="odo-alert-text" id="odoAlertMessage">
+                    <span>🚀</span>
+                    <span><strong>Diagnostic Ready:</strong> Enter your domain to evaluate performance.</span>
+                  </div>
+                  <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20tested%20my%20website%20speed" class="odo-cta-link" id="odoWaBtn" target="_blank" rel="noopener noreferrer">
+                    💬 Optimize My Speed &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>

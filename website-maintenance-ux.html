@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Maintenance Services in India | GA Digital Solutions</title>
+  <meta name="description" content="Professional website maintenance services in India. 24/7 uptime monitoring, security scanning, daily backups, speed optimization & WordPress updates.">
+  <link rel="canonical" href="https://gadigitalsolutions.com/services/website-maintenance">
+  <link rel="icon" href="https://www.gadigitalsolutions.com/images/logo.png" type="image/png">
+  
+  <!-- Modern Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #126db2;
+      --primary-dark: #0c4d7e;
+      --primary-light: #e0f2fe;
+      --accent: #0284c7;
+      --dark: #0f172a;
+      --slate: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 6px 18px rgba(0,0,0,0.07);
+      --shadow-lg: 0 12px 30px rgba(0,0,0,0.09);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--dark);
+      background-color: var(--bg-page);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Global Header */
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      position: relative;
+      z-index: 50;
+    }
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .header-logo img {
+      height: 52px;
+      width: auto;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .header-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate);
+      text-decoration: none !important;
+    }
+    .header-link:hover {
+      color: var(--primary);
+    }
+    .header-cta-btn {
+      background: var(--primary);
+      color: #ffffff !important;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: 6px;
+      text-decoration: none !important;
+      transition: background 0.2s;
+    }
+    .header-cta-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Sticky Sub-Nav */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+    .nav-scroller {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      list-style: none;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+    .nav-scroller::-webkit-scrollbar {
+      display: none;
+    }
+    .nav-scroller li a {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate);
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-scroller li a:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .nav-scroller li a.cta-pill {
+      background: #e0f2fe;
+      color: var(--primary);
+      border-color: #bae6fd;
+      font-weight: 700;
+    }
+
+    /* Typography & Section Styles */
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.3;
+      color: var(--dark);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    @media (min-width: 768px) {
+      h1 { font-size: 38px; }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--dark);
+      margin: 0 0 10px;
+    }
+
+    p {
+      color: var(--slate);
+      font-size: 16px;
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    strong {
+      color: var(--dark);
+    }
+
+    ul {
+      margin: 0 0 18px 20px;
+      color: var(--slate);
+    }
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Card Containers */
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card-accent {
+      border-left: 5px solid var(--primary);
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+    .card-warning {
+      border-left: 5px solid #f59e0b;
+      background: #fffbeb;
+    }
+
+    /* Hero Section */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 35px;
+      margin-bottom: 40px;
+      align-items: start;
+    }
+    @media (min-width: 992px) {
+      .hero-layout {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+    .hero-media {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+      margin: 20px 0 25px;
+    }
+    .trust-item {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Hero Lead Form Card */
+    .lead-card {
+      background: #ffffff;
+      border: 1.5px solid #bae6fd;
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: var(--shadow-lg);
+    }
+    .lead-badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .lead-card h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    .lead-card p.lead-desc {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: #f8fafc;
+      font-family: inherit;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(18, 109, 178, 0.15);
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover {
+      background: var(--primary-dark);
+    }
+    .btn-wa-direct {
+      width: 100%;
+      background: #25d366;
+      color: #ffffff !important;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 10px;
+      border-radius: 6px;
+      text-align: center;
+      display: block;
+      margin-top: 8px;
+      text-decoration: none !important;
+    }
+    .btn-wa-direct:hover {
+      background: #1eb956;
+    }
+
+    /* Deliverables Grid (10 Tasks) */
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .deliv-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--primary);
+    }
+    .deliv-card .badge-task {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--dark);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .deliv-card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+
+    /* 4-Pillar Impact Grid */
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .impact-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .impact-card h2 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    /* Plans Section */
+    .plans-container {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 35px 25px;
+      margin-bottom: 35px;
+    }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+      margin: 25px 0;
+      align-items: stretch;
+    }
+    .plan-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .plan-card-header {
+      background: #1e529b;
+      color: #ffffff;
+      padding: 16px 20px;
+      text-align: center;
+    }
+    .plan-card-header h3 {
+      color: #ffffff !important;
+      margin: 0;
+      font-size: 20px;
+    }
+    .plan-card-body {
+      padding: 22px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-card-body p {
+      margin-bottom: 12px;
+    }
+    .plan-cta {
+      margin-top: auto;
+      padding-top: 15px;
+    }
+
+    /* Accordion FAQs */
+    .faq-accordion {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .faq-summary {
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+    }
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--primary);
+    }
+    .faq-accordion[open] .faq-summary::after {
+      content: '−';
+    }
+    .faq-body {
+      padding: 18px 20px;
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    /* Audit Lead Section */
+    .audit-section {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .audit-section h2 {
+      color: #38bdf8 !important;
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+    .audit-section p {
+      color: #cbd5e1;
+    }
+    .audit-section strong {
+      color: #ffffff;
+    }
+    .audit-section ul li {
+      color: #f1f5f9;
+      padding: 3px 0;
+    }
+    .audit-form-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 25px;
+    }
+    .audit-form-box input {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 12px;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    /* Related Articles Grid */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .related-col {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .related-col h2 {
+      font-size: 16px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    /* Global Footer */
+    .site-footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 40px 0;
+      margin-top: 50px;
+      font-size: 14px;
+      border-top: 1px solid #1e293b;
+    }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Mobile Sticky Bar */
+    .mobile-bar {
+      display: none;
+    }
+    @media (max-width: 767px) {
+      .mobile-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        border-top: 1px solid #cbd5e1;
+        padding: 8px 12px;
+        z-index: 9999;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        gap: 10px;
+      }
+      .mobile-bar a {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 6px;
+        text-decoration: none !important;
+      }
+      .bar-call {
+        background: #f1f5f9;
+        color: var(--dark) !important;
+        border: 1px solid #cbd5e1;
+      }
+      .bar-wa {
+        background: #25d366;
+        color: #ffffff !important;
+      }
+      body {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="header-logo">
+        <a href="https://www.gadigitalsolutions.com/">
+          <img src="https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg" alt="GA Digital Solutions Logo" height="52">
+        </a>
+      </div>
+      <div class="header-actions">
+        <a href="tel:9849574618" class="header-link">📞 +91 98495 74618</a>
+        <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20need%20website%20maintenance%20support" class="header-cta-btn" target="_blank" rel="noopener noreferrer">
+          💬 WhatsApp Support
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Quick-Nav -->
+  <nav class="sticky-nav">
+    <div class="container">
+      <ul class="nav-scroller">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#deliverables">10 Tasks Included</a></li>
+        <li><a href="#why-matters">Why It Matters</a></li>
+        <li><a href="#cost-neglect">Cost of Neglect</a></li>
+        <li><a href="#schedule">Maintenance Schedule</a></li>
+        <li><a href="#diy-vs-pro">DIY vs Pro</a></li>
+        <li><a href="#plans" class="cta-pill">Maintenance Plans</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#free-audit" class="cta-pill">Free 20-Point Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-layout" id="hero">
+      <div>
+        <div class="hero-media">
+          <img src="https://www.gadigitalsolutions.com/images/Website_Maintenance.jpg" width="820" height="460" alt="Website Maintenance Services in India - GA Digital Solutions" fetchpriority="high">
+        </div>
+        <h1>Website Maintenance Services: The Complete Guide for Indian Businesses (2026)</h1>
+
+
+
+        
+        <div class="trust-strip">
+          <div class="trust-item">🛡️ 24/7 Monitoring</div>
+          <div class="trust-item">⚡ Staging Tested</div>
+          <div class="trust-item">💾 Daily Cloud Backups</div>
+          <div class="trust-item">⏱️ 30-Min SLA</div>
+        </div>
+
+        <h2>Is Your Website Working as Hard as You Are?</h2>
+        
+<p>You built your website. You paid for it, launched it, and told your customers about it. But here is the question most business owners never stop to ask: what has happened to it since?</p>
+<p>Every day your website sits online without being maintained, small problems quietly compound into big ones. Plugins fall out of date. Security vulnerabilities open. Page speed drops. Google notices. Leads stop converting. And one morning, you wake up to find your website is down &mdash; or worse, hacked &mdash; and you have no idea when it happened or how to fix it.</p>
+<p>This is not a hypothetical. It is the reality for thousands of business websites across India right now.</p>
+<p>Website maintenance is not a luxury for large companies with dedicated IT teams. It is the basic ongoing upkeep that keeps any business website doing its job &mdash; attracting visitors, building trust, and converting enquiries into revenue.</p>
+<p>This guide covers everything you need to know about website maintenance: what it includes, why it matters, how much it costs in India, and how to choose the right partner to handle it for your business.</p>
+
+
+      </div>
+
+      <div>
+        <div class="lead-card">
+          <span class="lead-badge">Free Diagnostic</span>
+          <h3>Get Your Free 20-Point Website Health Audit</h3>
+          <p class="lead-desc">Find security vulnerabilities, outdated plugins, and mobile page speed issues.</p>
+          
+          <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20would%20like%20a%20free%20website%20health%20audit%20for:%20' + encodeURIComponent(this.website.value);">
+            <div class="form-group">
+              <label for="f-site">Website URL *</label>
+              <input type="url" id="f-site" name="website" placeholder="https://yourcompany.com" required>
+            </div>
+            <div class="form-group">
+              <label for="f-name">Your Name *</label>
+              <input type="text" id="f-name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="f-phone">WhatsApp / Phone *</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+91 98765 43210" required>
+            </div>
+            <button type="submit" class="btn-submit">
+              Get Free Health Audit &rarr;
+            </button>
+            <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20need%20website%20maintenance%20support" class="btn-wa-direct" target="_blank" rel="noopener noreferrer">
+              💬 Chat Directly on WhatsApp
+            </a>
+          </form>
+          <p style="font-size: 11px; text-align: center; color: var(--muted); margin: 10px 0 0;">
+            🔒 100% Free &amp; Confidential. No spam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="card card-accent" id="overview">
+      <h2>What Is Website Maintenance?</h2>
+      
+<p>Website maintenance is the ongoing process of keeping a website secure, up-to-date, fast, and functioning correctly. It is not a one-time task &mdash; it is a continuous responsibility, like maintaining a vehicle or a commercial property.</p>
+<p><strong>A maintained website:</strong></p>
+<ul>
+<li>Has its software, plugins, and themes kept current</li>
+<li>Is regularly backed up so data is never permanently lost</li>
+<li>Is scanned for malware and security vulnerabilities</li>
+<li>Loads quickly on mobile and desktop devices</li>
+<li>Has no broken links, error pages, or outdated content</li>
+<li>Is monitored for downtime around the clock</li>
+</ul>
+<p>A neglected website accumulates technical debt silently. The risks grow with every passing week &mdash; and the cost of fixing problems reactively is always higher than the cost of preventing them.</p>
+<p>For Indian businesses &mdash; where digital competition is intensifying across every industry, from healthcare and real estate to education and retail &mdash; a well-maintained website is no longer optional. It is a basic cost of competing online.</p>
+
+
+    </section>
+
+    <!-- 10 DELIVERABLES -->
+    <section id="deliverables" style="margin-bottom: 35px;">
+      <div class="card" style="margin-bottom: 20px;">
+        <h2>What Does Website Maintenance Include?</h2>
+        
+<p>Website maintenance covers a range of technical and content-related tasks. Here is a comprehensive breakdown of what a professional maintenance service should include.</p>
+
+
+      </div>
+      <div class="deliverables-grid">
+
+        <div class="deliv-card">
+          <span class="badge-task">TASK #01</span>
+          <h2>1. Software, Plugin, and Theme Updates</h2>
+          
+<p>Most business websites in India run on platforms like WordPress, which power over 40% of all websites globally. These platforms release regular updates to fix bugs, improve performance, and patch security vulnerabilities.</p>
+<p>When plugins and themes are left outdated, they become entry points for hackers. Outdated software is the number one cause of website hacks. A maintenance service handles all updates &mdash; core platform, plugins, themes, and third-party integrations &mdash; after testing them in a staging environment to ensure nothing breaks.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #02</span>
+          <h2>2. Website Backups</h2>
+          
+<p>If your website is hacked, corrupted, or accidentally broken during an update, a recent backup is the difference between a one-hour recovery and a complete rebuild.</p>
+<p>Professional maintenance includes automated, regular backups stored in secure, off-site locations. Backups should be taken daily for active e-commerce sites, and at a minimum weekly for brochure websites. Backups should be tested periodically to confirm they can actually be restored &mdash; a backup that cannot be recovered is not a backup.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #03</span>
+          <h2>3. Security Monitoring and Malware Scanning</h2>
+          
+<p>Cybercriminals do not only target large corporations. Small business websites are frequently targeted because they tend to be less protected. A hacked website can:</p>
+<ul>
+<li>Be used to distribute malware to your visitors</li>
+<li>Get blacklisted by Google, wiping out your search rankings overnight</li>
+<li>Expose customer data, creating legal liability</li>
+<li>Damage your brand reputation irreparably</li>
+</ul>
+<p>Professional website maintenance includes regular malware scanning, firewall management, login protection, SSL certificate monitoring, and security hardening &mdash; the technical steps that make your website a harder target.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #04</span>
+          <h2>4. Uptime Monitoring</h2>
+          
+<p>Every minute your website is down, you are losing potential business. For a website that receives 1,000 visitors per month, even a single hour of downtime can cost you 1&ndash;2 missed enquiries. Multiply that across a year and the revenue impact becomes significant.</p>
+<p>Uptime monitoring uses automated tools to check whether your website is live every few minutes, and alerts your maintenance team the moment it goes offline so the issue can be resolved &mdash; often before your customers even notice.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #05</span>
+          <h2>5. Performance and Speed Optimisation</h2>
+          
+<p>Website speed is a Google ranking factor. It also directly affects conversion rates. Research consistently shows that visitors abandon websites that take more than 3 seconds to load, and mobile users are even less patient.</p>
+<p>Over time, websites accumulate unnecessary data &mdash; unused image files, bloated databases, cached files that have never been cleared, and code that has never been optimised. Regular maintenance includes performance audits and speed optimisation to keep load times fast on both desktop and mobile devices.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #06</span>
+          <h2>6. Broken Link and Error Page Checks</h2>
+          
+<p>Broken links are not just frustrating for visitors &mdash; they signal to Google that your website is not well-maintained, which can negatively affect your search rankings. A 404 error page where a working page should be is a lost opportunity every single time a visitor lands there.</p>
+<p>Maintenance includes regular checks for broken internal and external links, redirect errors, and missing pages &mdash; and fixing them before they become a persistent problem.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #07</span>
+          <h2>7. Content Updates and Freshness</h2>
+          
+<p>Search engines favour websites that are regularly updated. If your website\'s content has not changed in six months &mdash; same homepage copy, same service descriptions, same blog posts &mdash; Google deprioritises it in favour of more actively maintained websites.</p>
+<p>Maintenance can include regular content reviews, updating outdated information (team changes, address updates, pricing, contact details), and flagging content that needs refreshing.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #08</span>
+          <h2>8. SSL Certificate Management</h2>
+          
+<p>An SSL certificate is what creates the padlock icon in your browser\'s address bar and the "https" prefix in your URL. It encrypts data passed between your website and your visitors &mdash; essential for any website that handles contact forms, login pages, or payment information.</p>
+<p>SSL certificates expire annually. If yours lapses, visitors will see a security warning when they try to visit your website &mdash; and most of them will leave immediately. Maintenance includes monitoring and renewing SSL certificates before they expire.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #09</span>
+          <h2>9. Database Optimisation</h2>
+          
+<p>Websites that use content management systems store all their data in a database &mdash; posts, pages, user information, settings, and much more. Over time, this database accumulates unnecessary data: spam comments, post revisions, transient data, and orphaned records.</p>
+<p>Database bloat slows down your website and increases hosting costs. Regular database optimisation keeps things running efficiently.</p>
+
+
+        </div>
+    
+        <div class="deliv-card">
+          <span class="badge-task">TASK #10</span>
+          <h2>10. Analytics and Reporting</h2>
+          
+<p>A good maintenance service does not just keep your website running &mdash; it helps you understand how it is performing. Monthly reports should cover traffic trends, top-performing pages, conversion rates, Core Web Vitals scores, and any issues identified and resolved during the period.</p>
+<p>This data is invaluable for making smart decisions about your digital marketing and content strategy.</p>
+
+
+        </div>
+    
+      </div>
+    </section>
+
+    <!-- WHY IT MATTERS -->
+    <section class="card" id="why-matters">
+      <h2>Why Website Maintenance Matters for Your Business</h2>
+      
+<p>For many business owners, a website is the first impression &mdash; sometimes the only impression &mdash; a potential customer gets before deciding whether to enquire. The stakes of that impression are higher than most people realise.</p>
+<p>Here is what is actually at risk when website maintenance is neglected.</p>
+
+
+      <div class="impact-grid">
+        <div class="impact-card" style="border-top: 3px solid #10b981;"><h2 style="font-size: 20px;">Your Google Rankings</h2>
+<p>Google\'s search algorithms take website health into account &mdash; page speed, mobile usability, security (HTTPS), broken links, and crawl errors all factor into where your website appears in search results. A website that is slow, insecure, or poorly maintained will lose rankings to better-maintained competitors, even if your content and offerings are superior.</p>
+<p>In a market where most of your potential customers start their search online, a drop in rankings is a direct drop in revenue.</p>
+
+</div>
+        <div class="impact-card" style="border-top: 3px solid #ef4444;"><h2 style="font-size: 20px;">Your Security and Your Customers\' Data</h2>
+<p>Research indicates that the vast majority of successful cyberattacks exploit known vulnerabilities &mdash; vulnerabilities that have already been patched by software updates that were simply never installed.</p>
+<p>A hacked website is not just a technical problem. If customer data is compromised, the legal, financial, and reputational consequences for your business can be severe. In India, data protection standards are evolving rapidly, and businesses have a growing responsibility to protect the information their websites collect.</p>
+
+</div>
+        <div class="impact-card" style="border-top: 3px solid #f59e0b;"><h2 style="font-size: 20px;">Your Conversion Rate</h2>
+<p>Even small performance issues have measurable impacts on conversion rates. A one-second delay in page load time can reduce conversions meaningfully. For a business generating ₹10 lakhs per month through its website, even a modest conversion drop costs tens of thousands of rupees every month.</p>
+<p>A well-maintained website loads fast, functions correctly on all devices, has no broken forms or dead ends, and gives visitors every reason to stay and enquire.</p>
+
+</div>
+        <div class="impact-card" style="border-top: 3px solid #126db2;"><h2 style="font-size: 20px;">Your Brand Reputation</h2>
+<p>A website with a security warning, a broken page, or outdated information does not just lose that one visitor. It creates an impression that your business is unreliable &mdash; an impression that is very hard to recover from.</p>
+<p>For professional service businesses, healthcare providers, educational institutions, and real estate developers, trust is the product. Your website either builds it or erodes it, every single day.</p>
+<p><a href="/contact" class="btn btn-primary" style="background-color: #1e529b; border-color: #1e529b; margin-top: 10px;">&rarr; Get your free 20-point website health audit &mdash; no cost, no obligation</a></p>
+
+</div>
+      </div>
+    </section>
+
+    <!-- COST OF NEGLECT -->
+    <section class="card card-warning" id="cost-neglect">
+      <h2>The Real Cost of Neglecting Your Website</h2>
+      
+<p>Business owners who do not invest in website maintenance often believe they are saving money. In most cases, the reverse is true.</p>
+<p>Consider what a single website hack costs to recover from:</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead><tr><th>Recovery Task</th><th>Estimated Cost</th></tr></thead>
+<tbody>
+<tr><td>Emergency malware removal and security cleanup</td><td>₹15,000 &ndash; ₹50,000</td></tr>
+<tr><td>Developer time to assess damage and restore functionality</td><td>₹10,000 &ndash; ₹30,000</td></tr>
+<tr><td>Lost revenue during downtime</td><td>Variable &mdash; often significant</td></tr>
+<tr><td>Recovery of Google rankings (if blacklisted)</td><td>3&ndash;6 months</td></tr>
+<tr><td>Reputational damage with customers who saw the warning</td><td>Immeasurable</td></tr>
+</tbody>
+</table>
+</div>
+<p>Annual professional website maintenance typically costs a fraction of a single emergency recovery. Prevention is not just better than cure &mdash; it is considerably cheaper.</p>
+
+
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="card" id="schedule">
+      <h2>How Often Should You Maintain Your Website?</h2>
+      
+<p>Website maintenance is not a once-a-year spring clean. Different tasks need to happen on different schedules. Here is a practical framework.</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead><tr><th>Frequency</th><th>Tasks</th></tr></thead>
+<tbody>
+<tr><td><strong>Daily</strong></td><td>Uptime monitoring (24/7 automated) &middot; Security scanning for malware &middot; Backups for e-commerce and high-traffic sites</td></tr>
+<tr><td><strong>Weekly</strong></td><td>Plugin and theme update review &middot; Spam and form submission cleanup &middot; Performance checks &middot; Backups for standard brochure websites</td></tr>
+<tr><td><strong>Monthly</strong></td><td>Software updates (tested in staging first) &middot; Broken link check &middot; Database optimisation &middot; SSL certificate status &middot; Analytics report &middot; Full functionality review of forms and CTAs</td></tr>
+<tr><td><strong>Quarterly</strong></td><td>Full security audit &middot; Core Web Vitals assessment &middot; Content audit &middot; Hosting environment review &middot; SEO health check (crawl errors, indexing, keyword rankings)</td></tr>
+<tr><td><strong>Annually</strong></td><td>SSL and domain renewal &middot; Full design and UX review &middot; Hosting plan review &middot; Privacy policy and legal page review</td></tr>
+</tbody>
+</table>
+</div>
+
+
+    </section>
+
+    <!-- DIY VS PRO -->
+    <section class="card" id="diy-vs-pro">
+      <h2>DIY vs. Professional Website Maintenance</h2>
+      
+<p>Some business owners choose to handle website maintenance themselves. This is possible &mdash; but the question is whether it is the best use of your time and whether the risks are being properly managed.</p>
+
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 20px;"><h2 style="font-size: 20px;">What You Can Handle Yourself</h2>
+<ul>
+<li>Updating website content (text, images, blog posts)</li>
+<li>Checking that your website loads correctly on your devices</li>
+<li>Monitoring your Google Analytics dashboard</li>
+</ul>
+
+</div>
+        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 20px;"><h2 style="font-size: 20px;">What Requires Technical Expertise</h2>
+<ul>
+<li>Safe plugin and theme updates without breaking the live site</li>
+<li>Database optimisation and cleanup</li>
+<li>Security configuration and hardening</li>
+<li>Diagnosing and resolving performance issues</li>
+<li>Malware removal and security recovery</li>
+<li>Server-level configurations and hosting management</li>
+</ul>
+
+</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0;">
+        <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 20px;"><h2 style="font-size: 20px;">The Real Cost of DIY</h2>
+<p>Even if you have the technical skills, time is the hidden cost. Business owners who manage their own website maintenance typically spend 4&ndash;8 hours per month on maintenance tasks &mdash; time that could be spent on growing their business.</p>
+<p>The most common website disasters &mdash; a broken site after a failed update, a hack that goes undetected for weeks, a backup that was never properly set up &mdash; happen to businesses that were managing their own websites. The risk is not theoretical.</p>
+
+</div>
+        <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 20px;"><h2 style="font-size: 20px;">The Case for Professional Maintenance</h2>
+<p>Professional website maintenance in India typically ranges from ₹3,000 &ndash; ₹15,000 per month, depending on the size and complexity of your website and the scope of services included.</p>
+<p>For any business that depends on its website to generate leads, bookings, or revenue, professional maintenance is not an expense &mdash; it is a form of insurance. The cost of a single major incident almost always exceeds a full year of maintenance fees.</p>
+
+</div>
+      </div>
+      <div style="margin-top: 25px; border-top: 1px solid var(--border); padding-top: 20px;">
+        <h2>What to Look for in a Website Maintenance Partner</h2>
+        
+<p>Not all website maintenance services are equal. Here are seven criteria to evaluate before you sign any agreement.</p>
+<div class="table-responsive">
+<table class="table table-bordered table-striped">
+<thead><tr><th>#</th><th>Criterion</th><th>What to Check</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Transparency in Reporting</td><td>A good maintenance partner sends you a detailed monthly report showing exactly what was done, what issues were found, and what was resolved. If a provider cannot show you their work, ask why.</td></tr>
+<tr><td>2</td><td>Staging Environment for Updates</td><td>Updates should never be applied directly to your live website without testing first. Ask specifically whether a staging environment is used before any changes go live.</td></tr>
+<tr><td>3</td><td>Defined Emergency Response Time</td><td>If your website goes down at 9pm on a Saturday, what happens? A professional partner should have a defined emergency response protocol and SLA &mdash; not just a business-hours inbox.</td></tr>
+<tr><td>4</td><td>Automated, Off-Site Backups</td><td>Backups stored on the same server as your website are not useful if the server fails. Confirm that backups are automated, tested periodically, and stored in a separate, secure location.</td></tr>
+<tr><td>5</td><td>Malware Removal Included</td><td>Ask whether malware removal is included in your maintenance plan or billed additionally as an emergency service. Prevention and recovery should both be covered for active clients.</td></tr>
+<tr><td>6</td><td>Relevant Industry Experience</td><td>A maintenance provider that primarily works with personal blogs is a different proposition to one that manages healthcare clinic websites, e-commerce stores, or real estate portals.</td></tr>
+<tr><td>7</td><td>Plain-Language Communication</td><td>Technical work does not require technical jargon. If communication feels evasive or difficult before you have signed, it will not improve afterwards.</td></tr>
+</tbody>
+</table>
+</div>
+
+
+      </div>
+    </section>
+
+    <!-- PLANS SECTION -->
+    <section class="plans-container" id="plans">
+      <h2>Website Maintenance Plans from GA Digital Solutions</h2>
+      
+<p>GA Digital Solutions provides professional website maintenance services to businesses in Hyderabad and across India. Our plans are designed for Indian SMBs &mdash; straightforward, comprehensive, and priced transparently.</p>
+<p><strong>All plans include:</strong></p>
+<ul style="list-style-type: none; padding-left: 0;">
+<li>✅ Monthly software, plugin, and theme updates (tested in staging)</li>
+<li>✅ Daily automated backups with off-site storage</li>
+<li>✅ 24/7 uptime monitoring with email and WhatsApp alerts</li>
+<li>✅ Monthly security scan and malware check</li>
+<li>✅ Broken link and error page checks</li>
+<li>✅ Monthly performance and speed review</li>
+<li>✅ SSL certificate monitoring</li>
+<li>✅ Monthly analytics report with plain-language summary</li>
+<li>✅ Content updates (up to agreed hours per month)</li>
+<li>✅ Priority support via WhatsApp and email</li>
+</ul>
+
+
+
+      <div class="plans-grid">
+        <!-- Essential Plan -->
+        <div class="plan-card">
+          <div class="plan-card-header">
+            <h3>Essential</h3>
+          </div>
+          <div class="plan-card-body">
+            <p><strong>For brochure websites and small business sites</strong></p>
+            <p>Ideal for: standard websites with stable content and moderate visitor traffic</p>
+            <div class="plan-cta">
+              <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20am%20interested%20in%20the%20Essential%20Website%20Maintenance%20Plan" class="header-cta-btn" style="display:block; text-align:center;" target="_blank" rel="noopener noreferrer">
+                Enquire on WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="plan-card" style="border: 2px solid var(--primary);">
+          <div class="plan-card-header" style="background: var(--primary);">
+            <h3>Growth</h3>
+          </div>
+          <div class="plan-card-body">
+            <p><strong>For websites actively generating leads</strong></p>
+            <p>Ideal for: businesses relying on their website for consistent lead generation</p>
+            <div class="plan-cta">
+              <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20am%20interested%20in%20the%20Growth%20Website%20Maintenance%20Plan" class="header-cta-btn" style="display:block; text-align:center;" target="_blank" rel="noopener noreferrer">
+                Enquire on WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Plan -->
+        <div class="plan-card">
+          <div class="plan-card-header">
+            <h3>Business</h3>
+          </div>
+          <div class="plan-card-body">
+            <p><strong>For e-commerce, booking platforms, and high-traffic sites</strong></p>
+            <p>Ideal for: e-commerce stores and businesses with significant revenue dependence on their website</p>
+            <div class="plan-cta">
+              <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20am%20interested%20in%20the%20Business%20Website%20Maintenance%20Plan" class="header-cta-btn" style="display:block; text-align:center;" target="_blank" rel="noopener noreferrer">
+                Enquire on WhatsApp &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      tions provides professional website maintenance services to businesses in Hyderabad and across India. Our plans are designed for Indian SMBs &mdash; straightforward, comprehensive, and priced transparently.</p>
+<p><strong>All plans include:</strong></p>
+<ul style="list-style-type: none; padding-left: 0;">
+<li>✅ Monthly software, plugin, and theme updates (tested in staging)</li>
+<li>✅ Daily automated backups with off-site storage</li>
+<li>✅ 24/7 uptime monitoring with email and WhatsApp alerts</li>
+<li>✅ Monthly security scan and malware check</li>
+<li>✅ Broken link and error page checks</li>
+<li>✅ Monthly performance and speed review</li>
+<li>✅ SSL certificate monitoring</li>
+<li>✅ Monthly analytics report with plain-language summary</li>
+<li>✅ Content updates (up to agreed hours per month)</li>
+<li>✅ Priority support via WhatsApp and email</li>
+</ul>
+
+<div class="row" style="margin-top: 30px; margin-bottom: 30px;">
+    <div class="col-md-4">
+        <div class="panel panel-default" style="border-color: #1e529b;">
+            <div class="panel-heading" style="background-color: #1e529b; color: white;">
+                <h3 style="margin: 0; text-align: center; color: white;">Essential</h3>
+            </div>
+            <div class="panel-body" style="min-height: 150px;">
+                <p><strong>For brochure websites and small business sites</strong></p>
+                <p>Ideal for: standard websites with stable content and moderate visitor traffic</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default" style="border-color: #1e529b;">
+            <div class="panel-heading" style="background-color: #1e529b; color: white;">
+                <h3 style="margin: 0; text-align: center; color: white;">Growth</h3>
+            </div>
+            <div class="panel-body" style="min-height: 150px;">
+                <p><strong>For websites actively generating leads</strong></p>
+                <p>Ideal for: businesses relying on their website for consistent lead generation</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-default" style="border-color: #1e529b;">
+            <div class="panel-heading" style="background-color: #1e529b; color: white;">
+                <h3 style="margin: 0; text-align: center; color: white;">Business</h3>
+            </div>
+            <div class="panel-body" style="min-height: 150px;">
+                <p><strong>For e-commerce, booking platforms, and high-traffic sites</strong></p>
+                <p>Ideal for: e-commerce stores and businesses with significant revenue dependence on their website</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>Contact us to discuss the right plan for your website. We are happy to assess your site and recommend the plan that fits &mdash; with no obligation to proceed.</p>
+
+
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="card" id="industries">
+      <h2>Industries We Serve</h2>
+      
+<p>We maintain websites for businesses across Hyderabad and India, with particular expertise in the following sectors.</p>
+<ul>
+<li><strong>Healthcare</strong> &mdash; Clinic, hospital, and diagnostic centre websites. We understand the importance of appointment booking uptime, trust signals, and local SEO for medical practices.</li>
+<li><strong>Real Estate</strong> &mdash; Property developer and real estate agent websites. We keep project pages, floor plans, and enquiry forms current and functional throughout the sales cycle.</li>
+<li><strong>Education</strong> &mdash; School, college, coaching institute, and ed-tech websites. Admission season is not the time to discover your website is down. We ensure reliability when it matters most.</li>
+<li><strong>E-Commerce</strong> &mdash; Online stores and product websites. For e-commerce businesses, website downtime is directly lost revenue. Our e-commerce plans are designed for maximum uptime and performance.</li>
+<li><strong>Professional Services</strong> &mdash; CA firms, legal practices, consulting agencies, and financial services businesses. Your website reflects the professionalism of your practice.</li>
+</ul>
+
+
+    </section>
+
+    <!-- FAQS -->
+    <section id="faqs" style="margin-bottom: 35px;">
+      <div class="card" style="margin-bottom: 20px;">
+        <h2>Frequently Asked Questions</h2>
+        
+<p>These are the questions business owners ask us most often about website maintenance. If you have a question that is not answered here, contact us directly.</p>
+      </div>
+
+      <details class="faq-accordion">
+        <summary class="faq-summary">How much does website maintenance cost in India?</summary>
+        <div class="faq-body"><p>Website maintenance in India typically costs between ₹3,000 and ₹15,000 per month for small to medium-sized business websites, depending on the platform, the size and complexity of the site, and the scope of services required. For a full breakdown of our monthly deliverables and tiers, check our complete <a href="/website-maintenance-pricing" style="color: #1e529b; font-weight: bold; text-decoration: underline;">Website Maintenance Pricing &amp; Plans</a>.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">How much does website maintenance cost in India?</summary>
+        <div class="faq-body"><p>Website maintenance in India typically costs between ₹3,000 and ₹15,000 per month for small to medium-sized business websites, depending on the platform, the size and complexity of the site, and the scope of services required. E-commerce websites and high-traffic sites may require more comprehensive plans.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">What happens if my website gets hacked while I am on a maintenance plan?</summary>
+        <div class="faq-body"><p>If your website is on our maintenance plan, malware removal and security recovery are included &mdash; no emergency billing. Our monitoring system is designed to detect and flag suspicious activity early, and our team responds immediately to any security incident for active maintenance clients.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">How do I know my website needs maintenance if I have not had any obvious problems?</summary>
+        <div class="faq-body"><p>Most website maintenance issues are invisible until they become serious. A website can have outdated plugins, slow load times, or a database that has not been optimised in years &mdash; and look perfectly normal to a visitor. The only way to know is a professional audit. We offer a free 20-point website health audit to help you understand where your site stands.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">My website was built by a freelancer. Can you still maintain it?</summary>
+        <div class="faq-body"><p>Yes. We maintain websites built by third-party developers, agencies, and freelancers, across platforms including WordPress, Wix, Shopify, and custom-built sites. Our onboarding process includes a technical review of your website\'s current setup before maintenance begins.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">Do I need to be technical to work with you?</summary>
+        <div class="faq-body"><p>Not at all. Our monthly reports are written in plain language. Our team communicates via WhatsApp and email, and we explain everything in terms that make sense for your business &mdash; not your server. You stay informed without needing to understand the technical details.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">What is the difference between website maintenance and website redesign?</summary>
+        <div class="faq-body"><p>Website maintenance keeps your existing website healthy, secure, and performing well. Website redesign involves significantly changing the structure, design, or functionality of the website. In some cases, a neglected website may require both &mdash; a redesign to modernise it and an ongoing maintenance plan to keep it that way.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">How do I move to your maintenance plan from my current provider?</summary>
+        <div class="faq-body"><p>The transition is straightforward. We conduct a technical audit of your current website, document access credentials and configurations, set up our monitoring and backup systems, and take over ongoing maintenance. The process is designed to be seamless &mdash; with no downtime for your website.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">Do you offer maintenance for WordPress websites specifically?</summary>
+        <div class="faq-body"><p>Yes. The majority of websites we maintain run on WordPress. Our team has deep expertise in WordPress maintenance &mdash; plugin updates, theme management, database optimisation, security hardening, and performance tuning.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">How quickly do you respond if something goes wrong?</summary>
+        <div class="faq-body"><p>Our uptime monitoring system alerts our team immediately if your website goes offline. For active maintenance clients, our response time for critical issues is within 2 hours. For non-critical issues, we respond within one business day. Emergency WhatsApp access to your account manager is included in all plans.</p></div>
+      </details>
+    
+      <details class="faq-accordion">
+        <summary class="faq-summary">Can you maintain a website that is not hosted with you?</summary>
+        <div class="faq-body"><p>Yes. Your hosting arrangement does not need to change when you engage our maintenance services. We work with all major hosting providers across shared hosting, VPS, and dedicated server environments. If your current hosting is underperforming, we can advise on better options &mdash; but there is no obligation to move.</p></div>
+      </details>
+    
+    </section>
+
+    <!-- FREE AUDIT -->
+    <section class="audit-section" id="free-audit">
+      <h2>Get Your Free 20-Point Website Health Audit</h2>
+      
+<p>Most business websites in India have at least three significant, fixable problems that their owners are unaware of. Our free website health audit identifies them &mdash; in plain language, with no obligation to proceed.</p>
+<p>The audit covers:</p>
+<ul style="list-style-type: none; padding-left: 0;">
+<li>✅ Security vulnerabilities and outdated software</li>
+<li>✅ Page speed and Core Web Vitals scores</li>
+<li>✅ Mobile usability assessment</li>
+<li>✅ SSL certificate status</li>
+<li>✅ Broken links and error pages</li>
+<li>✅ Backup status assessment</li>
+<li>✅ SEO technical health &mdash; crawl errors, indexing issues</li>
+<li>✅ Contact form and conversion point functionality</li>
+</ul>
+<p>Fill in our contact form with your website URL and contact details. Our team will complete the audit within 2 business days and walk you through the findings on a call or via WhatsApp &mdash; whichever you prefer.</p>
+<p>There is no pitch at the end. If your website is in good health, we will tell you so. If there are issues worth addressing, we will explain them clearly and you can decide what to do next.</p>
+<p><a href="/contact" class="btn btn-primary" style="background-color: #1e529b; border-color: #1e529b; margin-top: 10px;">&rarr; Get My Free Website Audit &mdash; No Cost, No Obligation</a></p>
+<p>Or contact us directly via WhatsApp for a faster response.</p>
+
+
+
+      <div class="audit-form-box">
+        <h3 style="margin-top: 0; color: #38bdf8; font-size: 20px; font-weight: 700;">
+          ⚡ Enter Your Website to Start Your Free 20-Point Audit
+        </h3>
+        <p style="font-size: 14px; color: #cbd5e1; margin-bottom: 18px;">
+          Submit your URL directly here and our team will begin your review with no obligation.
+        </p>
+        <form onsubmit="event.preventDefault(); window.location.href='https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20am%20requesting%20the%20Free%2020-Point%20Website%20Health%20Audit%20for:%20' + encodeURIComponent(this.audit_site.value) + '%20(Name:%20' + encodeURIComponent(this.audit_name.value) + ');'">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 15px;">
+            <div>
+              <label style="display:block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 5px;">WEBSITE URL *</label>
+              <input type="url" name="audit_site" placeholder="https://yourwebsite.com" required>
+            </div>
+            <div>
+              <label style="display:block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 5px;">YOUR NAME *</label>
+              <input type="text" name="audit_name" placeholder="John Doe" required>
+            </div>
+            <div>
+              <label style="display:block; font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 5px;">WHATSAPP / PHONE *</label>
+              <input type="tel" name="audit_phone" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px;">
+            <button type="submit" class="btn-submit" style="flex: 2; min-width: 240px; padding: 14px;">
+              Claim My Free Website Health Audit &rarr;
+            </button>
+            <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20would%20like%20to%20request%20the%20Free%20Website%20Health%20Audit%20directly" class="btn-wa-direct" style="flex: 1; min-width: 200px; padding: 14px; margin: 0;" target="_blank" rel="noopener noreferrer">
+              💬 WhatsApp Fast Track
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- RELATED ARTICLES -->
+    <section class="card" id="related-articles">
+      <h2>Related Articles</h2>
+      
+<p>Explore our complete content library on website maintenance for Indian businesses.</p>
+<div class="row">
+    <div class="col-md-6">
+        
+      <div class="related-grid">
+        <div class="related-col"><h2 style="font-size: 20px;">Understanding Website Maintenance</h2>
+        <ul>
+        <li><a href="/blogs/what-is-website-maintenance">What Is Website Maintenance? Everything Business Owners Need to Know</a></li>
+        <li><a href="/blogs/why-website-maintenance-is-important">Why Website Maintenance Is Important: 10 Risks of Neglecting Your Site</a></li>
+        <li><a href="/blogs/how-often-should-you-update-your-website">How Often Should You Update Your Website?</a></li>
+        <li><a href="/blogs/website-maintenance-checklist">The Complete Website Maintenance Checklist</a></li>
+        <li><a href="/blogs/what-happens-if-you-dont-maintain-your-website">What Happens If You Don't Maintain Your Website?</a></li>
+        <li><a href="/blogs/website-maintenance-vs-web-development">Website Maintenance vs Web Development: What's the Difference?</a></li>
+        </ul>
+
+        </div>
+        <div class="related-col"><h2 style="font-size: 20px;">By Industry</h2>
+        <ul>
+        <li><a href="/blogs/website-maintenance-for-healthcare">Website Maintenance for Healthcare Businesses</a></li>
+        <li><a href="/blogs/ecommerce-website-maintenance">E-Commerce Website Maintenance</a></li>
+        <li><a href="/blogs/website-speed-optimisation-maintenance">Website Speed Optimisation as a Maintenance Task</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        </div>
+        <div class="related-col"><h2 style="font-size: 20px;">Comparing Your Options</h2>
+        <ul>
+        <li><a href="/website-maintenance-pricing"><strong>Website Maintenance Pricing &amp; Plans (Complete Breakdown)</strong></a></li>
+        <li><a href="/blogs/website-maintenance-cost-india">Website Maintenance Cost in India (2026)</a></li>
+        <li><a href="/blogs/diy-vs-professional-website-maintenance">DIY vs Professional Website Maintenance</a></li>
+        <li><a href="/blogs/how-to-choose-website-maintenance-company">How to Choose a Website Maintenance Company</a></li>
+        <li><a href="/blogs/website-maintenance-packages-india">Website Maintenance Packages in India: How to Compare</a></li>
+        <li><a href="/blogs/wordpress-website-maintenance">WordPress Website Maintenance in India</a></li>
+        <li><a href="/blogs/website-security-maintenance">Website Security Maintenance Guide</a></li>
+        </ul>
+
+        </div>
+        <div class="related-col"><h2 style="font-size: 20px;">Hyderabad and India</h2>
+        <ul>
+        <li><a href="/services/website-development">Website Design & Development Services: The Complete Guide</a></li>
+        <li><a href="/blogs/website-maintenance-services-hyderabad">Website Maintenance Services in Hyderabad</a></li>
+        <li><a href="/blogs/outsource-website-maintenance-india">Outsourcing Website Maintenance in India</a></li>
+        <li><a href="/blogs/website-maintenance-contract-what-to-include">Website Maintenance Contract: What to Include</a></li>
+        </ul>
+    </div>
+</div> 
+<br>
+<div class="well" style="background-color: #f8f9fa; border-left: 4px solid #1e529b; padding: 20px;">
+    <p style="margin: 0; font-size: 1.1em;"><strong>GA Digital Solutions is a full-service digital agency based in Hyderabad, India. We provide website maintenance, design and development, SEO, performance marketing, and lead management services to businesses across India.</strong></p>
+</div>        </div>
+        
+        <div class="gallery-sidebar-col" style="text-align: center; z-index: 100;">
+            <div class="gallery" style="margin-top: 0;">
+                <img src="/images/GA Digital website maintenance services imagae 1.jpg" alt="Website Maintenance Service Feature 1" width="400" height="400" loading="lazy">
+                <img src="/images/GA Digital website maintenance services imagae 2.jpg" alt="Website Maintenance Service Feature 2" width="400" height="400" loading="lazy">
+                <img src="/images/GA Digital website maintenance services imagae 3.jpg" alt="Website Maintenance Service Feature 3" width="400" height="400" loading="lazy">
+                <img src="/images/GA Digital website maintenance services imagae 4.jpg" alt="Website Maintenance Service Feature 4" width="400" height="400" loading="lazy">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer: Desktop and Mobile -->
+<div class="hidden-xs">
+    <!-- place this at the bottom of your HTML, before </body> -->
+</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <p style="color: #ffffff; font-weight: 700; margin-bottom: 4px;">GA Digital Solutions</p>
+        <p style="color: #94a3b8; font-size: 13px; margin: 0;">A Business Unit of Gunnam Associates | Hyderabad, India</p>
+      </div>
+      <div>
+        <p style="color: #94a3b8; font-size: 13px; margin: 0;">&copy; 2026 GA Digital Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-bar">
+    <a href="tel:9849574618" class="bar-call">📞 Call Engineer</a>
+    <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital,%20I%20need%20website%20maintenance%20support" class="bar-wa" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+  </div>
+
+</body>
+</html>

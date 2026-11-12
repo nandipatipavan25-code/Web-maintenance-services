@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Temporary and backup files
+scratch/
+*.backup*.html
+test_*.png
+test_*.html
