@@ -1278,6 +1278,49 @@
         text-align: center;
       }
     }
+  
+    /* ============================================================
+       SCROLLING SECTION REVEAL SYSTEM (VARIANT 2)
+       ============================================================ */
+    html.reveal-ready .scroll-reveal-section {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    html.reveal-ready .scroll-reveal-section.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+      will-change: auto;
+    }
+
+    html.reveal-ready .scroll-reveal-child {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    html.reveal-ready .scroll-reveal-child.is-revealed,
+    html.reveal-ready .scroll-reveal-section.is-revealed .scroll-reveal-child {
+      opacity: 1;
+      transform: translateY(0);
+      will-change: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html.reveal-ready .scroll-reveal-section,
+      html.reveal-ready .scroll-reveal-child {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1390,7 +1433,7 @@
         <!-- Right: Telemetry Dashboard Card -->
         <div class="hero-dashboard-card" style="position: relative;">
           <!-- 3D Animated Cartoon IT Engineer Mascot -->
-          <img src="v2_3d_hero_engineer.png" alt="3D Engineer Cartoon Mascot" class="v2-3d-character-hero">
+          
           <div class="dash-header">
             <div class="dash-site-meta">
               <div class="dash-favicon">GA</div>
@@ -2574,6 +2617,93 @@
       window.addEventListener('scroll', onScrollSpy, { passive: true });
       onScrollSpy();
     });
+  </script>
+
+
+  <!-- ============================================================
+       SCROLLING SECTION REVEAL ENGINE (VARIANT 2)
+       ============================================================ -->
+  <script>
+    (function() {
+      // 1. Enable reveal system by adding class to html root
+      document.documentElement.classList.add('reveal-ready');
+
+      // 2. Select major sections and add .scroll-reveal-section class
+      const sectionSelectors = [
+        '#definition',
+        '#deliverables',
+        '#why-matters',
+        '#cost-neglect',
+        '#schedule',
+        '#diy-vs-pro',
+        '#partner-criteria',
+        '#plans',
+        '#industries',
+        '#faqs',
+        '#audit-form',
+        '#related-articles'
+      ];
+
+      const revealSections = document.querySelectorAll(sectionSelectors.join(', '));
+      revealSections.forEach(sec => {
+        sec.classList.add('scroll-reveal-section');
+      });
+
+      // 3. Staggered card reveals inside grids
+      const gridGroups = [
+        { container: '.deliverables-grid', item: '.deliv-card', step: 45, maxDelay: 320 },
+        { container: '.risk-cards-grid', item: '.risk-card', step: 50, maxDelay: 300 },
+        { container: '.plans-grid', item: '.plan-card', step: 60, maxDelay: 300 },
+        { container: '.industries-grid', item: '.industry-card', step: 40, maxDelay: 320 },
+        { container: '.articles-grid', item: '.article-col', step: 50, maxDelay: 300 }
+      ];
+
+      gridGroups.forEach(group => {
+        const container = document.querySelector(group.container);
+        if (container) {
+          const items = container.querySelectorAll(group.item);
+          items.forEach((item, idx) => {
+            item.classList.add('scroll-reveal-child');
+            const delay = Math.min(idx * group.step, group.maxDelay);
+            item.style.setProperty('--reveal-delay', `${delay}ms`);
+          });
+        }
+      });
+
+      // 4. IntersectionObserver Engine
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.06
+        });
+
+        revealSections.forEach(sec => revealObserver.observe(sec));
+        document.querySelectorAll('.scroll-reveal-child').forEach(child => revealObserver.observe(child));
+
+        // Immediate check for elements currently in viewport
+        const checkInitialView = () => {
+          const h = window.innerHeight || document.documentElement.clientHeight;
+          revealSections.forEach(sec => {
+            const r = sec.getBoundingClientRect();
+            if (r.top <= h - 20) {
+              sec.classList.add('is-revealed');
+            }
+          });
+        };
+        setTimeout(checkInitialView, 60);
+      } else {
+        // Fallback for older browsers
+        revealSections.forEach(s => s.classList.add('is-revealed'));
+        document.querySelectorAll('.scroll-reveal-child').forEach(c => c.classList.add('is-revealed'));
+      }
+    })();
   </script>
 
 </body>
