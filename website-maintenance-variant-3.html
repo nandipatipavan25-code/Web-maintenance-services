@@ -7215,21 +7215,7 @@
                ========================================================= -->
           <div class="odo-results-wrapper" id="odoResultsWrapper" style="display: none; opacity: 0; transition: opacity 0.4s ease, transform 0.4s ease; transform: translateY(12px);">
             
-            <!-- Quick Preset Toggles for testing comparisons -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border);">
-              <span style="font-size: 12px; font-weight: 700; color: #475569;">Test Speed Comparison:</span>
-              <div class="speed-mode-toggle" style="margin: 0;">
-                <button type="button" class="speed-toggle-btn active" id="btnModeLive" onclick="toggleOdoMode('live')">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Current Diagnostic
-                </button>
-                <button type="button" class="speed-toggle-btn" id="btnModeUnmaintained" onclick="toggleOdoMode('unmaintained')">
-                  <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#ef4444; margin-right:6px;"></span>Unmaintained Site
-                </button>
-                <button type="button" class="speed-toggle-btn" id="btnModeOptimized" onclick="toggleOdoMode('optimized')">
-                  <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#22c55e; margin-right:6px;"></span>GA Digital Maintained
-                </button>
-              </div>
-            </div>
+
 
                         <!-- Odometer Gauge & Metrics Cluster -->
             <div class="odo-cluster">
@@ -7662,7 +7648,7 @@
       const input = document.getElementById('odoUrlInput');
       
       if (mode === 'unmaintained') {
-        document.getElementById('btnModeUnmaintained').classList.add('active');
+        document.getElementById('btnModeUnmaintained')?.classList.add('active');
         input.value = 'https://unmaintained-business-demo.com';
         updateOdometerUI(
           38,
@@ -7676,7 +7662,7 @@
           'Unmaintained Business Website'
         );
       } else if (mode === 'optimized') {
-        document.getElementById('btnModeOptimized').classList.add('active');
+        document.getElementById('btnModeOptimized')?.classList.add('active');
         input.value = 'https://maintained-by-gadigital.com';
         updateOdometerUI(
           96,
@@ -7690,7 +7676,7 @@
           'Maintained by GA Digital'
         );
       } else {
-        document.getElementById('btnModeLive').classList.add('active');
+        document.getElementById('btnModeLive')?.classList.add('active');
         runSpeedScan();
       }
     }
