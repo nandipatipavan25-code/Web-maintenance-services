@@ -366,16 +366,67 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 14px;
+      width: 100%;
+    }
+    .v2-nav-scroll-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+    .v2-nav-links-scroller {
+      display: flex;
+      align-items: center;
       overflow-x: auto;
       scrollbar-width: none;
+      scroll-behavior: smooth;
+      flex: 1;
+      min-width: 0;
+      -webkit-overflow-scrolling: touch;
+      padding: 10px 0;
     }
-    .v2-nav-inner::-webkit-scrollbar { display: none; }
-
+    .v2-nav-links-scroller::-webkit-scrollbar {
+      display: none;
+    }
     .v2-nav-links {
       display: flex;
       align-items: center;
       gap: 4px;
-      padding: 10px 0;
+      width: max-content;
+    }
+    .v2-nav-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      color: #1d4fd8;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+      cursor: pointer;
+      z-index: 5;
+      padding: 0;
+      flex-shrink: 0;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .v2-nav-arrow:hover {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #1e40af;
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(29, 79, 216, 0.22);
+    }
+    .v2-nav-arrow.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
     }
 
     .v2-nav-link {
@@ -2102,22 +2153,35 @@
   <nav class="v2-sticky-nav" id="stickyNav" aria-label="Page Sections Navigation">
     <div class="v2-container">
       <div class="v2-nav-inner">
-        <div class="v2-nav-links" id="navLinksContainer">
-          <a href="#hero" class="v2-nav-link active">Overview</a>
-          <a href="#clients" class="v2-nav-link">Clients</a>
-          <a href="#definition" class="v2-nav-link">Definition</a>
-          <a href="#deliverables" class="v2-nav-link">10 Tasks</a>
-          <a href="#why-matters" class="v2-nav-link">Why Matters</a>
-          <a href="#cost-neglect" class="v2-nav-link">Cost of Neglect</a>
-          <a href="#schedule" class="v2-nav-link">Schedule</a>
-          <a href="#diy-vs-pro" class="v2-nav-link">DIY vs Pro</a>
-          <a href="#partner-criteria" class="v2-nav-link">Partner Guide</a>
-          <a href="#plans" class="v2-nav-link">Plans &amp; Pricing</a>
-          <a href="#industries" class="v2-nav-link">Industries</a>
-          <a href="#faqs" class="v2-nav-link">FAQs</a>
-          <a href="#speed-odometer" class="v2-nav-link">Speed Odometer</a>
-          <a href="#audit-form" class="v2-nav-link">Health Audit</a>
+        <div class="v2-nav-scroll-wrapper">
+          <button type="button" class="v2-nav-arrow v2-nav-arrow-left is-hidden" id="navArrowLeft" aria-label="Scroll navigation left" title="Scroll left">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <div class="v2-nav-links-scroller" id="navLinksScroller">
+            <div class="v2-nav-links" id="navLinksContainer">
+              <a href="#hero" class="v2-nav-link active">Overview</a>
+              <a href="#clients" class="v2-nav-link">Clients</a>
+              <a href="#definition" class="v2-nav-link">Definition</a>
+              <a href="#deliverables" class="v2-nav-link">10 Tasks</a>
+              <a href="#why-matters" class="v2-nav-link">Why Matters</a>
+              <a href="#cost-neglect" class="v2-nav-link">Cost of Neglect</a>
+              <a href="#schedule" class="v2-nav-link">Schedule</a>
+              <a href="#diy-vs-pro" class="v2-nav-link">DIY vs Pro</a>
+              <a href="#partner-criteria" class="v2-nav-link">Partner Guide</a>
+              <a href="#plans" class="v2-nav-link">Plans &amp; Pricing</a>
+              <a href="#industries" class="v2-nav-link">Industries</a>
+              <a href="#faqs" class="v2-nav-link">FAQs</a>
+              <a href="#speed-odometer" class="v2-nav-link">Speed Odometer</a>
+              <a href="#audit-form" class="v2-nav-link">Health Audit</a>
+            </div>
+          </div>
+
+          <button type="button" class="v2-nav-arrow v2-nav-arrow-right" id="navArrowRight" aria-label="Scroll navigation right" title="Scroll right">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
+
         <a href="#audit-form" class="v2-nav-cta">
           <span>Free Audit</span> &rarr;
         </a>
@@ -3684,6 +3748,48 @@
 
       window.addEventListener('scroll', onScrollSpy, { passive: true });
       onScrollSpy();
+
+      // Horizontal Arrow Navigation Logic for Sticky Nav
+      const navScroller = document.getElementById('navLinksScroller');
+      const arrowLeft = document.getElementById('navArrowLeft');
+      const arrowRight = document.getElementById('navArrowRight');
+
+      function updateNavArrows() {
+        if (!navScroller || !arrowLeft || !arrowRight) return;
+        const maxScroll = navScroller.scrollWidth - navScroller.clientWidth;
+        if (maxScroll <= 5) {
+          arrowLeft.classList.add('is-hidden');
+          arrowRight.classList.add('is-hidden');
+          return;
+        }
+        if (navScroller.scrollLeft <= 6) {
+          arrowLeft.classList.add('is-hidden');
+        } else {
+          arrowLeft.classList.remove('is-hidden');
+        }
+        if (navScroller.scrollLeft >= maxScroll - 6) {
+          arrowRight.classList.add('is-hidden');
+        } else {
+          arrowRight.classList.remove('is-hidden');
+        }
+      }
+
+      if (arrowLeft && navScroller) {
+        arrowLeft.addEventListener('click', () => {
+          navScroller.scrollBy({ left: -220, behavior: 'smooth' });
+        });
+      }
+      if (arrowRight && navScroller) {
+        arrowRight.addEventListener('click', () => {
+          navScroller.scrollBy({ left: 220, behavior: 'smooth' });
+        });
+      }
+      if (navScroller) {
+        navScroller.addEventListener('scroll', updateNavArrows, { passive: true });
+        window.addEventListener('resize', updateNavArrows, { passive: true });
+        // Initial check after paint
+        setTimeout(updateNavArrows, 100);
+      }
     });
   </script>
 
