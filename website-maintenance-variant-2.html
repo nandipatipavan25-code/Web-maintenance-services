@@ -1672,7 +1672,336 @@
       color: #ffffff !important;
     }
 
-  </style>
+
+    /* ============================================================
+       CLIENT LOGO MARQUEE SYSTEM (VARIANT 2)
+       ============================================================ */
+    .clients-marquee-section {
+      background: #ffffff !important;
+      border-top: 1px solid var(--border-subtle, #e2e8f0);
+      border-bottom: 1px solid var(--border-subtle, #e2e8f0);
+      padding: 40px 0 36px !important;
+      margin: 0 !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    .clients-marquee-header {
+      text-align: center;
+      padding: 0 24px;
+      margin-bottom: 24px;
+    }
+    .clients-marquee-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eff6ff;
+      color: #1d4fd8;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      margin-bottom: 10px;
+    }
+    .clients-marquee-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.02em;
+    }
+    .clients-marquee-sub {
+      font-size: 14.5px;
+      color: #64748b;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .clients-marquee-viewport {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 16px 0;
+      background: #ffffff;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .clients-marquee-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: logoScrollHoriz 35s linear infinite;
+      will-change: transform;
+    }
+    .clients-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes logoScrollHoriz {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .client-logo-item {
+      width: 140px !important;
+      min-width: 140px !important;
+      max-width: 140px !important;
+      height: 64px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+      margin: 0 16px !important;
+      padding: 0 6px !important;
+      box-sizing: border-box !important;
+      text-decoration: none !important;
+      cursor: pointer;
+    }
+    .client-logo-img {
+      max-width: 130px !important;
+      max-height: 48px !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      opacity: 0.9;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .client-logo-item:hover .client-logo-img {
+      opacity: 1;
+      transform: scale(1.08);
+    }
+    .client-logo-item.logo-wide-item {
+      width: 200px !important;
+      min-width: 200px !important;
+      max-width: 200px !important;
+    }
+    .client-logo-item.logo-wide-item .client-logo-img {
+      max-width: 190px !important;
+      max-height: 52px !important;
+    }
+
+    /* ============================================================
+       CRISIS BREAKDOWN CARD (COST OF NEGLECT)
+       ============================================================ */
+    .cost-neglect-crisis-card {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 32px;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 32px 0 28px 0;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
+    }
+    @media (max-width: 860px) {
+      .cost-neglect-crisis-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 18px;
+      }
+    }
+    .crisis-card-image-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.12);
+    }
+    .crisis-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .crisis-card-image-wrap:hover .crisis-card-img {
+      transform: scale(1.03);
+    }
+    .crisis-badge-overlay {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #ef4444;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .crisis-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      animation: crisisPulse 1.8s infinite;
+    }
+    @keyframes crisisPulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+    .crisis-stat-callout {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 12px;
+    }
+    .crisis-stat-num {
+      font-size: 32px;
+      font-weight: 800;
+      color: #dc2626;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .crisis-stat-label {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .crisis-card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+    }
+    .crisis-card-text {
+      font-size: 14.5px;
+      color: #475569;
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+    .crisis-points-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 540px) {
+      .crisis-points-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .crisis-point-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border-left: 3px solid #ef4444;
+    }
+    .crisis-point-item strong {
+      display: block;
+      font-size: 13px;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    .crisis-point-item p {
+      font-size: 12px;
+      color: #64748b;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       MAINTENANCE SCHEDULE CADENCE CARDS
+       ============================================================ */
+    .schedule-cadence-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 28px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .schedule-cadence-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 580px) {
+      .schedule-cadence-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cadence-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px 18px;
+      transition: all 0.25s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .cadence-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.08);
+      border-color: #cbd5e1;
+    }
+    .cadence-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .cadence-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+    .badge-daily { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+    .badge-weekly { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+    .badge-monthly { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+    .badge-quarterly { background: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+    .cadence-icon {
+      font-size: 20px;
+    }
+    .cadence-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+    }
+    .cadence-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 13px;
+      color: #475569;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .cadence-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .cadence-list li::before {
+      content: '✓';
+      color: #2563eb;
+      font-weight: 700;
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
   </style>
 </head>
 <body>
@@ -1718,6 +2047,7 @@
       <div class="v2-nav-inner">
         <div class="v2-nav-links" id="navLinksContainer">
           <a href="#hero" class="v2-nav-link active">Overview</a>
+          <a href="#clients" class="v2-nav-link">Clients</a>
           <a href="#definition" class="v2-nav-link">Definition</a>
           <a href="#deliverables" class="v2-nav-link">10 Tasks</a>
           <a href="#why-matters" class="v2-nav-link">Why Matters</a>
@@ -1833,6 +2163,104 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED CLIENTS MARQUEE SECTION -->
+  <section class="clients-marquee-section" id="clients">
+    <div class="v2-container">
+      <div class="clients-marquee-header">
+        <span class="clients-marquee-badge">★ Proven Engineering Track Record</span>
+        <h2 class="clients-marquee-title">Trusted by Growing Indian Brands & Enterprises</h2>
+        <p class="clients-marquee-sub">From healthcare leaders and e-commerce platforms to industrial exporters, we keep mission-critical web infrastructure fast, secure, and always online.</p>
+      </div>
+
+      <!-- Continuous Seamless Auto-Scrolling Logo Marquee -->
+      <div class="clients-marquee-viewport">
+        <div class="clients-marquee-track">
+          <!-- Loop A -->
+          <a href="https://phidimensions.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="PhiDimensions">
+            <img src="images/clients/phidimensions.png" alt="PhiDimensions Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://tanatanindian.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Tanatan India">
+            <img src="images/clients/tanatan-india.svg" alt="Tanatan India Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://indiarasoi.co.uk/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Indian Rasoi">
+            <img src="images/clients/indian-rasoi.svg" alt="Indian Rasoi Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://www.deccanprime.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Deccan Prime">
+            <img src="images/clients/deccan-prime.svg" alt="Deccan Prime Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://teacherplus.org/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Teacher Plus">
+            <img src="images/clients/teacher-plus.png" alt="Teacher Plus Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://bohemiansoul.in/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Bohemian Soul">
+            <img src="images/clients/bohemian-soul.png" alt="Bohemian Soul Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://dranishanandphysician.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Dr. Anish Anand">
+            <img src="images/clients/dr-anish-anand.svg" alt="Dr. Anish Anand Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://himalaya-exports.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Himalaya Exports">
+            <img src="images/clients/himalaya-exports.png" alt="Himalaya Exports Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://nivihomes.com.au/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Nivi Homes">
+            <img src="images/clients/nivi-homes.png" alt="Nivi Homes Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://gsmglobal.co.in/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="GSM Global">
+            <img src="images/clients/gsm-global.png" alt="GSM Global Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://healinghastha.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Healing Hastha">
+            <img src="images/clients/healing-hastha.png" alt="Healing Hastha Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://drrajeshreddy.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item logo-wide-item" title="Dr. Rajesh Reddy">
+            <img src="images/clients/dr-rajesh-reddy.svg" alt="Dr. Rajesh Reddy Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://cpvia.com" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="CPVIA">
+            <img src="images/clients/cpvia.png" alt="CPVIA Logo" class="client-logo-img" loading="lazy">
+          </a>
+
+          <!-- Loop B (Duplicate for smooth seamless marquee) -->
+          <a href="https://phidimensions.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="PhiDimensions">
+            <img src="images/clients/phidimensions.png" alt="PhiDimensions Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://tanatanindian.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Tanatan India">
+            <img src="images/clients/tanatan-india.svg" alt="Tanatan India Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://indiarasoi.co.uk/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Indian Rasoi">
+            <img src="images/clients/indian-rasoi.svg" alt="Indian Rasoi Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://www.deccanprime.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Deccan Prime">
+            <img src="images/clients/deccan-prime.svg" alt="Deccan Prime Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://teacherplus.org/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Teacher Plus">
+            <img src="images/clients/teacher-plus.png" alt="Teacher Plus Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://bohemiansoul.in/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Bohemian Soul">
+            <img src="images/clients/bohemian-soul.png" alt="Bohemian Soul Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://dranishanandphysician.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Dr. Anish Anand">
+            <img src="images/clients/dr-anish-anand.svg" alt="Dr. Anish Anand Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://himalaya-exports.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Himalaya Exports">
+            <img src="images/clients/himalaya-exports.png" alt="Himalaya Exports Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://nivihomes.com.au/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Nivi Homes">
+            <img src="images/clients/nivi-homes.png" alt="Nivi Homes Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://gsmglobal.co.in/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="GSM Global">
+            <img src="images/clients/gsm-global.png" alt="GSM Global Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://healinghastha.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="Healing Hastha">
+            <img src="images/clients/healing-hastha.png" alt="Healing Hastha Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://drrajeshreddy.com/" target="_blank" rel="noopener noreferrer" class="client-logo-item logo-wide-item" title="Dr. Rajesh Reddy">
+            <img src="images/clients/dr-rajesh-reddy.svg" alt="Dr. Rajesh Reddy Logo" class="client-logo-img" loading="lazy">
+          </a>
+          <a href="https://cpvia.com" target="_blank" rel="noopener noreferrer" class="client-logo-item" title="CPVIA">
+            <img src="images/clients/cpvia.png" alt="CPVIA Logo" class="client-logo-img" loading="lazy">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -2195,6 +2623,43 @@
           Consider what a single website hack costs to recover from:
         </p>
 
+        <!-- Visual Crisis Breakdown Card -->
+        <div class="cost-neglect-crisis-card">
+          <div class="crisis-card-image-wrap">
+            <img src="stressed-website-maintenance-owner.jpg" alt="Business owner facing unexpected website outage emergency" class="crisis-card-img" loading="lazy">
+            <div class="crisis-badge-overlay">
+              <span class="crisis-pulse-dot"></span>
+              <span>OUTAGE ALERT · 3:00 AM INCIDENT</span>
+            </div>
+          </div>
+          <div class="crisis-card-content">
+            <div class="crisis-stat-callout">
+              <span class="crisis-stat-num">₹25,000+</span>
+              <span class="crisis-stat-label">Average hourly downtime cost for Indian commercial sites</span>
+            </div>
+            <h3 class="crisis-card-title">The Emergency Call No Business Owner Wants</h3>
+            <p class="crisis-card-text">
+              When an unmaintained website gets hacked or throws a fatal database crash, leads vanish instantly. Emergency recovery costs 5x to 10x more than an annual proactive care plan—and lost Google rankings take months to rebuild.
+            </p>
+            <div class="crisis-points-grid">
+              <div class="crisis-point-item">
+                <span class="crisis-icon">⚠️</span>
+                <div>
+                  <strong>Search Blacklists</strong>
+                  <p>Google flags hacked sites with red warnings, killing 95% of traffic.</p>
+                </div>
+              </div>
+              <div class="crisis-point-item">
+                <span class="crisis-icon">📉</span>
+                <div>
+                  <strong>Permanent Churn</strong>
+                  <p>88% of online buyers never return to a site after a broken experience.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Recovery Table Element with Integrated 3D Character -->
         <div class="table-container-wrap" style="position: relative; overflow: visible; background: var(--white); border: 1px solid var(--slate-200); border-radius: var(--radius-xl); padding: 22px 24px; box-shadow: var(--shadow-sm); margin: 24px 0 28px;">
           <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--slate-100);">
@@ -2255,6 +2720,69 @@
         <p>
           Website maintenance is not a once-a-year spring clean. Different tasks need to happen on different schedules. Here is a practical framework.
         </p>
+
+        <!-- Visual Cadence Framework Grid -->
+        <div class="schedule-cadence-grid">
+          <!-- Daily -->
+          <div class="cadence-card">
+            <div class="cadence-header">
+              <span class="cadence-badge badge-daily">Every 24 Hours</span>
+              <span class="cadence-icon">⚡</span>
+            </div>
+            <h3 class="cadence-title">Daily Cadence</h3>
+            <ul class="cadence-list">
+              <li>Uptime checks every 60 seconds</li>
+              <li>Automated off-site cloud backups</li>
+              <li>SSL certificate & HTTPS verification</li>
+              <li>Real-time malware firewall monitoring</li>
+            </ul>
+          </div>
+
+          <!-- Weekly -->
+          <div class="cadence-card">
+            <div class="cadence-header">
+              <span class="cadence-badge badge-weekly">Every 7 Days</span>
+              <span class="cadence-icon">🛡️</span>
+            </div>
+            <h3 class="cadence-title">Weekly Cadence</h3>
+            <ul class="cadence-list">
+              <li>Core CMS & plugin patch audits</li>
+              <li>Staging regression test before push</li>
+              <li>404 error & broken link crawl</li>
+              <li>Form submission & lead flow test</li>
+            </ul>
+          </div>
+
+          <!-- Monthly -->
+          <div class="cadence-card">
+            <div class="cadence-header">
+              <span class="cadence-badge badge-monthly">Every 30 Days</span>
+              <span class="cadence-icon">📊</span>
+            </div>
+            <h3 class="cadence-title">Monthly Cadence</h3>
+            <ul class="cadence-list">
+              <li>Database optimization & table cleanup</li>
+              <li>Core Web Vitals & speed tune-up</li>
+              <li>Google Search Console error audit</li>
+              <li>Executive maintenance PDF report</li>
+            </ul>
+          </div>
+
+          <!-- Quarterly -->
+          <div class="cadence-card">
+            <div class="cadence-header">
+              <span class="cadence-badge badge-quarterly">Every 90 Days</span>
+              <span class="cadence-icon">🎯</span>
+            </div>
+            <h3 class="cadence-title">Quarterly Cadence</h3>
+            <ul class="cadence-list">
+              <li>Server environment & PHP upgrades</li>
+              <li>Full security vulnerability scan</li>
+              <li>Mobile UX & checkout conversion audit</li>
+              <li>Annual disaster recovery drill</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="table-container-wrap">
           <table class="v2-styled-table">
