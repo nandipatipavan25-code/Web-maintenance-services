@@ -17,7 +17,7 @@
        ARCHIO ARCHITECTURAL DESIGN SYSTEM (WHITE / SOFT WHITE / LIGHT BLUE + LUXURY NAVY)
        ------------------------------------------------------------- */
     :root {
-      --bg-canvas: #f4f8fd;            /* Luminous Soft Light Blue Architectural Canvas */
+      --bg-canvas: #f9fbfd;            /* Luminous Soft Light Blue Architectural Canvas */
       --bg-card: #ffffff;              /* Crisp Pure White Surface */
       --bg-card-light: #f8fbff;        /* Very Soft Luminous Light Blue / White */
       --bg-card-white: #ffffff;        /* Pure White */
@@ -305,7 +305,7 @@
       position: sticky;
       top: 0;
       z-index: 90;
-      background-color: rgba(244, 248, 253, 0.94);
+      background-color: rgba(249, 251, 253, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
@@ -1948,6 +1948,60 @@
       }
     }
 
+  
+    /* ==========================================================================
+       PAGE SCROLL PERCENTAGE CIRCLE IN FLOATING NAV DOCK
+       ========================================================================== */
+    .dock-scroll-progress {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin: 0 4px;
+      border-radius: 50%;
+      background: rgba(15, 59, 122, 0.04);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .dock-scroll-progress:hover {
+      transform: scale(1.1);
+      background: rgba(15, 59, 122, 0.08);
+    }
+    .dock-progress-svg {
+      width: 34px;
+      height: 34px;
+      transform: rotate(-90deg);
+      display: block;
+    }
+    .dock-progress-bg-ring {
+      fill: none;
+      stroke: rgba(15, 59, 122, 0.12);
+      stroke-width: 3;
+    }
+    .dock-progress-fill-ring {
+      fill: none;
+      stroke: #0f3b7a;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 0, 100;
+      transition: stroke-dasharray 0.12s ease-out;
+    }
+    .dock-progress-val {
+      position: absolute;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #0f3b7a;
+      letter-spacing: -0.03em;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      pointer-events: none;
+      line-height: 1;
+      text-align: center;
+      user-select: none;
+    }
+
   </style>
 
 </head>
@@ -3320,6 +3374,17 @@
       <a href="#faqs" class="dock-link">FAQs</a>
     </div>
     <div class="dock-divider" aria-hidden="true"></div>
+
+    <!-- Page Scroll Progress Circle -->
+    <div class="dock-scroll-progress" id="dockScrollProgress" title="Page read progress · Click to scroll to top" aria-label="Page read progress">
+      <svg class="dock-progress-svg" viewBox="0 0 36 36">
+        <path class="dock-progress-bg-ring"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="dock-progress-fill-ring" id="dockProgressPath"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+      </svg>
+      <span class="dock-progress-val" id="dockProgressVal">0%</span>
+    </div>
     <a href="#free-audit" class="dock-cta-btn">
       <span>Free Audit &rarr;</span>
     </a>
@@ -3366,8 +3431,38 @@
         });
       }
 
-      window.addEventListener('scroll', updateActiveDock, { passive: true });
+      // Circular Scroll Progress Indicator Logic
+      const progressPath = document.getElementById('dockProgressPath');
+      const progressVal = document.getElementById('dockProgressVal');
+      const progressWrap = document.getElementById('dockScrollProgress');
+
+      function updateScrollProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? Math.min(100, Math.max(0, Math.round((scrollTop / scrollHeight) * 100))) : 0;
+
+        if (progressPath) {
+          progressPath.setAttribute('stroke-dasharray', `${progress}, 100`);
+        }
+        if (progressVal) {
+          progressVal.textContent = `${progress}%`;
+        }
+      }
+
+      if (progressWrap) {
+        progressWrap.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      function handleScroll() {
+        updateActiveDock();
+        updateScrollProgress();
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
       updateActiveDock();
+      updateScrollProgress();
 
     });
   </script>
