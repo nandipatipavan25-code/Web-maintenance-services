@@ -2108,6 +2108,53 @@
       }
     }
 
+
+    /* Floating "Go to Top" Button (Stacked cleanly above sticky WhatsApp) */
+    .gads-back-to-top {
+      position: fixed;
+      bottom: 84px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0f3b7a;
+      border: 1.5px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+      cursor: pointer;
+      z-index: 9980;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px) scale(0.92);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .gads-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+    .gads-back-to-top:hover {
+      background: #0f3b7a;
+      color: #ffffff;
+      border-color: #0f3b7a;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 22px rgba(15, 59, 122, 0.28);
+    }
+    .gads-back-to-top:active {
+      transform: translateY(0) scale(0.96);
+    }
+    @media (max-width: 640px) {
+      .gads-back-to-top {
+        bottom: 74px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -4040,6 +4087,31 @@
     }
   </script>
 
+
+  
+  <!-- Floating "Go to Top" Button -->
+  <button type="button" class="gads-back-to-top" id="gadsBackToTop" aria-label="Go to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+  <script>
+    (function() {
+      const topBtn = document.getElementById('gadsBackToTop');
+      if (topBtn) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 350) {
+            topBtn.classList.add('is-visible');
+          } else {
+            topBtn.classList.remove('is-visible');
+          }
+        }, { passive: true });
+        topBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
 
   <!-- Sticky WhatsApp "Chat with us" Floating Button -->
   <a href="https://wa.me/919849574618?text=Hi%20GA%20Digital%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20Website%20Maintenance%20Services." target="_blank" rel="noopener noreferrer" class="gads-sticky-whatsapp" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
