@@ -3406,19 +3406,25 @@
       ];
 
       function updateActiveDock() {
-        const scrollPosition = window.scrollY + 180;
+        // High-precision viewport trigger offset
+        const scrollPosition = window.scrollY + 240;
         let currentSectionId = sections[0];
 
-        for (const id of sections) {
-          const el = document.getElementById(id);
+        // Robust absolute document coordinate evaluation (handles nested articles, sections & grids)
+        for (let i = 0; i < sections.length; i++) {
+          const el = document.getElementById(sections[i]);
           if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPosition >= top && scrollPosition < top + height) {
-              currentSectionId = id;
-              break;
+            const rect = el.getBoundingClientRect();
+            const absTop = rect.top + window.scrollY;
+            if (scrollPosition >= absTop) {
+              currentSectionId = sections[i];
             }
           }
+        }
+
+        // When reaching near the bottom of the page, activate the final section (FAQs)
+        if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 80)) {
+          currentSectionId = sections[sections.length - 1];
         }
 
         dockLinks.forEach(link => {
@@ -3430,6 +3436,14 @@
           }
         });
       }
+
+      // Smooth click handling for immediate active feedback
+      dockLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          dockLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
 
       // Circular Scroll Progress Indicator Logic
       const progressPath = document.getElementById('dockProgressPath');
