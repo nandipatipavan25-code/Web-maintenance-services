@@ -6048,16 +6048,20 @@
       <strong>VARIANT 3 PREVIEW</strong> · Brand New European Tech Agency Experience
     </div>
     <nav class="nav-variants" aria-label="Switch Design Variants">
-      <a href="website-maintenance.html" class="">← Variant 1 (Left Nav)</a>
-      <a href="website-maintenance-variant-2.html" class="">Variant 2 (Right Nav Editorial)</a>
+      <span style="color: #94a3b8; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
+      <a href="website-maintenance.html">Variant 1 (Guide)</a>
+      <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry Page)</a>
+      <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav)</a>
       <a href="website-maintenance-variant-3.html" class="active">Variant 3 (Tech Agency)</a>
-      <a href="website-maintenance-variant-4.html" class="">Variant 4 (Archio Minimalist)</a>
+      <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
+      <a href="website-maintenance-variant-4.2.html">Variant 4.2 (Archio Enquiry)</a>
     </nav>
   </aside>
 
   <!-- Sticky Horizontal Sub-Navigation Ribbon (Ref: NIAT Inspiration) -->
   <nav class="sticky-subnav-bar" id="stickySubnav" aria-label="Section Navigation">
     <div class="subnav-inner">
+      <button type="button" class="subnav-arrow-btn subnav-arrow-left" id="subnavArrowLeft" aria-label="Scroll left" title="Previous sections">&lsaquo;</button>
       <div class="subnav-track" id="subnavTrack">
         <a href="#overview" class="subnav-item active">Overview</a>
         <a href="#deliverables" class="subnav-item">10 Tasks</a>
@@ -6073,7 +6077,7 @@
         <a href="#clients" class="subnav-item">Our Clients</a>
         <a href="#speed-odometer" class="subnav-item">Speed Odometer</a>
       </div>
-      <button class="subnav-arrow-btn" id="subnavScrollBtn" aria-label="Scroll right" title="Next sections">&rsaquo;</button>
+      <button type="button" class="subnav-arrow-btn subnav-arrow-right" id="subnavArrowRight" aria-label="Scroll right" title="Next sections">&rsaquo;</button>
     </div>
   </nav>
 
@@ -7540,11 +7544,27 @@
       // Run once immediately
       onScrollUpdate();
 
-      // Horizontal Scroll Arrow click
-      if (scrollBtn && track) {
-        scrollBtn.addEventListener('click', function() {
-          track.scrollBy({ left: 240, behavior: 'smooth' });
-        });
+      // Horizontal Scroll Arrow clicks (Left and Right)
+      const arrowLeft = document.getElementById('subnavArrowLeft');
+      const arrowRight = document.getElementById('subnavArrowRight') || document.getElementById('subnavScrollBtn');
+      
+      if (track) {
+        if (arrowLeft) {
+          arrowLeft.addEventListener('click', function() {
+            track.scrollBy({ left: -240, behavior: 'smooth' });
+          });
+        }
+        if (arrowRight) {
+          arrowRight.addEventListener('click', function() {
+            track.scrollBy({ left: 240, behavior: 'smooth' });
+          });
+        }
+        function updateArrowState() {
+          if (arrowLeft) arrowLeft.style.opacity = track.scrollLeft > 10 ? '1' : '0.35';
+          if (arrowRight) arrowRight.style.opacity = (track.scrollLeft + track.clientWidth < track.scrollWidth - 10) ? '1' : '0.35';
+        }
+        track.addEventListener('scroll', updateArrowState, { passive: true });
+        updateArrowState();
       }
     })();
   </script>

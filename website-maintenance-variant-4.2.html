@@ -207,7 +207,7 @@
     }
 
     /* Top Variant Preview Bar */
-    .variant-preview-bar {
+    .nav-variants {
       background: #081d3d;
       color: #cbd5e1;
       padding: 8px 20px;
@@ -218,24 +218,26 @@
       justify-content: center;
       gap: 10px;
     }
-    .variant-preview-bar span {
+    .nav-variants span {
       color: #94a3b8;
       font-weight: 600;
       margin-right: 4px;
     }
-    .variant-preview-bar a {
-      color: #cbd5e1;
+    .nav-variants a {
+      color: rgba(228, 239, 254, 0.78);
       text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
+      padding: 4px 12px;
+      border-radius: 9999px;
       background: rgba(255, 255, 255, 0.08);
       transition: var(--transition-smooth);
+      font-size: 12.5px;
+      font-weight: 500;
     }
-    .variant-preview-bar a:hover {
+    .nav-variants a:hover {
       background: rgba(255, 255, 255, 0.2);
       color: #ffffff;
     }
-    .variant-preview-bar a.active {
+    .nav-variants a.active {
       background: #0ea5e9;
       color: #ffffff;
       font-weight: 700;
@@ -1595,15 +1597,15 @@
 <body>
 
   <!-- Top Variant Preview Bar -->
-  <nav class="variant-preview-bar" aria-label="Switch Design Variants">
-    <span>Variants:</span>
-    <a href="website-maintenance.html">Variant 1 (Guide)</a>
-    <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry Landing Page)</a>
-    <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav Editorial)</a>
-    <a href="website-maintenance-variant-3.html">Variant 3 (Tech Agency)</a>
-    <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
-    <a href="website-maintenance-variant-4.2.html" class="active">Variant 4.2 (Archio Landing Page)</a>
-  </nav>
+  <nav class="nav-variants" aria-label="Switch Design Variants">
+      <span style="color: #94a3b8; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
+      <a href="website-maintenance.html">Variant 1 (Guide)</a>
+      <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry Page)</a>
+      <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav)</a>
+      <a href="website-maintenance-variant-3.html">Variant 3 (Tech Agency)</a>
+      <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
+      <a href="website-maintenance-variant-4.2.html" class="active">Variant 4.2 (Archio Enquiry)</a>
+    </nav>
 
   <!-- Architectural Header Navigation -->
   <header class="archio-header">
