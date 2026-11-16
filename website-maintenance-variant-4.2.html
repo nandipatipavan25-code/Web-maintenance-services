@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Maintenance Services in India | Ongoing Care by GA Digital Solutions</title>
+  <meta name="description" content="Your website needs more than hosting—it needs ongoing care. Reliable WordPress, WooCommerce & custom website maintenance services in India by GA Digital Solutions. 24/7 uptime monitoring, daily backups, speed tuning & 30-min SLA.">
+  <link rel="canonical" href="https://gadigitalsolutions.com/services/website-maintenance">
+
+  <!-- Typography: Crimson Pro (Display Serif) + Plus Jakarta Sans (Geometric Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------------
+       ARCHIO ARCHITECTURAL DESIGN SYSTEM (VARIANT 4.2 - ENQUIRY LANDING PAGE)
+       Palette: Luminous Soft Light Blue (#f9fbfd) + Pure White (#ffffff) + Luxury Architectural Navy (#0f3b7a)
+       Typography: Crimson Pro (Editorial Serif Headings) + Plus Jakarta Sans (UI & Body)
+       ------------------------------------------------------------- */
+    :root {
+      --bg-canvas: #f9fbfd;            /* Soft Light Blue Architectural Canvas */
+      --bg-card: #ffffff;              /* Crisp Pure White Surface */
+      --bg-card-light: #f8fbff;        /* Delicate Ice Blue / White */
+      --bg-card-soft-blue: #e8f2fe;    /* Soft Blue Accent Container */
+      
+      /* Luxury Blue Palette */
+      --color-primary-dark: #0f3b7a;   /* Rich Deep Architectural Navy Blue */
+      --color-primary-dark-hover: #164ea0;
+      --color-primary-deeper: #081d3d; /* Deep Midnight Ink */
+      --color-pale-accent: #e4effe;    /* Soft Ice Blue Accent */
+      --color-status-blue: #0ea5e9;    /* Electric Sky Blue */
+      --color-status-green: #10b981;   /* Emerald Status */
+      --color-status-red: #ef4444;
+      --color-status-amber: #f59e0b;
+      --border-subtle: #dbe7f4;        /* Soft Hairline Border */
+      --border-card: #e2eaf4;
+      
+      --text-primary: #0d1726;         /* Deep Midnight Charcoal */
+      --text-secondary: #4b5563;       /* Editorial Muted Body */
+      --text-muted: #788290;
+      
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      
+      --radius-pill: 9999px;
+      --radius-card: 26px;
+      --radius-nested: 18px;
+      --radius-sm: 10px;
+      
+      --shadow-subtle: 0 4px 20px rgba(15, 59, 122, 0.04);
+      --shadow-card: 0 10px 30px rgba(15, 59, 122, 0.06);
+      --shadow-hover: 0 18px 45px rgba(15, 59, 122, 0.12);
+      --shadow-dock: 0 16px 40px rgba(15, 59, 122, 0.15);
+      
+      --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.65;
+      font-size: 16px;
+      padding-bottom: 90px; /* Room for floating dock */
+    }
+
+    /* Layout Containers */
+    .archio-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .archio-section {
+      padding: 84px 0;
+      position: relative;
+    }
+
+    /* Typography */
+    .serif-font {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .serif-italic {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px auto;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 14px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-primary-dark);
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Archio Button Suite */
+    .archio-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      border: none;
+    }
+
+    .archio-btn-primary {
+      background: var(--color-primary-dark);
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(15, 59, 122, 0.25);
+    }
+    .archio-btn-primary:hover {
+      background: var(--color-primary-dark-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 59, 122, 0.35);
+    }
+
+    .archio-btn-secondary {
+      background: #ffffff;
+      color: var(--color-primary-dark);
+      border: 1.5px solid var(--border-subtle);
+    }
+    .archio-btn-secondary:hover {
+      background: var(--color-pale-accent);
+      border-color: #bcd5f5;
+      transform: translateY(-2px);
+    }
+
+    .archio-btn-wa {
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+    .archio-btn-wa:hover {
+      background: #dcfce7;
+      border-color: #86efac;
+    }
+
+    /* Top Variant Preview Bar */
+    .variant-preview-bar {
+      background: #081d3d;
+      color: #cbd5e1;
+      padding: 8px 20px;
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .variant-preview-bar span {
+      color: #94a3b8;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .variant-preview-bar a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      transition: var(--transition-smooth);
+    }
+    .variant-preview-bar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    .variant-preview-bar a.active {
+      background: #0ea5e9;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Header Navigation */
+    .archio-header {
+      background: rgba(249, 251, 253, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .archio-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .brand-logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--color-primary-dark);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(15, 59, 122, 0.2);
+    }
+    .brand-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: block;
+      line-height: 1.2;
+    }
+    .brand-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      display: block;
+    }
+    .status-availability-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-status-green);
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* =============================================================
+       PHASE 1: HERO SECTION & FIRST IMPRESSION
+       ============================================================= */
+    .hero-section {
+      padding: 64px 0 72px 0;
+      background: radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 15% 85%, rgba(15, 59, 122, 0.05) 0%, transparent 50%),
+                  var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-copy-wrap {
+      max-width: 640px;
+    }
+    .hero-lead-text {
+      font-size: 18px;
+      color: var(--text-secondary);
+      line-height: 1.68;
+      margin-bottom: 30px;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+    .hero-trust-indicators {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .trust-indicator-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .trust-indicator-item svg {
+      color: var(--color-status-green);
+      flex-shrink: 0;
+    }
+
+    /* Realistic Website Maintenance Dashboard (Archio Styling) */
+    .hero-dashboard-card {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+    .hero-dashboard-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+    .hud-header {
+      background: var(--color-primary-deeper);
+      color: #ffffff;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .hud-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hud-dots {
+      display: flex;
+      gap: 5px;
+    }
+    .hud-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+    .hud-domain {
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #f8fafc;
+    }
+    .hud-status-badge {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .hud-body {
+      padding: 24px;
+      background: var(--bg-card-light);
+    }
+    .hud-metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .hud-metric-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-nested);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .hud-metric-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .hud-metric-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+    .hud-metric-value {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .hud-metric-sub {
+      font-size: 11.5px;
+      color: #15803d;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .hud-status-row {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-nested);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .hud-status-row strong {
+      color: var(--text-primary);
+    }
+    .hud-badge-clean {
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+    }
+    .hud-terminal {
+      background: var(--color-primary-deeper);
+      border-radius: var(--radius-nested);
+      padding: 14px 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11.5px;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .hud-terminal span.ok { color: #34d399; font-weight: 700; }
+    .hud-terminal span.info { color: #38bdf8; }
+
+    /* =============================================================
+       PHASE 2: TRUST BAR (IMMEDIATELY AFTER HERO)
+       ============================================================= */
+    .trust-bar-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 30px 0;
+    }
+    .trust-bar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .trust-bar-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .trust-bar-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-nested);
+      background: var(--color-pale-accent);
+      border: 1px solid #bcd5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-dark);
+      flex-shrink: 0;
+    }
+    .trust-bar-info h4 {
+      font-size: 14.5px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      color: var(--text-primary);
+    }
+    .trust-bar-info p {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    /* Client Logo Strip */
+    .client-strip-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 26px 0;
+      text-align: center;
+    }
+    .client-strip-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .client-logos-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+    .client-logo-item {
+      height: 28px;
+      opacity: 0.7;
+      filter: grayscale(100%);
+      transition: var(--transition-smooth);
+    }
+    .client-logo-item:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+
+    /* =============================================================
+       PHASE 2: PROBLEMS & BUSINESS IMPACT SECTION
+       ============================================================= */
+    .problems-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .problem-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .problem-archio-card {
+      background: #ffffff;
+      border: 1.5px solid #fee2e2;
+      border-radius: var(--radius-card);
+      padding: 32px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+    .problem-archio-card:hover {
+      border-color: #fca5a5;
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+    .problem-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      background: #fef2f2;
+      color: #b91c1c;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      border: 1px solid #fecaca;
+    }
+    .problem-archio-card h3 {
+      font-size: 20px;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .problem-impact-box {
+      background: #f8fafc;
+      border-left: 3px solid #ef4444;
+      padding: 10px 14px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 14px;
+    }
+    .problem-impact-label {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #ef4444;
+    }
+    .problem-impact-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+    .problem-desc {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .problem-cta-banner {
+      background: var(--color-primary-deeper);
+      color: #ffffff;
+      border-radius: var(--radius-card);
+      padding: 36px 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .problem-cta-banner h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .problem-cta-banner p {
+      color: #94a3b8;
+      font-size: 15px;
+    }
+    .problem-cta-banner .archio-btn-primary {
+      background: #ffffff;
+      color: var(--color-primary-dark);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .problem-cta-banner .archio-btn-primary:hover {
+      background: var(--color-pale-accent);
+    }
+
+    /* =============================================================
+       PHASE 3: SERVICES IN VISUAL CARDS
+       ============================================================= */
+    .services-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+    .service-archio-card {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 34px 28px;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+    .service-archio-card:hover {
+      border-color: #bcd5f5;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .service-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-nested);
+      background: var(--color-pale-accent);
+      border: 1px solid #bcd5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-dark);
+      margin-bottom: 20px;
+    }
+    .service-archio-card h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .service-archio-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+    .service-feature-list {
+      list-style: none;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .service-feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .service-feature-list li svg {
+      color: var(--color-status-green);
+      flex-shrink: 0;
+    }
+    .services-perks-bar {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-nested);
+      padding: 18px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 16px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-subtle);
+    }
+    .perk-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .perk-pill svg {
+      color: var(--color-primary-dark);
+    }
+
+    /* =============================================================
+       PHASE 3: DEDICATED MAINTENANCE PROCESS SECTION (4 STEPS)
+       ============================================================= */
+    .process-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .process-step-card {
+      background: var(--bg-card-light);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 30px 24px;
+      transition: var(--transition-smooth);
+    }
+    .process-step-card:hover {
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-3px);
+    }
+    .step-num-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary-dark);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(15, 59, 122, 0.25);
+    }
+    .process-step-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .process-step-card p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* =============================================================
+       PHASE 3: MAINTENANCE FREQUENCY & SCHEDULE SECTION
+       ============================================================= */
+    .schedule-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .schedule-archio-card {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-subtle);
+    }
+    .schedule-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .badge-daily { background: #dbeafe; color: #1e40af; }
+    .badge-weekly { background: #dcfce7; color: #15803d; }
+    .badge-monthly { background: #fef3c7; color: #92400e; }
+    .badge-quarterly { background: #f3e8ff; color: #6b21a8; }
+    .schedule-archio-card h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    .schedule-cadence-type {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .schedule-task-list {
+      list-style: none;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .schedule-task-list li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 18px;
+    }
+    .schedule-task-list li::before {
+      content: '•';
+      position: absolute;
+      left: 4px;
+      color: var(--color-primary-dark);
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    /* =============================================================
+       PHASE 4: DIY VS PROFESSIONAL MAINTENANCE COMPARISON
+       ============================================================= */
+    .comparison-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .comparison-table-container {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-subtle);
+      overflow-x: auto;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14.5px;
+    }
+    .comparison-table th {
+      background: var(--bg-card-light);
+      padding: 18px 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 15px;
+    }
+    .comparison-table td {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .comparison-table .param-col {
+      font-weight: 700;
+      color: var(--text-primary);
+      width: 25%;
+    }
+    .comparison-table .diy-col {
+      color: #64748b;
+      width: 37.5%;
+      background: rgba(248, 250, 252, 0.4);
+    }
+    .comparison-table .pro-col {
+      color: var(--text-primary);
+      font-weight: 600;
+      width: 37.5%;
+      background: #f0fdf4;
+    }
+    .pro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #15803d;
+      font-weight: 700;
+    }
+
+    /* =============================================================
+       PHASE 4: PRICING & MAINTENANCE PLANS
+       ============================================================= */
+    .plans-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+    .plan-archio-card {
+      background: #ffffff;
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 38px 32px;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+    .plan-archio-card:hover {
+      border-color: #bcd5f5;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .plan-archio-card.recommended {
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-card);
+    }
+    .recommended-pill {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary-dark);
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 16px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 4px 10px rgba(15, 59, 122, 0.3);
+    }
+    .plan-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .plan-subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .plan-price-block {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .price-currency {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .price-amount {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .price-period {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .plan-specs-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .spec-row {
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card-light);
+      display: flex;
+      justify-content: space-between;
+    }
+    .spec-row span.val {
+      font-weight: 700;
+      color: var(--color-primary-dark);
+    }
+    .plan-checklist {
+      list-style: none;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 30px;
+      flex-grow: 1;
+    }
+    .plan-checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .plan-checklist li svg {
+      color: var(--color-status-green);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .plan-action-wrap {
+      margin-top: auto;
+    }
+    .plan-action-wrap a {
+      width: 100%;
+    }
+    .plans-custom-bar {
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-nested);
+      padding: 20px 24px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-subtle);
+    }
+    .plans-custom-bar a {
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* =============================================================
+       PHASE 5: INDUSTRIES WE SERVE
+       ============================================================= */
+    .industries-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .industry-archio-card {
+      background: var(--bg-card-light);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 30px 26px;
+      transition: var(--transition-smooth);
+    }
+    .industry-archio-card:hover {
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+    .industry-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-nested);
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-dark);
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-subtle);
+    }
+    .industry-archio-card h3 {
+      font-size: 18.5px;
+      margin-bottom: 8px;
+    }
+    .industry-archio-card p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* =============================================================
+       PHASE 5: WHY CHOOSE GA DIGITAL SOLUTIONS
+       ============================================================= */
+    .why-ga-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .why-ga-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .why-archio-card {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+    .why-archio-card:hover {
+      border-color: #bcd5f5;
+      box-shadow: var(--shadow-card);
+    }
+    .why-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-nested);
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #15803d;
+      margin-bottom: 18px;
+    }
+    .why-archio-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .why-archio-card p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* =============================================================
+       PHASE 5: CLIENT TESTIMONIALS
+       ============================================================= */
+    .testimonials-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-archio-card {
+      background: var(--bg-card-light);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 34px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+    .testimonial-archio-card:hover {
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-card);
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      color: #f59e0b;
+      margin-bottom: 16px;
+    }
+    .testimonial-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text-primary);
+      font-style: italic;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+    .testimonial-client {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .client-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-pale-accent);
+      color: var(--color-primary-dark);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+    .client-details h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 1px;
+    }
+    .client-details p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* =============================================================
+       PHASE 6: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ============================================================= */
+    .faqs-section {
+      background: var(--bg-canvas);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .faq-accordion-container {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .faq-item-card {
+      background: #ffffff;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-nested);
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      transition: var(--transition-smooth);
+    }
+    .faq-item-card:hover {
+      border-color: #bcd5f5;
+    }
+    .faq-btn {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 26px;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-btn svg {
+      transition: transform 0.25s ease;
+      color: var(--color-primary-dark);
+      flex-shrink: 0;
+    }
+    .faq-item-card.open .faq-btn svg {
+      transform: rotate(180deg);
+    }
+    .faq-content {
+      display: none;
+      padding: 0 26px 22px 26px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+    }
+    .faq-item-card.open .faq-content {
+      display: block;
+    }
+
+    /* =============================================================
+       PHASE 4: ENQUIRY & FREE AUDIT FORM
+       ============================================================= */
+    .audit-section {
+      background: #ffffff;
+      padding: 84px 0 96px 0;
+    }
+    .audit-card {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-card);
+      padding: 48px;
+      box-shadow: var(--shadow-card);
+    }
+    .audit-header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    .audit-header h2 {
+      margin-bottom: 8px;
+    }
+    .audit-header p {
+      font-size: 16px;
+      color: var(--text-secondary);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 16px;
+      font-family: inherit;
+      font-size: 14.5px;
+      border: 1.5px solid var(--border-subtle);
+      border-radius: var(--radius-nested);
+      background: var(--bg-card-light);
+      color: var(--text-primary);
+      transition: var(--transition-smooth);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-primary-dark);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(15, 59, 122, 0.12);
+    }
+    .privacy-badge {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+    .success-confirmation {
+      display: none;
+      background: #f0fdf4;
+      border: 1.5px solid #86efac;
+      border-radius: var(--radius-nested);
+      padding: 26px;
+      text-align: center;
+    }
+    .success-confirmation h4 {
+      font-size: 19px;
+      color: #166534;
+      margin-bottom: 6px;
+    }
+    .success-confirmation p {
+      font-size: 14.5px;
+      color: #15803d;
+    }
+
+    /* =============================================================
+       ARCHIO FLOATING DOCK & FLOATING WIDGETS
+       ============================================================= */
+    .archio-floating-dock {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      background: rgba(8, 29, 61, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-pill);
+      padding: 6px 14px 6px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-dock);
+    }
+    .dock-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dock-link {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+    }
+    .dock-link:hover,
+    .dock-link.active {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .dock-divider {
+      width: 1px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .dock-scroll-progress {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dock-progress-svg {
+      width: 32px;
+      height: 32px;
+      transform: rotate(-90deg);
+    }
+    .dock-progress-bg-ring {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.15);
+      stroke-width: 3.2;
+    }
+    .dock-progress-fill-ring {
+      fill: none;
+      stroke: #0ea5e9;
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-dasharray: 100, 100;
+      stroke-dashoffset: 100;
+      transition: stroke-dashoffset 0.15s ease;
+    }
+    .dock-progress-val {
+      position: absolute;
+      font-size: 9px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .dock-cta-btn {
+      background: #0ea5e9;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+    }
+    .dock-cta-btn:hover {
+      background: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .v4-back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary-deeper);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-smooth);
+      z-index: 999;
+    }
+    .v4-back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .v4-back-to-top:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .sticky-wa-bubble {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      background: #25d366;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      z-index: 999;
+      transition: var(--transition-smooth);
+    }
+    .sticky-wa-bubble:hover {
+      background: #1eb956;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Responsive Rules */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .trust-bar-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .services-grid,
+      .plans-grid,
+      .industries-grid,
+      .why-ga-grid,
+      .testimonials-grid,
+      .process-grid,
+      .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .dock-links a:nth-child(n+6) {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      .archio-floating-dock {
+        display: none; /* Mobile uses standard bottom buttons */
+      }
+      .trust-bar-grid,
+      .problem-cards-grid,
+      .services-grid,
+      .plans-grid,
+      .industries-grid,
+      .why-ga-grid,
+      .testimonials-grid,
+      .process-grid,
+      .schedule-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .problem-cta-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .audit-card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Variant Preview Bar -->
+  <nav class="variant-preview-bar" aria-label="Switch Design Variants">
+    <span>Variants:</span>
+    <a href="website-maintenance.html">Variant 1 (Guide)</a>
+    <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry Landing Page)</a>
+    <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav Editorial)</a>
+    <a href="website-maintenance-variant-3.html">Variant 3 (Tech Agency)</a>
+    <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
+    <a href="website-maintenance-variant-4.2.html" class="active">Variant 4.2 (Archio Landing Page)</a>
+  </nav>
+
+  <!-- Architectural Header Navigation -->
+  <header class="archio-header">
+    <div class="archio-container">
+      <div class="archio-header-inner">
+        
+        <!-- Brand Logo Area -->
+        <a href="#hero" class="brand-logo-area">
+          <div class="brand-mark">G</div>
+          <div class="brand-text">
+            <span class="brand-name">GA Digital Solutions</span>
+            <span class="brand-sub">Website Maintenance Services</span>
+          </div>
+        </a>
+
+        <!-- Live Status Pill -->
+        <div class="status-availability-pill">
+          <span class="pulse-dot"></span>
+          <span>Engineers On-Call · 30-Min SLA</span>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="tel:+919849574618" class="archio-btn archio-btn-secondary" style="padding: 9px 18px; font-size: 13.5px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 98495 74618
+          </a>
+          <a href="#free-audit" class="archio-btn archio-btn-primary" style="padding: 9px 20px; font-size: 13.5px;">
+            Free Website Audit →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================================================
+       PHASE 1: HERO SECTION & FIRST IMPRESSION
+       Priority 1 - Must change: Headline, CTAs, Trust indicators, Dashboard visual
+       ============================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="archio-container">
+      <div class="hero-grid">
+        
+        <!-- Left: Editorial Copy -->
+        <div class="hero-copy-wrap">
+          <div class="section-tag">
+            <span class="pulse-dot"></span>
+            Proactive Website Maintenance &amp; Security Support
+          </div>
+
+          <h1>Your Website Needs More Than Hosting. <span class="serif-italic">It Needs Ongoing Care.</span></h1>
+
+          <p class="hero-lead-text">
+            Keep your website secure, updated, fast and running smoothly with reliable website maintenance services from GA Digital Solutions. We take care of the technical work so you can focus on growing your business.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta-group">
+            <a href="#free-audit" class="archio-btn archio-btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Get a Free Website Audit
+            </a>
+            <a href="#plans" class="archio-btn archio-btn-secondary">
+              Explore Maintenance Plans ↓
+            </a>
+          </div>
+
+          <!-- Compact Verified Trust Indicators -->
+          <div class="hero-trust-indicators">
+            <div class="trust-indicator-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>10+ Years Experience</span>
+            </div>
+            <div class="trust-indicator-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>250+ Websites Maintained</span>
+            </div>
+            <div class="trust-indicator-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>99.9% Uptime Monitored</span>
+            </div>
+            <div class="trust-indicator-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>15+ Industries Served</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Realistic Website Maintenance Dashboard Visual -->
+        <div class="hero-visual-wrap">
+          <div class="hero-dashboard-card" aria-label="Website Maintenance Real-Time Dashboard">
+            
+            <div class="hud-header">
+              <div class="hud-header-left">
+                <div class="hud-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <span class="hud-domain">yourbusiness.com</span>
+              </div>
+              <div class="hud-status-badge">
+                <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#34d399;"></span>
+                HEALTHY &amp; PROTECTED
+              </div>
+            </div>
+
+            <div class="hud-body">
+              <div class="hud-metrics-grid">
+                
+                <!-- Metric 1: Uptime -->
+                <div class="hud-metric-card">
+                  <div class="hud-metric-top">
+                    <span class="hud-metric-label">Website Uptime</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <div class="hud-metric-value">99.98%</div>
+                  <div class="hud-metric-sub">✓ 0 Outages (Last 30 Days)</div>
+                </div>
+
+                <!-- Metric 2: Security -->
+                <div class="hud-metric-card">
+                  <div class="hud-metric-top">
+                    <span class="hud-metric-label">Security Firewall</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </div>
+                  <div class="hud-metric-value" style="color: #10b981;">Clean</div>
+                  <div class="hud-metric-sub">✓ Zero Malware · SSL Active</div>
+                </div>
+
+                <!-- Metric 3: Backups -->
+                <div class="hud-metric-card">
+                  <div class="hud-metric-top">
+                    <span class="hud-metric-label">Cloud Backup</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0f3b7a" stroke-width="2"><path d="M19 14.5a4.5 4.5 0 0 0-4.5-4.5c-.3 0-.6.04-.9.1A6 6 0 1 0 3 15.5H19z"/><polyline points="12 12 12 18 15 15"/></svg>
+                  </div>
+                  <div class="hud-metric-value" style="font-size: 20px;">2 Hrs Ago</div>
+                  <div class="hud-metric-sub">✓ Daily Off-Site Snapshot</div>
+                </div>
+
+                <!-- Metric 4: Core Web Vitals -->
+                <div class="hud-metric-card">
+                  <div class="hud-metric-top">
+                    <span class="hud-metric-label">Core Web Vitals</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div class="hud-metric-value">96/100</div>
+                  <div class="hud-metric-sub">✓ LCP 1.1s · INP 38ms (Fast)</div>
+                </div>
+
+              </div>
+
+              <!-- Pending Updates Status -->
+              <div class="hud-status-row">
+                <div>
+                  <strong>CMS &amp; Plugins:</strong> 100% Up to Date
+                </div>
+                <span class="hud-badge-clean">0 Vulnerabilities</span>
+              </div>
+
+              <!-- Console Terminal -->
+              <div class="hud-terminal">
+                <div>[08:14:02] <span class="info">Automated Health Ping:</span> Response 200 OK (112ms)</div>
+                <div>[08:14:05] <span class="ok">Security Integrity:</span> WAF active, 0 malicious attempts</div>
+                <div>[08:14:10] <span class="ok">Backup Status:</span> Off-site AWS S3 verified (482MB)</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 2: TRUST BAR (IMMEDIATELY AFTER HERO)
+       Priority 2 - 4 verified service promises
+       ============================================================= -->
+  <section class="trust-bar-section">
+    <div class="archio-container">
+      <div class="trust-bar-grid">
+        
+        <div class="trust-bar-card">
+          <div class="trust-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          </div>
+          <div class="trust-bar-info">
+            <h4>Proactive Website Monitoring</h4>
+            <p>24/7 uptime surveillance and instant downtime alerting.</p>
+          </div>
+        </div>
+
+        <div class="trust-bar-card">
+          <div class="trust-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="trust-bar-info">
+            <h4>Regular Security Updates</h4>
+            <p>Continuous malware scanning and vulnerability patching.</p>
+          </div>
+        </div>
+
+        <div class="trust-bar-card">
+          <div class="trust-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          </div>
+          <div class="trust-bar-info">
+            <h4>Reliable Backup Management</h4>
+            <p>Automated off-site cloud storage and rapid 1-click restore.</p>
+          </div>
+        </div>
+
+        <div class="trust-bar-card">
+          <div class="trust-bar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="trust-bar-info">
+            <h4>Dedicated Technical Support</h4>
+            <p>Fast emergency response with guaranteed 30-min SLA.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logo Trust Marquee -->
+  <section class="client-strip-section">
+    <div class="archio-container">
+      <div class="client-strip-label">Trusted By Indian Businesses Across Healthcare, Real Estate, E-Commerce &amp; Education</div>
+      <div class="client-logos-row">
+        <img src="images/clients/deccan-prime.svg" alt="Deccan Prime" class="client-logo-item" onerror="this.src='images/clients/deccan-prime.jpg'">
+        <img src="images/clients/dr-rajesh-reddy.svg" alt="Dr. Rajesh Reddy" class="client-logo-item" onerror="this.src='images/clients/dr-rajesh-reddy.jpg'">
+        <img src="images/clients/nivi-homes.png" alt="Nivi Homes" class="client-logo-item">
+        <img src="images/clients/cpvia.png" alt="CPVIA" class="client-logo-item">
+        <img src="images/clients/gsm-global.png" alt="GSM Global" class="client-logo-item">
+        <img src="images/clients/healing-hastha.png" alt="Healing Hastha" class="client-logo-item">
+        <img src="images/clients/teacher-plus.png" alt="Teacher Plus" class="client-logo-item">
+        <img src="images/clients/tanatan-india.svg" alt="Tanatan India" class="client-logo-item" onerror="this.src='images/clients/tanatan-india.jpg'">
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 2: WEBSITE MAINTENANCE PROBLEM SECTION
+       Priority 2 - Speaks directly to business owners with 4 visual cards
+       ============================================================= -->
+  <section class="archio-section problems-section" id="cost-neglect">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          The Cost of Neglect
+        </div>
+        <h2>Why Does Your Business Need Website Maintenance?</h2>
+        <p class="section-subtitle">Business owners who skip maintenance often believe they are saving money. In reality, waiting for something to break leads to expensive emergencies, lost customer trust, and vanished Google rankings.</p>
+      </div>
+
+      <div class="problem-cards-grid">
+        
+        <!-- Card 1 -->
+        <div class="problem-archio-card">
+          <div class="problem-badge">Problem 1: Outdated Plugins</div>
+          <h3>Vulnerable Code &amp; Hack Exposure</h3>
+          <div class="problem-impact-box">
+            <div class="problem-impact-label">Business Impact:</div>
+            <div class="problem-impact-val">Security Vulnerabilities &amp; Google Blacklisting</div>
+          </div>
+          <p class="problem-desc">
+            Over 95% of compromised websites are breached through outdated plugins and themes. Once hacked, Google displays prominent "Deceptive Site Ahead" security warnings that immediately destroy 90%+ of your web traffic.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="problem-archio-card">
+          <div class="problem-badge">Problem 2: Slow Loading Speed</div>
+          <h3>Creeping Bloat &amp; Performance Loss</h3>
+          <div class="problem-impact-box">
+            <div class="problem-impact-label">Business Impact:</div>
+            <div class="problem-impact-val">Lost Visitors, High Bounce Rates &amp; Dropped Enquiries</div>
+          </div>
+          <p class="problem-desc">
+            53% of mobile users abandon a website that takes longer than 3 seconds to load. Uncompressed uploads, cluttered databases, and inefficient scripts silently drain your conversion rates and inflate your Google Ads cost.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="problem-archio-card">
+          <div class="problem-badge">Problem 3: Broken Forms &amp; Links</div>
+          <h3>Silent Technical Malfunctions</h3>
+          <div class="problem-impact-box">
+            <div class="problem-impact-label">Business Impact:</div>
+            <div class="problem-impact-val">Missed Business Opportunities &amp; Wasted Ad Budget</div>
+          </div>
+          <p class="problem-desc">
+            Following automatic server or PHP updates, lead capture forms, payment checkouts, and booking calendars frequently break silently. Visitors attempt to contact you, encounter errors, and bounce to competitors without leaving a trace.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="problem-archio-card">
+          <div class="problem-badge">Problem 4: No Regular Backups</div>
+          <h3>Zero Recovery Safety Net</h3>
+          <div class="problem-impact-box">
+            <div class="problem-impact-label">Business Impact:</div>
+            <div class="problem-impact-val">Catastrophic Risk of Total Data Loss &amp; Days of Downtime</div>
+          </div>
+          <p class="problem-desc">
+            Web hosting providers rarely take comprehensive, off-site daily backups. When a server failure or accidental deletion occurs, restoring a website without a recent clean snapshot can cost upwards of ₹25,000+ with zero guarantee of recovery.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="problem-cta-banner">
+        <div>
+          <h3>Don't Wait for Your Website to Break. Get It Maintained.</h3>
+          <p>Protect your brand reputation, customer pipeline, and revenue with proactive technical care.</p>
+        </div>
+        <a href="#free-audit" class="archio-btn archio-btn-primary">
+          Get Started with Proactive Care →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 3: SERVICES IN VISUAL CARDS
+       Priority 3 - Visual 2/3 column card layout, clear deliverables
+       ============================================================= -->
+  <section class="archio-section services-section" id="services">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Core Deliverables
+        </div>
+        <h2>What Is Included in Our Website Maintenance Services?</h2>
+        <p class="section-subtitle">We provide full-stack technical, security, and content management so your digital storefront never skips a beat.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Service 1 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Security Monitoring</h3>
+          <p>Continuous malware scanning, Web Application Firewall (WAF) deployment, brute-force login blocking, SSL certification checks, and vulnerability patching.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated 24/7 malware detection</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Brute-force &amp; DDoS shielding</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 100% clean site guarantee</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>CMS &amp; Plugin Updates</h3>
+          <p>Weekly updates for WordPress core, themes, and third-party extensions. All updates are tested in an isolated staging environment before deployment to prevent crashes.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Staging compatibility verification</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Safe rollback protection</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> PHP stack compatibility checks</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14.5a4.5 4.5 0 0 0-4.5-4.5c-.3 0-.6.04-.9.1A6 6 0 1 0 3 15.5H19z"/><polyline points="12 12 12 18 15 15"/></svg>
+          </div>
+          <h3>Website Backups</h3>
+          <p>Automated daily and weekly off-site cloud backups stored securely on Amazon Web Services (AWS) or Google Cloud with rapid, tested 1-click restoration support.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Multi-region cloud storage</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Up to 90-day snapshot retention</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1-click disaster recovery</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Performance Optimisation</h3>
+          <p>Continuous loading speed monitoring, asset minification, Redis caching, database indexing, and Google Core Web Vitals (LCP, INP, CLS) fine-tuning.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> WebP image compression</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Interaction to Next Paint (INP) tuning</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Database bloat &amp; transient cleanups</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Website Health Checks</h3>
+          <p>Routine diagnostic scans across your site to detect and fix broken links, 404 errors, form submission failures, cart checkout hitches, and SSL expirations.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Broken link &amp; 404 repair</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Form submission testing</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cross-browser rendering audits</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-archio-card">
+          <div class="service-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>Content &amp; Technical Updates</h3>
+          <p>Routine website changes handled promptly by our web team. Upload new banners, update text, publish blog posts, add products, and fix styling quirks without stress.</p>
+          <ul class="service-feature-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Text, image &amp; banner updates</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Product &amp; pricing revisions</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Included hours in every plan</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Supporting Inclusions Bar -->
+      <div class="services-perks-bar">
+        <div class="perk-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span>24/7 Uptime Monitoring (60s Pings)</span>
+        </div>
+        <div class="perk-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <span>Database Cleanup &amp; Indexing</span>
+        </div>
+        <div class="perk-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <span>Mobile UX Responsiveness Checks</span>
+        </div>
+        <div class="perk-pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>Dedicated WhatsApp Engineer Support</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 3: DEDICATED MAINTENANCE PROCESS SECTION (4 STEPS)
+       ============================================================= -->
+  <section class="archio-section process-section" id="process">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Methodology
+        </div>
+        <h2>Our Website Maintenance Process</h2>
+        <p class="section-subtitle">A proven, four-step methodology to transition your website from reactive firefighting to automated, reliable stability.</p>
+      </div>
+
+      <div class="process-grid">
+        
+        <div class="process-step-card">
+          <div class="step-num-badge">01</div>
+          <h3>Website Audit</h3>
+          <p>We perform an in-depth 20-point diagnostic of your website’s current code, speed bottlenecks, security vulnerabilities, plugin conflicts, and server configuration.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-num-badge">02</div>
+          <h3>Maintenance Planning</h3>
+          <p>We fix accumulated technical debt, eliminate obsolete plugins, establish off-site backup pipelines, and define a custom maintenance scope tailored to your business.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-num-badge">03</div>
+          <h3>Ongoing Maintenance</h3>
+          <p>Our engineers execute scheduled weekly updates, daily automated backups, 24/7 uptime monitoring, security scans, and continuous speed optimization.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-num-badge">04</div>
+          <h3>Reporting &amp; Support</h3>
+          <p>Receive clear monthly health reports showing updates applied, uptime statistics, and performance gains, backed by our guaranteed 30-min emergency SLA.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 3: MAINTENANCE FREQUENCY SECTION
+       ============================================================= -->
+  <section class="archio-section schedule-section" id="schedule">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Execution Cadence
+        </div>
+        <h2>Website Maintenance Schedule &amp; Frequency</h2>
+        <p class="section-subtitle">Transparency in action: clearly distinguishing between 24/7 automated systems and hands-on engineer reviews.</p>
+      </div>
+
+      <div class="schedule-grid">
+        
+        <div class="schedule-archio-card">
+          <div class="schedule-badge-pill badge-daily">Daily Cadence</div>
+          <h3>Daily Maintenance</h3>
+          <div class="schedule-cadence-type">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Automated Monitoring
+          </div>
+          <ul class="schedule-task-list">
+            <li>24/7 Uptime pinging every 60 seconds</li>
+            <li>Automated off-site cloud database &amp; file backup</li>
+            <li>Web application firewall (WAF) live tracking</li>
+            <li>Brute-force attack &amp; bot traffic mitigation</li>
+          </ul>
+        </div>
+
+        <div class="schedule-archio-card">
+          <div class="schedule-badge-pill badge-weekly">Weekly Cadence</div>
+          <h3>Weekly Maintenance</h3>
+          <div class="schedule-cadence-type">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Automated + Engineer Verified
+          </div>
+          <ul class="schedule-task-list">
+            <li>Core CMS, plugin &amp; theme security patches</li>
+            <li>Staging environment compatibility testing</li>
+            <li>Lead form and checkout transaction verification</li>
+            <li>Broken link scanner &amp; 404 error mitigation</li>
+          </ul>
+        </div>
+
+        <div class="schedule-archio-card">
+          <div class="schedule-badge-pill badge-monthly">Monthly Cadence</div>
+          <h3>Monthly Maintenance</h3>
+          <div class="schedule-cadence-type">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Manual Specialist Review
+          </div>
+          <ul class="schedule-task-list">
+            <li>Full Core Web Vitals (LCP, INP, CLS) speed audit</li>
+            <li>Database optimization &amp; transient table cleanup</li>
+            <li>Comment &amp; user spam purging</li>
+            <li>Itemized monthly maintenance &amp; uptime report</li>
+          </ul>
+        </div>
+
+        <div class="schedule-archio-card">
+          <div class="schedule-badge-pill badge-quarterly">Quarterly Cadence</div>
+          <h3>Quarterly Maintenance</h3>
+          <div class="schedule-cadence-type">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="12 8 8 12 12 16 16 12 12 8"/></svg>
+            Senior Lead Strategic Review
+          </div>
+          <ul class="schedule-task-list">
+            <li>Server PHP version &amp; hosting infrastructure check</li>
+            <li>Full deep security audit &amp; penetration review</li>
+            <li>Mobile usability &amp; UX conversion review</li>
+            <li>Search engine crawlability &amp; XML sitemap hygiene</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 4: DIY VS PROFESSIONAL MAINTENANCE COMPARISON
+       ============================================================= -->
+  <section class="archio-section comparison-section" id="diy-vs-pro">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          Resource Tradeoffs
+        </div>
+        <h2>DIY vs. Professional Website Maintenance</h2>
+        <p class="section-subtitle">Understanding why outsourcing technical care to specialists saves business owners time, stress, and costly downtime.</p>
+      </div>
+
+      <div class="comparison-table-container">
+        <table class="comparison-table" aria-label="Comparison between DIY and Professional Website Maintenance">
+          <thead>
+            <tr>
+              <th class="param-col">Evaluation Factor</th>
+              <th class="diy-col">In-House / DIY Maintenance</th>
+              <th class="pro-col">GA Digital Professional Maintenance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="param-col">Technical Knowledge</td>
+              <td class="diy-col">Requires ongoing server, database, security, and PHP coding knowledge.</td>
+              <td class="pro-col"><span class="pro-badge">✓ Handled by Specialists:</span> Dedicated team of seasoned web engineers and security experts.</td>
+            </tr>
+            <tr>
+              <td class="param-col">Time &amp; Focus</td>
+              <td class="diy-col">Requires regular personal attention that pulls you away from running your business.</td>
+              <td class="pro-col"><span class="pro-badge">✓ Zero Effort for You:</span> Proactive scheduled maintenance runs quietly in the background.</td>
+            </tr>
+            <tr>
+              <td class="param-col">Troubleshooting Speed</td>
+              <td class="diy-col">Troubleshooting crashes can take hours or days of frustrating online searches.</td>
+              <td class="pro-col"><span class="pro-badge">✓ Guaranteed 30-Min SLA:</span> Rapid diagnostics with dedicated developer response times.</td>
+            </tr>
+            <tr>
+              <td class="param-col">Update Safety</td>
+              <td class="diy-col">High risk of updates breaking layout or causing fatal "white screen of death".</td>
+              <td class="pro-col"><span class="pro-badge">✓ Staging Tested:</span> Every plugin and theme update is tested in staging before live deploy.</td>
+            </tr>
+            <tr>
+              <td class="param-col">Backup Reliability</td>
+              <td class="diy-col">Backups are frequently forgotten or stored on the same vulnerable web server.</td>
+              <td class="pro-col"><span class="pro-badge">✓ Redundant Cloud Backups:</span> Automated daily off-site snapshots with tested 1-click restore.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 4: PRICING & MAINTENANCE PLANS
+       ============================================================= -->
+  <section class="archio-section plans-section" id="plans">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          Predictable Pricing
+        </div>
+        <h2>Website Maintenance Plans from GA Digital Solutions</h2>
+        <p class="section-subtitle">Transparent pricing, clear inclusions, and zero long-term lock-in. Choose the level of care your business requires.</p>
+      </div>
+
+      <div class="plans-grid">
+        
+        <!-- Plan 1 -->
+        <div class="plan-archio-card">
+          <div class="plan-title">Basic Care</div>
+          <div class="plan-subtitle">For small websites, portfolios &amp; blogs</div>
+
+          <div class="plan-price-block">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">2,499</span>
+            <span class="price-period">/ month</span>
+          </div>
+
+          <div class="plan-specs-col">
+            <div class="spec-row"><span>Websites Covered:</span> <span class="val">1 Website</span></div>
+            <div class="spec-row"><span>Included Tech Support:</span> <span class="val">2 Hours / mo</span></div>
+            <div class="spec-row"><span>Support SLA:</span> <span class="val">24-Hr Email Response</span></div>
+          </div>
+
+          <ul class="plan-checklist">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> WordPress core &amp; plugin security updates</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Weekly off-site cloud backups (30-day retention)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Uptime monitoring (15-min intervals)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> SSL certificate &amp; domain expiry tracking</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Monthly health summary email</li>
+          </ul>
+
+          <div class="plan-action-wrap">
+            <a href="#free-audit" class="archio-btn archio-btn-secondary">
+              Choose Basic Care →
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan 2: Recommended -->
+        <div class="plan-archio-card recommended">
+          <div class="recommended-pill">Most Popular Care Plan</div>
+          <div class="plan-title">Growth Care</div>
+          <div class="plan-subtitle">For growing businesses &amp; lead-generation sites</div>
+
+          <div class="plan-price-block">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">5,999</span>
+            <span class="price-period">/ month</span>
+          </div>
+
+          <div class="plan-specs-col">
+            <div class="spec-row"><span>Websites Covered:</span> <span class="val">1 Website</span></div>
+            <div class="spec-row"><span>Included Tech Support:</span> <span class="val">5 Hours / mo</span></div>
+            <div class="spec-row"><span>Support SLA:</span> <span class="val">4-Hr Priority Response</span></div>
+          </div>
+
+          <ul class="plan-checklist">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Basic Care, plus:</strong></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Daily off-site cloud backups (60-day retention)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Uptime monitoring (1-min intervals)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Core Web Vitals speed tuning &amp; image optimization</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Form submission testing &amp; broken link repair</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Staging environment testing for updates</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Detailed monthly executive performance report</li>
+          </ul>
+
+          <div class="plan-action-wrap">
+            <a href="#free-audit" class="archio-btn archio-btn-primary">
+              Choose Growth Care →
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-archio-card">
+          <div class="plan-title">Advanced Care</div>
+          <div class="plan-subtitle">For e-commerce, portals &amp; mission-critical sites</div>
+
+          <div class="plan-price-block">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">12,999</span>
+            <span class="price-period">/ month</span>
+          </div>
+
+          <div class="plan-specs-col">
+            <div class="spec-row"><span>Websites Covered:</span> <span class="val">Up to 2 Websites</span></div>
+            <div class="spec-row"><span>Included Tech Support:</span> <span class="val">12 Hours / mo</span></div>
+            <div class="spec-row"><span>Support SLA:</span> <span class="val">30-Min Emergency SLA</span></div>
+          </div>
+
+          <ul class="plan-checklist">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Everything in Growth Care, plus:</strong></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-time / 6-hour continuous cloud backups</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> E-commerce cart &amp; payment gateway checkout testing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dedicated WhatsApp technical support bridge</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Guaranteed malware removal &amp; hack repair</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Database indexing &amp; server configuration tuning</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Quarterly technical roadmap &amp; advisory</li>
+          </ul>
+
+          <div class="plan-action-wrap">
+            <a href="#free-audit" class="archio-btn archio-btn-secondary">
+              Choose Advanced Care →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="plans-custom-bar">
+        Need custom inclusions, multiple websites, or an enterprise SLA? <a href="#free-audit">Discuss your requirements with our technical lead →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 5: INDUSTRIES WE SERVE
+       ============================================================= -->
+  <section class="archio-section industries-section" id="industries">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Industry Practice
+        </div>
+        <h2>Industries We Serve</h2>
+        <p class="section-subtitle">Every industry faces distinct digital risks. We configure our maintenance protocols to match your industry's exact operational requirements.</p>
+      </div>
+
+      <div class="industries-grid">
+        
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Healthcare &amp; Clinics</h3>
+          <p>Ensuring 100% doctor appointment booking uptime, strict patient data privacy, SSL encryption, and accurate practitioner schedules.</p>
+        </div>
+
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Real Estate &amp; Builders</h3>
+          <p>High-resolution property image CDN compression, fast CRM enquiry capture, interactive project map stability, and brochure download monitoring.</p>
+        </div>
+
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Education &amp; Institutes</h3>
+          <p>Ensuring high-traffic admission portals remain responsive during intake seasons, fee payment gateway stability, and timely circular updates.</p>
+        </div>
+
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h3>E-Commerce &amp; Retail</h3>
+          <p>Zero-downtime shopping carts, uninterrupted payment gateway webhooks, inventory synchronization, and PCI-DSS compliant hosting maintenance.</p>
+        </div>
+
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Professional Services &amp; B2B</h3>
+          <p>High-converting lead capture forms, fast corporate portfolio loading, client portal uptime, and clean corporate brand representation.</p>
+        </div>
+
+        <div class="industry-archio-card">
+          <div class="industry-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Custom Web Applications</h3>
+          <p>Laravel, React, Node, and custom PHP database monitoring, background cron verification, API integration health, and server security hardening.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 5: WHY CHOOSE GA DIGITAL SOLUTIONS
+       ============================================================= -->
+  <section class="archio-section why-ga-section" id="why-ga">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Differentiators
+        </div>
+        <h2>Why Businesses Trust GA Digital Solutions</h2>
+        <p class="section-subtitle">No generic promises. We provide disciplined engineering, transparent reporting, and dependable technical execution.</p>
+      </div>
+
+      <div class="why-ga-grid">
+        
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+          </div>
+          <h3>Technical &amp; Content Support Under One Roof</h3>
+          <p>No need to manage separate developers, security consultants, and content writers. We resolve server bugs, patch plugins, and update your site content seamlessly.</p>
+        </div>
+
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Structured Maintenance Schedules</h3>
+          <p>No guesswork. We follow disciplined daily, weekly, and monthly checklists so every component of your website is verified, backed up, and protected consistently.</p>
+        </div>
+
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Clear Communication &amp; Transparent Reporting</h3>
+          <p>Receive comprehensive, jargon-free monthly reports detailing exact updates performed, speed scores, security logs, and uptime statistics.</p>
+        </div>
+
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Flexible Plans Tailored to Your Stack</h3>
+          <p>Whether you operate on WordPress, WooCommerce, Shopify, Laravel, or custom HTML, we tailor our security rules and backup intervals to your architecture.</p>
+        </div>
+
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>Proactive Ongoing Improvement</h3>
+          <p>We do not just wait for tickets. We proactively identify speed bottlenecks, database bloat, and usability frictions to ensure your site performs better every quarter.</p>
+        </div>
+
+        <div class="why-archio-card">
+          <div class="why-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Emergency SLA &amp; Clean Site Guarantee</h3>
+          <p>Should an emergency strike, our engineers respond within 30 minutes. In the rare event of malware infection, we restore and sanitize your site at zero extra charge.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 5: GENUINE CLIENT TESTIMONIALS
+       ============================================================= -->
+  <section class="archio-section testimonials-section" id="testimonials">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Client Track Record
+        </div>
+        <h2>Client Testimonials &amp; Proven Track Record</h2>
+        <p class="section-subtitle">What business owners and marketing directors say about partnering with GA Digital Solutions.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-archio-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Before partnering with GA Digital Solutions, our clinic’s appointment booking form would silently fail after automatic WordPress updates. Since onboarding onto their Growth Care plan, we have had zero downtime and 100% reliable lead capture."
+          </p>
+          <div class="testimonial-client">
+            <div class="client-avatar">DR</div>
+            <div class="client-details">
+              <h4>Dr. Rajesh Reddy</h4>
+              <p>Director, Medical &amp; Healthcare Services</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-archio-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Their emergency SLA is real. When our server experienced a database lockup during a major marketing campaign, GA Digital restored full functionality in under 25 minutes. They are an essential part of our digital operations."
+          </p>
+          <div class="testimonial-client">
+            <div class="client-avatar">SK</div>
+            <div class="client-details">
+              <h4>Suresh Kumar</h4>
+              <p>Managing Director, Deccan Prime Logistics</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-archio-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Our WooCommerce store loading speed dropped from 4.8 seconds to 1.2 seconds after GA Digital overhauled our caching and image delivery. Maintenance with GA Digital easily pays for itself every month through higher sales conversions."
+          </p>
+          <div class="testimonial-client">
+            <div class="client-avatar">PS</div>
+            <div class="client-details">
+              <h4>Pooja Sharma</h4>
+              <p>Head of Digital, Himalaya Exports</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 6: FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ============================================================= -->
+  <section class="archio-section faqs-section" id="faqs">
+    <div class="archio-container">
+      
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Direct Answers
+        </div>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about our website maintenance services, SLAs, and technical protocols.</p>
+      </div>
+
+      <div class="faq-accordion-container">
+        
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>Will updating plugins or CMS break my live website?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>No. We follow strict engineering safety protocols. Before applying updates to your production website, we create a full backup and test plugin/theme updates in an isolated staging environment. If an update causes a conflict, we troubleshoot and resolve it before deploying to your live visitors.</p>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>How quickly do you respond if my website goes down?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>Our automated monitoring systems check your website every 60 seconds from multiple global checkpoints. If an outage occurs, our on-call engineers are immediately dispatched. Under our Advanced Care plan, we guarantee a 30-minute emergency response SLA to diagnose and restore service.</p>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>Do you provide maintenance for custom-built websites or just WordPress?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>We maintain WordPress, WooCommerce, Shopify, Laravel, React, Node.js, and custom PHP/HTML websites. Our full-stack engineering team understands server infrastructure, database queries, and custom APIs.</p>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>What happens if my website gets hacked while under your care?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>Our Growth and Advanced plans include a 100% Clean Site Guarantee. In the rare event of a security breach or malicious injection, our security engineers will sanitize your database, remove all backdoors, clean blacklists with Google, and restore complete operational security at zero extra charge.</p>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>Can you help with routine content, product, and banner updates?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>Yes! Every plan includes dedicated technical maintenance hours that can be used for text modifications, banner updates, uploading new blog posts, adjusting pricing, or adding new products. Simply email our support desk and our developers will implement changes promptly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button type="button" class="faq-btn">
+            <span>Is there a long-term contract or lock-in?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-content">
+            <p>No. All maintenance plans operate on a flexible month-to-month billing cycle. You are free to upgrade, downgrade, or cancel your maintenance subscription at any time with 15 days' notice. We believe in earning your business every single month through proven execution.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============================================================
+       PHASE 4: ENQUIRY & FREE AUDIT FORM
+       ============================================================= -->
+  <section class="audit-section" id="free-audit">
+    <div class="archio-container">
+      <div class="audit-card">
+        
+        <div class="audit-header">
+          <div class="section-tag">Zero Sales Pressure</div>
+          <h2>Request Your Free 15-Point Website Audit</h2>
+          <p>Uncover hidden speed bottlenecks, security vulnerabilities, and broken links before they cost you business.</p>
+        </div>
+
+        <form id="v4AuditForm" onsubmit="handleV4AuditSubmit(event)">
+          <div class="form-grid">
+            
+            <div class="form-group">
+              <label for="v4Name">Your Full Name *</label>
+              <input type="text" id="v4Name" name="name" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label for="v4Email">Business Email *</label>
+              <input type="email" id="v4Email" name="email" placeholder="rahul@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="v4Phone">Phone / WhatsApp Number *</label>
+              <input type="tel" id="v4Phone" name="phone" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label for="v4Url">Website URL *</label>
+              <input type="url" id="v4Url" name="website" placeholder="https://yourwebsite.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="v4Platform">Website Platform</label>
+              <select id="v4Platform" name="platform">
+                <option value="WordPress">WordPress</option>
+                <option value="WooCommerce">WooCommerce (E-Commerce)</option>
+                <option value="Shopify">Shopify</option>
+                <option value="Custom PHP / Laravel">Custom PHP / Laravel</option>
+                <option value="React / Next.js">React / Next.js / Node</option>
+                <option value="Other / Not Sure">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="v4Plan">Interested Maintenance Plan</label>
+              <select id="v4Plan" name="plan">
+                <option value="Growth Care (Recommended)">Growth Care (₹5,999/mo) — Most Popular</option>
+                <option value="Basic Care">Basic Care (₹2,499/mo)</option>
+                <option value="Advanced Care">Advanced Care (₹12,999/mo)</option>
+                <option value="Custom Scope / Multiple Sites">Custom Scope / Multiple Sites</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="v4Message">Current Website Challenges or Maintenance Needs</label>
+              <textarea id="v4Message" name="message" rows="3" placeholder="Tell us about any specific issues you're facing (e.g. slow speed, plugin errors, lack of backups, security concerns)..."></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit" class="archio-btn archio-btn-primary" style="width: 100%; font-size: 16px; padding: 16px;">
+            Request My Free Website Audit →
+          </button>
+
+          <p class="privacy-badge">
+            🔒 <strong>100% Confidential.</strong> Zero spam. Your comprehensive 15-point audit report will be delivered to your email within 24 business hours.
+          </p>
+
+          <div id="v4SuccessMsg" class="success-confirmation" style="margin-top: 22px;">
+            <h4>✓ Thank You! Audit Request Received</h4>
+            <p>Our senior web engineer will inspect your website and email your customized 15-point performance and security audit report within 24 hours.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Archio Floating Dock Navigation -->
+  <nav class="archio-floating-dock" aria-label="Quick Dock Navigation">
+    <div class="dock-links">
+      <a href="#hero" class="dock-link active">Overview</a>
+      <a href="#cost-neglect" class="dock-link">Why Care</a>
+      <a href="#services" class="dock-link">Services</a>
+      <a href="#process" class="dock-link">Process</a>
+      <a href="#schedule" class="dock-link">Schedule</a>
+      <a href="#diy-vs-pro" class="dock-link">DIY vs Pro</a>
+      <a href="#plans" class="dock-link">Plans</a>
+      <a href="#industries" class="dock-link">Industries</a>
+      <a href="#faqs" class="dock-link">FAQs</a>
+    </div>
+    
+    <div class="dock-divider" aria-hidden="true"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="dock-scroll-progress" id="dockScrollProgress" title="Click to scroll to top" aria-label="Page read progress">
+      <svg class="dock-progress-svg" viewBox="0 0 36 36">
+        <path class="dock-progress-bg-ring"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+        <path class="dock-progress-fill-ring" id="dockProgressPath"
+              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+      </svg>
+      <span class="dock-progress-val" id="dockProgressVal">0%</span>
+    </div>
+
+    <a href="#free-audit" class="dock-cta-btn">
+      <span>Free Audit &rarr;</span>
+    </a>
+  </nav>
+
+  <!-- Floating Go to Top Button -->
+  <button type="button" class="v4-back-to-top" id="v4BackToTop" aria-label="Go to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Sticky WhatsApp Floating Button -->
+  <a href="https://wa.me/919849574618?text=Hello%20GA%20Digital,%20I%20am%20interested%20in%20your%20website%20maintenance%20services" target="_blank" rel="noopener noreferrer" class="sticky-wa-bubble" title="Chat with technical support on WhatsApp">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
+    Chat With Us
+  </a>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item-card').forEach(i => i.classList.remove('open'));
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // Form Submission
+    function handleV4AuditSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('v4AuditForm');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const successMsg = document.getElementById('v4SuccessMsg');
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Analyzing & Submitting...</span>';
+
+      setTimeout(() => {
+        submitBtn.style.display = 'none';
+        successMsg.style.display = 'block';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1000);
+    }
+
+    // Scroll Progress & Active Dock Link
+    (function() {
+      const progressPath = document.getElementById('dockProgressPath');
+      const progressVal = document.getElementById('dockProgressVal');
+      const topBtn = document.getElementById('v4BackToTop');
+      const dockLinks = document.querySelectorAll('.dock-link');
+      const sections = document.querySelectorAll('section[id]');
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = Math.min(Math.max(scrollY / (docHeight || 1), 0), 1);
+        const percent = Math.round(progress * 100);
+
+        if (progressPath) progressPath.style.strokeDashoffset = 100 - percent;
+        if (progressVal) progressVal.textContent = percent + '%';
+
+        if (topBtn) {
+          if (scrollY > 350) {
+            topBtn.classList.add('is-visible');
+          } else {
+            topBtn.classList.remove('is-visible');
+          }
+        }
+
+        // Active dock link tracking
+        let currentSection = '';
+        sections.forEach(sec => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= 140 && rect.bottom >= 140) {
+            currentSection = sec.getAttribute('id');
+          }
+        });
+
+        if (currentSection) {
+          dockLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + currentSection) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      const progressCircle = document.getElementById('dockScrollProgress');
+      if (progressCircle) {
+        progressCircle.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      if (topBtn) {
+        topBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
