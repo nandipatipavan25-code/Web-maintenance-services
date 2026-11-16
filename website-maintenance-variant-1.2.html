@@ -206,52 +206,95 @@
     }
 
     /* Header Nav */
-    .main-header {
-      background: var(--bg-white);
+    .ga-main-nav {
+      background: #ffffff;
       border-bottom: 1px solid var(--border-subtle);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow-sm);
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
     }
-    .main-header-inner {
+    .ga-nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 74px;
+      height: 72px;
     }
-    .brand-logo {
+    .ga-brand-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
       text-decoration: none;
     }
-    .brand-logo-img {
-      height: 44px;
+    .ga-brand-logo img {
+      height: 42px;
       width: auto;
-      object-fit: contain;
+      display: block;
     }
-    .nav-links {
+    .ga-nav-menu {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    .nav-links a {
-      color: var(--text-dark);
-      text-decoration: none;
+    .ga-nav-menu > li > a {
+      font-size: 14.5px;
       font-weight: 600;
-      font-size: 15px;
+      color: #1e293b;
+      padding: 8px 0;
+      text-decoration: none;
       transition: var(--transition);
     }
-    .nav-links a:hover,
-    .nav-links a.active {
+    .ga-nav-menu > li > a:hover {
       color: var(--primary);
     }
-    .nav-cta-group {
+    .ga-nav-menu > li > a.active {
+      color: var(--primary);
+    }
+    .ga-nav-actions {
       display: flex;
       align-items: center;
       gap: 14px;
+    }
+
+    .btn-nav-whatsapp {
+      background: #25d366;
+      color: #ffffff !important;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none !important;
+      transition: var(--transition);
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+    }
+    .btn-nav-whatsapp:hover {
+      background: #20ba5a;
+      transform: translateY(-1px);
+    }
+
+    .btn-nav-audit {
+      background: var(--primary-gradient);
+      color: #ffffff !important;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none !important;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(26, 72, 149, 0.25);
+    }
+    .btn-nav-audit:hover {
+      background: linear-gradient(135deg, #13356f 0%, #1a4895 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(26, 72, 149, 0.35);
     }
 
     /* Buttons */
@@ -1523,7 +1566,7 @@
 
     @media (max-width: 768px) {
       .ga-top-bar { display: none; }
-      .nav-links { display: none; }
+      .ga-nav-menu { display: none; }
       .hero-trust-indicators { grid-template-columns: repeat(2, 1fr); }
       .trust-bar-grid { grid-template-columns: 1fr; }
       .problems-grid { grid-template-columns: 1fr; }
@@ -1729,33 +1772,36 @@
   </aside>
 
   <!-- Main Navigation Header -->
-  <header class="main-header" role="banner">
+  <header class="ga-main-nav" role="banner">
     <div class="gads-container">
-      <div class="main-header-inner">
-        <a href="index.html" class="brand-logo" aria-label="GA Digital Solutions Home">
-          <img src="logo.png" alt="GA Digital Solutions Logo" class="brand-logo-img">
+      <div class="ga-nav-inner">
+        
+        <!-- Logo -->
+        <a href="https://www.gadigitalsolutions.com/" class="ga-brand-logo" title="GA Digital Solutions">
+          <img src="https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg" onerror="this.onerror=null; this.src='images/GADS-LOGO.svg';" alt="GA Digital Solutions Logo" height="42">
         </a>
 
-        <nav class="nav-menu" aria-label="Main Navigation">
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#plans-pricing">Maintenance Plans</a></li>
-            <li><a href="#audit-breakdown">15-Point Audit</a></li>
-            <li><a href="#diy-vs-pro">Why Outsource</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-          </ul>
-        </nav>
+        <!-- Main Navigation Links -->
+        <ul class="ga-nav-menu">
+          <li><a href="https://www.gadigitalsolutions.com/">Home</a></li>
+          <li><a href="https://www.gadigitalsolutions.com/services/website-development">Web Development</a></li>
+          <li><a href="website-maintenance.html" class="active">Maintenance</a></li>
+          <li><a href="https://www.gadigitalsolutions.com/services/seo">SEO Services</a></li>
+          <li><a href="#plans-pricing">Pricing</a></li>
+          <li><a href="#audit-form">Contact</a></li>
+        </ul>
 
-        <div class="nav-cta-group">
-          <a href="https://wa.me/919989042335?text=Hello%20GA%20Digital,%20I%20am%20interested%20in%20website%20maintenance%20services" target="_blank" rel="noopener noreferrer" class="btn-gads-wa" aria-label="Chat on WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/></svg>
+        <!-- Direct Actions -->
+        <div class="ga-nav-actions">
+          <a href="https://wa.me/919989042335?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20Website%20Maintenance%20Services" class="btn-nav-whatsapp" target="_blank" rel="noopener noreferrer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             WhatsApp
           </a>
-          <a href="#audit-form" class="btn-gads-primary">
-            Free Audit &rarr;
+          <a href="#audit-form" class="btn-nav-audit">
+            Claim Free Audit &rarr;
           </a>
         </div>
+
       </div>
     </div>
   </header>
@@ -3167,7 +3213,7 @@
       
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="logo.png" alt="GA Digital Solutions" style="height: 42px; margin-bottom: 14px; filter: brightness(0) invert(1);">
+          <img src="https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg" onerror="this.onerror=null; this.src='images/GADS-LOGO.svg';" alt="GA Digital Solutions" style="height: 42px; margin-bottom: 14px; filter: brightness(0) invert(1);">
           <p style="color: #cbd5e1; font-size: 13.5px; line-height: 1.6; margin-bottom: 14px;">
             GA Digital Solutions is a premier digital agency providing dependable website maintenance, WordPress support, Core Web Vitals optimization, and technical web engineering across India.
           </p>
