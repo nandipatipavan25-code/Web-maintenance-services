@@ -509,7 +509,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
     .hud-metric-box {
       background: #1e293b;
@@ -538,6 +538,49 @@
       font-weight: 600;
     }
     .hud-m-status.info { color: #38bdf8; }
+
+    /* HUD Pending Updates Card */
+    .hud-pending-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: var(--radius-md);
+      padding: 11px 14px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .hud-pending-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hud-pending-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .hud-uptime-bar {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-top: 5px;
+    }
+    .hud-uptime-tick {
+      flex: 1;
+      height: 8px;
+      border-radius: 1px;
+      background: #10b981;
+    }
 
     /* HUD Terminal Feed */
     .hud-terminal-feed {
@@ -1881,28 +1924,54 @@
                 </div>
 
                 <div class="hud-metrics-grid">
+                  <!-- 1. Website Uptime -->
                   <div class="hud-metric-box">
-                    <div class="hud-m-title">Uptime Monitoring</div>
-                    <div class="hud-m-val">99.9% <span style="font-size: 12px; color: #94a3b8; font-weight: 500;">target</span></div>
-                    <div class="hud-m-status">&#10003; Automated 60s Health Pings</div>
+                    <div class="hud-m-title">Website Uptime</div>
+                    <div class="hud-m-val">99.98% <span style="font-size: 11.5px; color: #94a3b8; font-weight: 500;">(30d)</span></div>
+                    <div class="hud-m-status">&#10003; 0 Outages &middot; 60s Health Pings</div>
+                    <div class="hud-uptime-bar" title="30-Day continuous uptime telemetry: 100% operational">
+                      <span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span>
+                    </div>
                   </div>
 
+                  <!-- 2. Security Status -->
                   <div class="hud-metric-box">
                     <div class="hud-m-title">Security &amp; WAF Status</div>
-                    <div class="hud-m-val" style="color: #34d399;">Clean</div>
+                    <div class="hud-m-val" style="color: #34d399;">Clean &amp; Shielded</div>
                     <div class="hud-m-status">&#10003; 0 Critical Vulnerabilities</div>
+                    <div style="font-size: 10.5px; color: #94a3b8; margin-top: 4px;">SSL 256-Bit Active &middot; Daily Scan PASS</div>
                   </div>
 
+                  <!-- 3. Backup Status -->
                   <div class="hud-metric-box">
-                    <div class="hud-m-title">Cloud Backup</div>
-                    <div class="hud-m-val" style="font-size: 17px;">2 hrs ago</div>
-                    <div class="hud-m-status info">&#10003; Off-site S3 Encrypted Snapshot</div>
+                    <div class="hud-m-title">Backup Status</div>
+                    <div class="hud-m-val" style="font-size: 18px;">2 hrs ago</div>
+                    <div class="hud-m-status info">&#10003; Daily AWS S3 Snapshot</div>
+                    <div style="font-size: 10.5px; color: #94a3b8; margin-top: 4px;">482 MB &middot; 1-Click Restore Point Verified</div>
                   </div>
 
+                  <!-- 4. Performance Monitoring -->
                   <div class="hud-metric-box">
-                    <div class="hud-m-title">Core Web Vitals</div>
+                    <div class="hud-m-title">Performance Monitoring</div>
                     <div class="hud-m-val" style="color: #38bdf8;">96 <span style="font-size: 13px; color: #94a3b8;">/ 100</span></div>
-                    <div class="hud-m-status">&#10003; LCP 1.1s &middot; INP 38ms</div>
+                    <div class="hud-m-status">&#10003; Core Web Vitals (Fast)</div>
+                    <div style="font-size: 10.5px; color: #94a3b8; margin-top: 4px;">LCP 1.1s &middot; INP 38ms &middot; CLS 0.01</div>
+                  </div>
+                </div>
+
+                <!-- 5. Pending Updates & Safe Staging -->
+                <div class="hud-pending-card">
+                  <div class="hud-pending-left">
+                    <div class="hud-m-title" style="margin-bottom: 2px;">Pending Updates &amp; Staging</div>
+                    <div style="font-size: 13px; font-weight: 700; color: #ffffff;">
+                      3 Patches Tested in Staging Sandbox
+                    </div>
+                    <div style="font-size: 11px; color: #94a3b8;">
+                      WordPress 6.7 Core &middot; WooCommerce &middot; Yoast SEO &mdash; <span style="color: #34d399; font-weight: 600;">0 Conflicts Detected</span>
+                    </div>
+                  </div>
+                  <div class="hud-pending-badge">
+                    <span>&#9881; Regression Tested</span>
                   </div>
                 </div>
 
@@ -1916,17 +1985,17 @@
                   <div class="terminal-row">
                     <span class="terminal-time">11:35:00</span>
                     <span class="terminal-ok">[PASS]</span>
-                    <span>Automated ping: HTTP 200 OK &middot; Latency 42ms</span>
+                    <span>Automated ping: HTTP 200 OK &middot; Latency 42ms &middot; 0 packet loss</span>
                   </div>
                   <div class="terminal-row">
                     <span class="terminal-time">11:35:12</span>
-                    <span class="terminal-info">[INFO]</span>
-                    <span>3 pending plugin patches staged for sandbox verification</span>
+                    <span class="terminal-info">[STAGING]</span>
+                    <span>3 pending plugin patches regression tested on staging copy</span>
                   </div>
                   <div class="terminal-row">
                     <span class="terminal-time">11:35:30</span>
                     <span class="terminal-ok">[PASS]</span>
-                    <span>Lead capture form test payload processed successfully</span>
+                    <span>Cloud backup integrity verified: 482 MB encrypted snapshot</span>
                   </div>
                 </div>
 

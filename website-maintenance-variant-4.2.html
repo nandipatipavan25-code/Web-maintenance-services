@@ -486,6 +486,46 @@
       padding: 3px 9px;
       border-radius: var(--radius-pill);
     }
+
+    /* HUD Pending Updates Card */
+    .hud-pending-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-nested);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow-subtle);
+    }
+    .hud-pending-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hud-pending-badge {
+      background: #fef3c7;
+      color: #b45309;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      border: 1px solid #fde68a;
+    }
+    .hud-uptime-bar {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-top: 5px;
+    }
+    .hud-uptime-tick {
+      flex: 1;
+      height: 7px;
+      border-radius: 1px;
+      background: #10b981;
+    }
     .hud-terminal {
       background: var(--color-primary-deeper);
       border-radius: var(--radius-nested);
@@ -1824,61 +1864,74 @@
             <div class="hud-body">
               <div class="hud-metrics-grid">
                 
-                <!-- Metric 1: Uptime -->
+                <!-- Metric 1: Website Uptime -->
                 <div class="hud-metric-card">
                   <div class="hud-metric-top">
                     <span class="hud-metric-label">Website Uptime</span>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                   </div>
                   <div class="hud-metric-value">99.98%</div>
-                  <div class="hud-metric-sub">✓ 0 Outages (Last 30 Days)</div>
+                  <div class="hud-metric-sub">✓ 0 Outages &middot; 60s Health Pings</div>
+                  <div class="hud-uptime-bar" title="30-Day continuous health ping telemetry">
+                    <span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span><span class="hud-uptime-tick"></span>
+                  </div>
                 </div>
 
-                <!-- Metric 2: Security -->
+                <!-- Metric 2: Security Status -->
                 <div class="hud-metric-card">
                   <div class="hud-metric-top">
                     <span class="hud-metric-label">Security Firewall</span>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                   </div>
                   <div class="hud-metric-value" style="color: #10b981;">Clean</div>
-                  <div class="hud-metric-sub">✓ Zero Malware · SSL Active</div>
+                  <div class="hud-metric-sub">✓ Zero Malware &middot; SSL Active</div>
+                  <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">WAF Protected &middot; 256-Bit SHA-2</div>
                 </div>
 
-                <!-- Metric 3: Backups -->
+                <!-- Metric 3: Backup Status -->
                 <div class="hud-metric-card">
                   <div class="hud-metric-top">
-                    <span class="hud-metric-label">Cloud Backup</span>
+                    <span class="hud-metric-label">Backup Status</span>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0f3b7a" stroke-width="2"><path d="M19 14.5a4.5 4.5 0 0 0-4.5-4.5c-.3 0-.6.04-.9.1A6 6 0 1 0 3 15.5H19z"/><polyline points="12 12 12 18 15 15"/></svg>
                   </div>
-                  <div class="hud-metric-value" style="font-size: 20px;">2 Hrs Ago</div>
+                  <div class="hud-metric-value" style="font-size: 21px;">2 Hrs Ago</div>
                   <div class="hud-metric-sub">✓ Daily Off-Site Snapshot</div>
+                  <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">AWS S3 Encrypted &middot; 482 MB</div>
                 </div>
 
-                <!-- Metric 4: Core Web Vitals -->
+                <!-- Metric 4: Performance Monitoring -->
                 <div class="hud-metric-card">
                   <div class="hud-metric-top">
-                    <span class="hud-metric-label">Core Web Vitals</span>
+                    <span class="hud-metric-label">Performance Monitoring</span>
                     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                   </div>
-                  <div class="hud-metric-value">96/100</div>
-                  <div class="hud-metric-sub">✓ LCP 1.1s · INP 38ms (Fast)</div>
+                  <div class="hud-metric-value" style="color: #0f3b7a;">96/100</div>
+                  <div class="hud-metric-sub">✓ Core Web Vitals (Fast)</div>
+                  <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">LCP 1.1s &middot; INP 38ms &middot; CLS 0.01</div>
                 </div>
 
               </div>
 
-              <!-- Pending Updates Status -->
-              <div class="hud-status-row">
-                <div>
-                  <strong>CMS &amp; Plugins:</strong> 100% Up to Date
+              <!-- Metric 5: Pending Updates & Safe Staging -->
+              <div class="hud-pending-card">
+                <div class="hud-pending-left">
+                  <span class="hud-metric-label" style="margin-bottom: 2px;">Pending Updates &amp; Staging</span>
+                  <div style="font-size: 13.5px; font-weight: 700; color: var(--text-primary);">
+                    3 Patches Tested in Staging Sandbox
+                  </div>
+                  <div style="font-size: 11px; color: var(--text-muted);">
+                    WordPress 6.7 Core &middot; WooCommerce &middot; Yoast SEO &mdash; <strong style="color: #15803d;">0 Conflicts Detected</strong>
+                  </div>
                 </div>
-                <span class="hud-badge-clean">0 Vulnerabilities</span>
+                <span class="hud-pending-badge">&#9881; Safe Sandbox Verified</span>
               </div>
 
               <!-- Console Terminal -->
               <div class="hud-terminal">
-                <div>[08:14:02] <span class="info">Automated Health Ping:</span> Response 200 OK (112ms)</div>
-                <div>[08:14:05] <span class="ok">Security Integrity:</span> WAF active, 0 malicious attempts</div>
-                <div>[08:14:10] <span class="ok">Backup Status:</span> Off-site AWS S3 verified (482MB)</div>
+                <div>[08:14:02] <span class="info">Automated Health Ping:</span> Response 200 OK (Latency 42ms) &middot; 0 downtime</div>
+                <div>[08:14:05] <span class="ok">Security Integrity:</span> Cloudflare WAF active, 0 malicious attempts</div>
+                <div>[08:14:10] <span class="ok">Backup Status:</span> Off-site AWS S3 encrypted snapshot verified (482MB)</div>
+                <div>[08:14:15] <span class="info">Pending Updates:</span> 3 patches staged &amp; regression tested before live push</div>
               </div>
             </div>
 
