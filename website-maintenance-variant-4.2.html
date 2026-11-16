@@ -1593,12 +1593,118 @@
       }
     }
   </style>
+  <!-- Unified Top Variant Switcher Preview Bar -->
+  <style id="unified-variant-preview-css">
+    .variant-preview-bar {
+      background-color: #07172c !important;
+      color: #e4effe !important;
+      padding: 6px 20px !important;
+      font-size: 13px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      z-index: 9999 !important;
+      border-bottom: 1px solid rgba(228, 239, 254, 0.15) !important;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      min-height: 42px !important;
+      line-height: normal !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+    }
+    .variant-preview-bar::-webkit-scrollbar {
+      display: none !important;
+    }
+    .variant-preview-bar * {
+      box-sizing: border-box !important;
+    }
+    .variant-preview-bar .badge-label {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      font-size: 12px !important;
+      letter-spacing: 0.04em !important;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+    }
+    .variant-preview-bar .badge-label .dot {
+      color: #38bdf8 !important;
+      font-size: 10px !important;
+      display: inline-block !important;
+    }
+    .variant-preview-bar .badge-label strong {
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      letter-spacing: 0.04em !important;
+    }
+    .variant-preview-bar .nav-variants {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+    }
+    .variant-preview-bar .nav-variants a {
+      color: rgba(228, 239, 254, 0.8) !important;
+      font-weight: 500 !important;
+      font-size: 12px !important;
+      padding: 4px 10px !important;
+      border-radius: 9999px !important;
+      border: 1px solid transparent !important;
+      text-decoration: none !important;
+      transition: all 0.2s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      line-height: 1.3 !important;
+      white-space: nowrap !important;
+      background: transparent !important;
+    }
+    .variant-preview-bar .nav-variants a:hover {
+      color: #ffffff !important;
+      border-color: rgba(228, 239, 254, 0.35) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+    }
+    .variant-preview-bar .nav-variants a.active {
+      color: #07172c !important;
+      background-color: #ffffff !important;
+      font-weight: 700 !important;
+      border-color: #ffffff !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
+    }
+    @media (max-width: 992px) {
+      .variant-preview-bar {
+        flex-direction: column !important;
+        gap: 6px !important;
+        align-items: flex-start !important;
+        padding: 8px 16px !important;
+        min-height: auto !important;
+      }
+      .variant-preview-bar .nav-variants {
+        width: 100% !important;
+        overflow-x: auto !important;
+        padding-bottom: 2px !important;
+      }
+      .variant-preview-bar .nav-variants a {
+        font-size: 11.5px !important;
+        padding: 3px 8px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Variant Preview Bar -->
-  <nav class="nav-variants" aria-label="Switch Design Variants">
-      <span style="color: #94a3b8; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
+    <!-- Variant Preview Bar & Switcher -->
+  <aside class="variant-preview-bar" aria-label="Variant Navigation">
+    <div class="badge-label">
+      <span class="dot">●</span>
+      <strong>VARIANT 4.2 PREVIEW</strong>
+    </div>
+    <nav class="nav-variants" aria-label="Switch Design Variants">
+      <span style="color: #94a3b8; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
       <a href="website-maintenance.html">Variant 1 (Guide)</a>
       <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry Page)</a>
       <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav)</a>
@@ -1606,6 +1712,7 @@
       <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
       <a href="website-maintenance-variant-4.2.html" class="active">Variant 4.2 (Archio Enquiry)</a>
     </nav>
+  </aside>
 
   <!-- Architectural Header Navigation -->
   <header class="archio-header">
