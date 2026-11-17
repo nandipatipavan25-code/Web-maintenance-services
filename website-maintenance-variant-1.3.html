@@ -1771,6 +1771,71 @@
       }
     }
   </style>
+<style>
+    /* Editorial SaaS Banners */
+    .v13-section-banner {
+      width: 100%;
+      height: 360px;
+      max-height: 360px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 24px 0 32px 0;
+      border: 1px solid var(--border, #e2e8f0);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      background-color: #ffffff;
+      position: relative;
+    }
+    .v13-section-banner img {
+      width: 100%;
+      height: 360px;
+      max-height: 360px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .v13-section-banner:hover img {
+      transform: scale(1.015);
+    }
+    @media (max-width: 768px) {
+      .v13-section-banner {
+        height: 200px;
+        max-height: 200px;
+        border-radius: 12px;
+        margin: 18px 0 22px 0;
+      }
+      .v13-section-banner img {
+        height: 200px;
+        max-height: 200px;
+      }
+    }
+
+    /* Client Marquee Strip */
+    .v13-client-marquee {
+      padding: 24px 0 10px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .v13-client-marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .v13-client-logo {
+      height: 32px;
+      max-height: 32px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.7);
+      transition: filter 0.25s ease, transform 0.25s ease;
+    }
+    .v13-client-logo:hover {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
 
@@ -2064,8 +2129,23 @@
           </div>
 
         </div>
-      </div>
-    </section>
+      
+        <div class="v13-client-marquee">
+          <p style="text-align: center; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin-bottom: 16px;">
+            Trusted by Indian Companies &amp; Institutions Across Healthcare, Real Estate &amp; Education
+          </p>
+          <div class="v13-client-marquee-track">
+            <img src="images/clients/deccan-prime.svg" alt="Deccan Prime" class="v13-client-logo" onerror="this.src='images/clients/deccan-prime.jpg'">
+            <img src="images/clients/dr-rajesh-reddy.svg" alt="Dr. Rajesh Reddy" class="v13-client-logo" onerror="this.src='images/clients/dr-rajesh-reddy.jpg'">
+            <img src="images/clients/nivi-homes.png" alt="Nivi Homes" class="v13-client-logo">
+            <img src="images/clients/cpvia.png" alt="CPVIA" class="v13-client-logo">
+            <img src="images/clients/gsm-global.png" alt="GSM Global" class="v13-client-logo">
+            <img src="images/clients/healing-hastha.png" alt="Healing Hastha" class="v13-client-logo">
+            <img src="images/clients/teacher-plus.png" alt="Teacher Plus" class="v13-client-logo">
+            <img src="images/clients/tanatan-india.svg" alt="Tanatan India" class="v13-client-logo" onerror="this.src='images/clients/tanatan-india.jpg'">
+          </div>
+        </div>
+</div></section>
 
     <!-- =========================================================
          SECTION 3: PROBLEM VS BUSINESS IMPACT
@@ -2079,6 +2159,11 @@
             Skipping maintenance can look like a saving. The cost usually shows up later, as a hacked site, lost enquiries, or an emergency repair.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-why-maintenance-matters.jpg" alt="Why Website Maintenance Matters for Businesses" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="problems-grid">
           <!-- Problem 1 -->
@@ -2165,6 +2250,11 @@
           </p>
         </div>
 
+        <div class="v13-section-banner">
+          <img src="banner-what-is-website-maintenance.jpg" alt="Website Maintenance Services Scope" width="1200" height="360" loading="lazy">
+        </div>
+
+
         <div class="services-grid">
           <!-- Service 1 -->
           <div class="service-card">
@@ -2235,6 +2325,11 @@
             Before you choose a plan, you can see exactly where your website stands. Our web engineers check 15 points across four areas.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-10-maintenance-tasks.jpg" alt="15-Point Website Health Diagnostic" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="audit-pillars-grid">
           <!-- Pillar 1 -->
@@ -2316,6 +2411,11 @@
             A transparent schedule of automated 24/7 monitoring and developer-led engineering maintenance across daily, weekly, monthly, and quarterly intervals.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-maintenance-schedule.jpg" alt="Website Maintenance Schedule Framework" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="schedule-grid">
           <!-- Daily -->
@@ -2422,6 +2522,11 @@
           </p>
         </div>
 
+        <div class="v13-section-banner">
+          <img src="banner-diy-vs-professional.jpg" alt="DIY vs Professional Website Maintenance" width="1200" height="360" loading="lazy">
+        </div>
+
+
         <div class="comparison-table-wrap">
           <table class="diy-comparison-table">
             <thead>
@@ -2475,6 +2580,11 @@
             Clear monthly prices, clear inclusions, and no long-term contract. Choose the level of care your business needs.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-maintenance-plans.jpg" alt="Website Maintenance Plans & Pricing" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="plans-grid">
           <!-- Plan 1: Basic Care -->
@@ -2684,6 +2794,11 @@
           </p>
         </div>
 
+        <div class="v13-section-banner">
+          <img src="banner-industries-served.jpg" alt="Industries We Serve Across India" width="1200" height="360" loading="lazy">
+        </div>
+
+
         <div class="industries-grid">
           <!-- Healthcare -->
           <div class="industry-card">
@@ -2754,6 +2869,11 @@
             Honest engineering, transparent communication, and technical expertise you can rely on.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-choose-partner.jpg" alt="Why Choose GA Digital Solutions" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="diff-grid">
           <!-- Pillar 1 -->
@@ -2944,6 +3064,11 @@
             Common questions about plan inclusions, response times, contracts, and how we care for your website.
           </p>
         </div>
+
+        <div class="v13-section-banner">
+          <img src="banner-faqs.jpg" alt="Website Maintenance Frequently Asked Questions" width="1200" height="360" loading="lazy">
+        </div>
+
 
         <div class="faqs-accordion-wrap">
           <!-- FAQ 1 -->

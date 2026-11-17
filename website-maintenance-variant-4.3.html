@@ -1740,6 +1740,118 @@
       }
     }
   </style>
+<style>
+    /* Editorial 3D Banners */
+    .section-editorial-banner {
+      width: 100%;
+      height: 380px;
+      max-height: 380px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 28px 0 36px 0;
+      border: 1px solid var(--border-subtle, #dbe7f4);
+      box-shadow: 0 10px 30px rgba(15, 59, 122, 0.08);
+      background-color: var(--bg-card, #ffffff);
+      position: relative;
+    }
+    .section-editorial-banner img {
+      width: 100%;
+      height: 380px;
+      max-height: 380px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .section-editorial-banner:hover img {
+      transform: scale(1.02);
+    }
+    @media (max-width: 768px) {
+      .section-editorial-banner {
+        height: 220px;
+        max-height: 220px;
+        border-radius: 14px;
+        margin: 20px 0 24px 0;
+      }
+      .section-editorial-banner img {
+        height: 220px;
+        max-height: 220px;
+      }
+    }
+
+    /* Refined Light Styling for 15-Point Audit Breakdown */
+    .audit-breakdown-section {
+      background-color: #ffffff !important;
+      border-top: 1px solid var(--border-subtle, #dbe7f4) !important;
+      border-bottom: 1px solid var(--border-subtle, #dbe7f4) !important;
+      padding: 96px 0 !important;
+    }
+    .audit-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .audit-pillar-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle, #dbe7f4);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 18px rgba(15, 59, 122, 0.05);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .audit-pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: #0ea5e9;
+      box-shadow: 0 12px 28px rgba(15, 59, 122, 0.12);
+    }
+    .audit-pillar-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f3b7a;
+      background: #e4effe;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .audit-pillar-card h3 {
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-primary, #0d1726);
+      margin: 0 0 14px 0;
+    }
+    .audit-pillar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .audit-pillar-list li {
+      font-size: 13.5px;
+      color: var(--text-secondary, #4b5563);
+      line-height: 1.6;
+      padding: 6px 0;
+      border-top: 1px dashed rgba(15, 59, 122, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .audit-pillar-list li::before {
+      content: "✓";
+      color: #0ea5e9;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+</style>
 </head>
 <body>
 
@@ -2038,6 +2150,11 @@
         <p class="section-subtitle">Most businesses only think about their website when it goes down. In practice, websites deteriorate gradually long before they fail completely.</p>
       </div>
 
+      <div class="section-editorial-banner">
+        <img src="banner-v4-why-matters.jpg" alt="Why Website Maintenance Matters for Businesses" width="1200" height="380" loading="lazy">
+      </div>
+
+
       <div class="problem-cards-grid">
         
         <!-- Card 1 -->
@@ -2122,6 +2239,11 @@
         <h2>What Our Website Maintenance Includes</h2>
         <p class="section-subtitle">Every website maintenance engagement covers the fundamentals required to keep your site fast, safe, and generating business.</p>
       </div>
+
+      <div class="section-editorial-banner">
+        <img src="banner-v4-what-is-website-maintenance.jpg" alt="What Is Website Maintenance Graphic" width="1200" height="380" loading="lazy">
+      </div>
+
 
       <div class="services-grid">
         
@@ -2235,7 +2357,8 @@
   </section>
 
   <!-- SECTION: 15-POINT WEBSITE AUDIT COVERS -->
-  <section class="archio-section audit-breakdown-section" id="audit-breakdown" style="background: var(--bg-surface, #0c182c); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    <!-- SECTION 3: 15-POINT WEBSITE AUDIT COVERS -->
+  <section class="archio-section audit-breakdown-section" id="audit-breakdown">
     <div class="archio-container">
       <div class="section-header">
         <div class="section-tag">
@@ -2246,49 +2369,57 @@
         <p class="section-subtitle">Before recommending any maintenance plan, we run a comprehensive diagnostic on your website. Here is exactly what our senior engineers inspect:</p>
       </div>
 
-      <div class="problem-cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <div class="problem-archio-card">
-          <div class="problem-badge">01 · Security Diagnostic</div>
+      <div class="section-editorial-banner">
+        <img src="banner-v4-10-tasks.jpg" alt="15-Point Website Health Diagnostic" width="1200" height="380" loading="lazy">
+      </div>
+
+      <div class="audit-grid-4">
+        <!-- Pillar 1 -->
+        <div class="audit-pillar-card">
+          <div class="audit-pillar-badge">01 · Security Diagnostic</div>
           <h3>Security &amp; Integrity</h3>
-          <p class="problem-desc" style="margin-top: 12px; font-size: 14px; line-height: 1.7; color: #cbd5e1;">
-            • SSL certificate validity &amp; HTTPS security<br>
-            • Outdated core, theme &amp; plugin versions<br>
-            • Exposed administration &amp; default login paths<br>
-            • Known malware signatures &amp; blacklist status
-          </p>
+          <ul class="audit-pillar-list">
+            <li>SSL certificate validity &amp; HTTPS security</li>
+            <li>Outdated core, theme &amp; plugin versions</li>
+            <li>Exposed administration &amp; default login paths</li>
+            <li>Known malware signatures &amp; blacklist status</li>
+          </ul>
         </div>
 
-        <div class="problem-archio-card">
-          <div class="problem-badge">02 · Performance Diagnostic</div>
+        <!-- Pillar 2 -->
+        <div class="audit-pillar-card">
+          <div class="audit-pillar-badge">02 · Performance Diagnostic</div>
           <h3>Speed &amp; Vitals</h3>
-          <p class="problem-desc" style="margin-top: 12px; font-size: 14px; line-height: 1.7; color: #cbd5e1;">
-            • PageSpeed score &amp; Core Web Vitals (LCP, INP)<br>
-            • Time to First Byte (TTFB) &amp; server response<br>
-            • Uncompressed images &amp; render-blocking CSS<br>
-            • Browser caching headers &amp; asset compression
-          </p>
+          <ul class="audit-pillar-list">
+            <li>Google PageSpeed score &amp; Core Web Vitals (LCP, INP)</li>
+            <li>Time to First Byte (TTFB) &amp; server latency</li>
+            <li>Uncompressed images &amp; render-blocking CSS</li>
+            <li>Browser caching headers &amp; gzip/brotli compression</li>
+          </ul>
         </div>
 
-        <div class="problem-archio-card">
-          <div class="problem-badge">03 · UX &amp; Deliverability</div>
+        <!-- Pillar 3 -->
+        <div class="audit-pillar-card">
+          <div class="audit-pillar-badge">03 · UX &amp; Deliverability</div>
           <h3>Mobile &amp; UX Health</h3>
-          <p class="problem-desc" style="margin-top: 12px; font-size: 14px; line-height: 1.7; color: #cbd5e1;">
-            • Mobile responsiveness &amp; viewport scaling<br>
-            • Broken internal &amp; external links (404s)<br>
-            • Contact &amp; lead form deliverability tests<br>
-            • Navigation menu usability on mobile devices
-          </p>
+          <ul class="audit-pillar-list">
+            <li>Mobile responsiveness &amp; viewport scaling</li>
+            <li>Broken internal &amp; external links (404s)</li>
+            <li>Contact &amp; lead form deliverability tests</li>
+            <li>Navigation menu usability on mobile touchscreens</li>
+          </ul>
         </div>
 
-        <div class="problem-archio-card">
-          <div class="problem-badge">04 · Google Crawl Health</div>
+        <!-- Pillar 4 -->
+        <div class="audit-pillar-card">
+          <div class="audit-pillar-badge">04 · Search Engine Crawl</div>
           <h3>Search Visibility</h3>
-          <p class="problem-desc" style="margin-top: 12px; font-size: 14px; line-height: 1.7; color: #cbd5e1;">
-            • XML sitemap validity &amp; indexing status<br>
-            • Robots.txt directives &amp; disallow rules<br>
-            • Fundamental meta title &amp; description tags<br>
-            • Google Search Console crawl errors &amp; warnings
-          </p>
+          <ul class="audit-pillar-list">
+            <li>XML sitemap presence &amp; indexing status</li>
+            <li>Robots.txt directives &amp; disallow crawl rules</li>
+            <li>Fundamental meta title &amp; description tags</li>
+            <li>Google Search Console crawl errors &amp; warnings</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -2355,6 +2486,11 @@
         <h2>How Often We Do What</h2>
         <p class="section-subtitle">Good website maintenance follows a structured operational rhythm. Here is our exact frequency schedule:</p>
       </div>
+
+      <div class="section-editorial-banner">
+        <img src="banner-v4-maintenance-schedule.jpg" alt="Website Maintenance Schedule Framework" width="1200" height="380" loading="lazy">
+      </div>
+
 
       <div class="schedule-grid">
         
@@ -2438,6 +2574,11 @@
         <p class="section-subtitle">Compare managing website health in-house versus outsourcing to our dedicated engineering team:</p>
       </div>
 
+      <div class="section-editorial-banner">
+        <img src="banner-v4-diy-vs-professional.jpg" alt="DIY vs Professional Website Maintenance" width="1200" height="380" loading="lazy">
+      </div>
+
+
       <div class="comparison-table-container">
         <table class="comparison-table" aria-label="Comparison between DIY and Professional Website Maintenance">
           <thead>
@@ -2494,6 +2635,11 @@
         <h2>Website Maintenance Plans</h2>
         <p class="section-subtitle">Transparent pricing, clear inclusions, and zero long-term lock-in. Choose the level of care your business requires.</p>
       </div>
+
+      <div class="section-editorial-banner">
+        <img src="banner-v4-maintenance-plans.jpg" alt="Website Maintenance Plans &amp; Pricing" width="1200" height="380" loading="lazy">
+      </div>
+
 
       <div class="plans-grid">
         
@@ -2622,6 +2768,11 @@
         <p class="section-subtitle">Different websites depend on different technical components working seamlessly. Here is what we prioritize for each industry:</p>
       </div>
 
+      <div class="section-editorial-banner">
+        <img src="banner-v4-industries.jpg" alt="Industries Served Across India" width="1200" height="380" loading="lazy">
+      </div>
+
+
       <div class="industries-grid">
         
         <div class="industry-archio-card">
@@ -2691,6 +2842,11 @@
         <h2>Why Choose GA Digital Solutions</h2>
         <p class="section-subtitle">We are not a ticket mill or a distant call center. We are an engineering-led digital agency based in Hyderabad that treats your website like our own.</p>
       </div>
+
+      <div class="section-editorial-banner">
+        <img src="banner-v4-choose-partner.jpg" alt="Why Businesses Choose GA Digital Solutions" width="1200" height="380" loading="lazy">
+      </div>
+
 
       <div class="why-ga-grid">
         
@@ -2993,6 +3149,11 @@
         <h2>Frequently Asked Questions</h2>
         <p class="section-subtitle">Everything you need to know about our website maintenance services, SLAs, and technical protocols.</p>
       </div>
+
+      <div class="section-editorial-banner">
+        <img src="banner-v4-faqs.jpg" alt="Website Maintenance FAQs" width="1200" height="380" loading="lazy">
+      </div>
+
 
       <div class="faq-accordion-container">
         
