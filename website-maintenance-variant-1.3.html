@@ -218,17 +218,41 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
       height: 72px;
     }
     .ga-brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      gap: 12px;
       text-decoration: none;
+      flex-shrink: 0;
+      min-width: 185px;
     }
-    .ga-brand-logo img {
-      height: 42px;
-      width: auto;
+    .brand-logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
       display: block;
+    }
+    .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+    }
+    .brand-logo-text .brand-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #1a4895;
+    }
+    .brand-logo-text .brand-subtitle {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #2296d3;
+      margin-top: 3px;
     }
     .ga-nav-menu {
       display: flex;
@@ -237,25 +261,30 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      flex-shrink: 1;
+    }
+    .ga-nav-menu > li {
+      white-space: nowrap;
     }
     .ga-nav-menu > li > a {
       font-size: 14.5px;
       font-weight: 600;
       color: #1e293b;
-      padding: 8px 0;
+      padding: 8px 4px;
       text-decoration: none;
+      white-space: nowrap;
       transition: var(--transition);
+      display: inline-block;
     }
-    .ga-nav-menu > li > a:hover {
-      color: var(--primary);
-    }
+    .ga-nav-menu > li > a:hover,
     .ga-nav-menu > li > a.active {
       color: var(--primary);
     }
     .ga-nav-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
     .btn-nav-whatsapp {
@@ -271,6 +300,7 @@
       text-decoration: none !important;
       transition: var(--transition);
       box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+      white-space: nowrap;
     }
     .btn-nav-whatsapp:hover {
       background: #20ba5a;
@@ -290,11 +320,38 @@
       text-decoration: none !important;
       transition: var(--transition);
       box-shadow: 0 4px 12px rgba(26, 72, 149, 0.25);
+      white-space: nowrap;
     }
     .btn-nav-audit:hover {
       background: linear-gradient(135deg, #13356f 0%, #1a4895 100%);
       transform: translateY(-1px);
       box-shadow: 0 6px 16px rgba(26, 72, 149, 0.35);
+    }
+
+    /* Responsive Navbar Adaptations */
+    @media (max-width: 1200px) {
+      .ga-nav-menu {
+        gap: 16px;
+      }
+      .ga-nav-menu > li > a {
+        font-size: 13.5px;
+      }
+      .btn-nav-whatsapp {
+        padding: 7px 12px;
+        font-size: 12.5px;
+      }
+      .btn-nav-audit {
+        padding: 7px 14px;
+        font-size: 12.5px;
+      }
+    }
+    @media (max-width: 1040px) {
+      .ga-nav-menu {
+        display: none !important; /* Gracefully collapse to prevent wrapping/squeezing */
+      }
+      .ga-nav-inner {
+        justify-content: space-between;
+      }
     }
 
     /* Buttons */
@@ -1848,12 +1905,12 @@
     <nav class="nav-variants" aria-label="Switch Design Variants">
       <span style="color: #94a3b8; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
       <a href="website-maintenance.html">Variant 1 (Guide)</a>
-      <a href="website-maintenance-variant-1.2.html">Variant 1.2</a>
+      <a href="website-maintenance-variant-1.2.html">Variant 1.2 (Enquiry)</a>
       <a href="website-maintenance-variant-1.3.html" class="active">Variant 1.3 (Updated Content)</a>
       <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav)</a>
       <a href="website-maintenance-variant-3.html">Variant 3 (Tech Agency)</a>
       <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
-      <a href="website-maintenance-variant-4.2.html">Variant 4.2</a>
+      <a href="website-maintenance-variant-4.2.html">Variant 4.2 (Archio Enquiry)</a>
       <a href="website-maintenance-variant-4.3.html">Variant 4.3 (Archio Content)</a>
     </nav>
   </aside>
@@ -1885,18 +1942,22 @@
       <div class="ga-nav-inner">
         
         <!-- Logo -->
-        <a href="https://www.gadigitalsolutions.com/" class="ga-brand-logo" title="GA Digital Solutions">
-          <img src="https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg" onerror="this.onerror=null; this.src='images/GADS-LOGO.svg';" alt="GA Digital Solutions Logo" height="42">
+        <a href="https://www.gadigitalsolutions.com/" class="ga-brand-logo" title="GA Digital Solutions - Website Maintenance & Technical Care" aria-label="GA Digital Solutions Homepage">
+          <img src="images/GADS-LOGO.svg" onerror="this.onerror=null; this.src='https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg';" alt="GA Digital Solutions Logo" class="brand-logo-img" width="40" height="40">
+          <div class="brand-logo-text">
+            <span class="brand-title">GA DIGITAL</span>
+            <span class="brand-subtitle">SOLUTIONS</span>
+          </div>
         </a>
 
         <!-- Main Navigation Links -->
-        <ul class="ga-nav-menu">
-          <li><a href="https://www.gadigitalsolutions.com/">Home</a></li>
-          <li><a href="https://www.gadigitalsolutions.com/services/website-development">Web Development</a></li>
-          <li><a href="website-maintenance.html" class="active">Maintenance</a></li>
-          <li><a href="https://www.gadigitalsolutions.com/services/seo">SEO Services</a></li>
-          <li><a href="#plans-pricing">Pricing</a></li>
-          <li><a href="#audit-form">Contact</a></li>
+        <ul class="ga-nav-menu" aria-label="Page Sections">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans-pricing">Plans &amp; Pricing</a></li>
+          <li><a href="#audit-breakdown">15-Point Audit</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#diy-vs-pro">Why Outsource</a></li>
+          <li><a href="#faqs">FAQs</a></li>
         </ul>
 
         <!-- Direct Actions -->
@@ -2159,13 +2220,7 @@
             Skipping maintenance can look like a saving. The cost usually shows up later, as a hacked site, lost enquiries, or an emergency repair.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-why-maintenance-matters.jpg" alt="Why Website Maintenance Matters for Businesses" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="problems-grid">
+<div class="problems-grid">
           <!-- Problem 1 -->
           <div class="problem-card">
             <div class="problem-col-issue">
@@ -2249,13 +2304,7 @@
             What you get depends on your plan. The comparison table below shows exactly what each plan includes.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-what-is-website-maintenance.jpg" alt="Website Maintenance Services Scope" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="services-grid">
+<div class="services-grid">
           <!-- Service 1 -->
           <div class="service-card">
             <div class="service-icon-wrap">
@@ -2325,13 +2374,7 @@
             Before you choose a plan, you can see exactly where your website stands. Our web engineers check 15 points across four areas.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-10-maintenance-tasks.jpg" alt="15-Point Website Health Diagnostic" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="audit-pillars-grid">
+<div class="audit-pillars-grid">
           <!-- Pillar 1 -->
           <div class="pillar-card">
             <div class="pillar-header">
@@ -2411,13 +2454,7 @@
             A transparent schedule of automated 24/7 monitoring and developer-led engineering maintenance across daily, weekly, monthly, and quarterly intervals.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-maintenance-schedule.jpg" alt="Website Maintenance Schedule Framework" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="schedule-grid">
+<div class="schedule-grid">
           <!-- Daily -->
           <div class="schedule-col">
             <div class="schedule-badge">Every day</div>
@@ -2521,13 +2558,7 @@
             Some of this you can do yourself. Editing text and images, publishing posts, and checking your analytics don't need an engineer. Updates, security, backups, and speed are where mistakes turn into downtime.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-diy-vs-professional.jpg" alt="DIY vs Professional Website Maintenance" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="comparison-table-wrap">
+<div class="comparison-table-wrap">
           <table class="diy-comparison-table">
             <thead>
               <tr>
@@ -2580,13 +2611,7 @@
             Clear monthly prices, clear inclusions, and no long-term contract. Choose the level of care your business needs.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-maintenance-plans.jpg" alt="Website Maintenance Plans & Pricing" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="plans-grid">
+<div class="plans-grid">
           <!-- Plan 1: Basic Care -->
           <div class="plan-card">
             <div class="plan-name">Basic Care</div>
@@ -2793,13 +2818,7 @@
             Different websites depend on different things working. This is what we pay attention to for each.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-industries-served.jpg" alt="Industries We Serve Across India" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="industries-grid">
+<div class="industries-grid">
           <!-- Healthcare -->
           <div class="industry-card">
             <div class="industry-icon-wrap">
@@ -2869,13 +2888,7 @@
             Honest engineering, transparent communication, and technical expertise you can rely on.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-choose-partner.jpg" alt="Why Choose GA Digital Solutions" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="diff-grid">
+<div class="diff-grid">
           <!-- Pillar 1 -->
           <div class="diff-card">
             <div class="diff-icon-box">
@@ -3064,13 +3077,7 @@
             Common questions about plan inclusions, response times, contracts, and how we care for your website.
           </p>
         </div>
-
-        <div class="v13-section-banner">
-          <img src="banner-faqs.jpg" alt="Website Maintenance Frequently Asked Questions" width="1200" height="360" loading="lazy">
-        </div>
-
-
-        <div class="faqs-accordion-wrap">
+<div class="faqs-accordion-wrap">
           <!-- FAQ 1 -->
           <div class="faq-accordion-item">
             <button class="faq-accordion-trigger" aria-expanded="false">

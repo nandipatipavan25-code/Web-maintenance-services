@@ -218,17 +218,41 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
       height: 72px;
     }
     .ga-brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
+      gap: 12px;
       text-decoration: none;
+      flex-shrink: 0;
+      min-width: 185px;
     }
-    .ga-brand-logo img {
-      height: 42px;
-      width: auto;
+    .brand-logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
       display: block;
+    }
+    .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+    }
+    .brand-logo-text .brand-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #1a4895;
+    }
+    .brand-logo-text .brand-subtitle {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #2296d3;
+      margin-top: 3px;
     }
     .ga-nav-menu {
       display: flex;
@@ -237,25 +261,30 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      flex-shrink: 1;
+    }
+    .ga-nav-menu > li {
+      white-space: nowrap;
     }
     .ga-nav-menu > li > a {
       font-size: 14.5px;
       font-weight: 600;
       color: #1e293b;
-      padding: 8px 0;
+      padding: 8px 4px;
       text-decoration: none;
+      white-space: nowrap;
       transition: var(--transition);
+      display: inline-block;
     }
-    .ga-nav-menu > li > a:hover {
-      color: var(--primary);
-    }
+    .ga-nav-menu > li > a:hover,
     .ga-nav-menu > li > a.active {
       color: var(--primary);
     }
     .ga-nav-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
     .btn-nav-whatsapp {
@@ -271,6 +300,7 @@
       text-decoration: none !important;
       transition: var(--transition);
       box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+      white-space: nowrap;
     }
     .btn-nav-whatsapp:hover {
       background: #20ba5a;
@@ -290,11 +320,38 @@
       text-decoration: none !important;
       transition: var(--transition);
       box-shadow: 0 4px 12px rgba(26, 72, 149, 0.25);
+      white-space: nowrap;
     }
     .btn-nav-audit:hover {
       background: linear-gradient(135deg, #13356f 0%, #1a4895 100%);
       transform: translateY(-1px);
       box-shadow: 0 6px 16px rgba(26, 72, 149, 0.35);
+    }
+
+    /* Responsive Navbar Adaptations */
+    @media (max-width: 1200px) {
+      .ga-nav-menu {
+        gap: 16px;
+      }
+      .ga-nav-menu > li > a {
+        font-size: 13.5px;
+      }
+      .btn-nav-whatsapp {
+        padding: 7px 12px;
+        font-size: 12.5px;
+      }
+      .btn-nav-audit {
+        padding: 7px 14px;
+        font-size: 12.5px;
+      }
+    }
+    @media (max-width: 1040px) {
+      .ga-nav-menu {
+        display: none !important; /* Gracefully collapse to prevent wrapping/squeezing */
+      }
+      .ga-nav-inner {
+        justify-content: space-between;
+      }
     }
 
     /* Buttons */
@@ -1783,11 +1840,13 @@
     <nav class="nav-variants" aria-label="Switch Design Variants">
       <span style="color: #94a3b8; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 4px;">Variants:</span>
       <a href="website-maintenance.html">Variant 1 (Guide)</a>
-      <a href="website-maintenance-variant-1.2.html" class="active">Variant 1.2 (Enquiry Page)</a>
+      <a href="website-maintenance-variant-1.2.html" class="active">Variant 1.2 (Enquiry)</a>
+      <a href="website-maintenance-variant-1.3.html">Variant 1.3 (Updated Content)</a>
       <a href="website-maintenance-variant-2.html">Variant 2 (Right Nav)</a>
       <a href="website-maintenance-variant-3.html">Variant 3 (Tech Agency)</a>
       <a href="website-maintenance-variant-4.html">Variant 4 (Archio Guide)</a>
       <a href="website-maintenance-variant-4.2.html">Variant 4.2 (Archio Enquiry)</a>
+      <a href="website-maintenance-variant-4.3.html">Variant 4.3 (Archio Content)</a>
     </nav>
   </aside>
 
@@ -1818,18 +1877,22 @@
       <div class="ga-nav-inner">
         
         <!-- Logo -->
-        <a href="https://www.gadigitalsolutions.com/" class="ga-brand-logo" title="GA Digital Solutions">
-          <img src="https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg" onerror="this.onerror=null; this.src='images/GADS-LOGO.svg';" alt="GA Digital Solutions Logo" height="42">
+        <a href="https://www.gadigitalsolutions.com/" class="ga-brand-logo" title="GA Digital Solutions - Website Maintenance & Technical Care" aria-label="GA Digital Solutions Homepage">
+          <img src="images/GADS-LOGO.svg" onerror="this.onerror=null; this.src='https://www.gadigitalsolutions.com/images/GADS%20LOGO-01.svg';" alt="GA Digital Solutions Logo" class="brand-logo-img" width="40" height="40">
+          <div class="brand-logo-text">
+            <span class="brand-title">GA DIGITAL</span>
+            <span class="brand-subtitle">SOLUTIONS</span>
+          </div>
         </a>
 
         <!-- Main Navigation Links -->
-        <ul class="ga-nav-menu">
-          <li><a href="https://www.gadigitalsolutions.com/">Home</a></li>
-          <li><a href="https://www.gadigitalsolutions.com/services/website-development">Web Development</a></li>
-          <li><a href="website-maintenance.html" class="active">Maintenance</a></li>
-          <li><a href="https://www.gadigitalsolutions.com/services/seo">SEO Services</a></li>
-          <li><a href="#plans-pricing">Pricing</a></li>
-          <li><a href="#audit-form">Contact</a></li>
+        <ul class="ga-nav-menu" aria-label="Page Sections">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#plans-pricing">Plans &amp; Pricing</a></li>
+          <li><a href="#audit-breakdown">15-Point Audit</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#diy-vs-pro">Why Outsource</a></li>
+          <li><a href="#faqs">FAQs</a></li>
         </ul>
 
         <!-- Direct Actions -->
