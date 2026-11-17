@@ -1638,6 +1638,122 @@
         padding: 24px;
       }
     }
+  
+    /* =========================================================
+       ICON PULSE & GLOW EFFECTS
+       ========================================================= */
+    @keyframes iconAuraPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(15, 59, 122, 0.26);
+      }
+      70% {
+        box-shadow: 0 0 0 12px rgba(15, 59, 122, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(15, 59, 122, 0);
+      }
+    }
+
+    @keyframes iconSvgBreath {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.09);
+      }
+    }
+
+    /* Primary Icon Containers: Services, Industries, Why GA, Trust Bar */
+    .service-icon-wrap,
+    .industry-icon-box,
+    .why-icon-box,
+    .trust-bar-icon {
+      position: relative;
+      animation: iconAuraPulse 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  background-color 0.35s ease,
+                  border-color 0.35s ease;
+      will-change: transform, box-shadow;
+    }
+
+    .service-icon-wrap svg,
+    .industry-icon-box svg,
+    .why-icon-box svg,
+    .trust-bar-icon svg {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+      animation: iconSvgBreath 3.2s ease-in-out infinite;
+      will-change: transform;
+    }
+
+    /* Staggered Timing Across Cards */
+    .services-grid .service-archio-card:nth-child(2) .service-icon-wrap,
+    .services-grid .service-archio-card:nth-child(2) .service-icon-wrap svg { animation-delay: 0.5s; }
+    .services-grid .service-archio-card:nth-child(3) .service-icon-wrap,
+    .services-grid .service-archio-card:nth-child(3) .service-icon-wrap svg { animation-delay: 1.0s; }
+    .services-grid .service-archio-card:nth-child(4) .service-icon-wrap,
+    .services-grid .service-archio-card:nth-child(4) .service-icon-wrap svg { animation-delay: 1.5s; }
+    .services-grid .service-archio-card:nth-child(5) .service-icon-wrap,
+    .services-grid .service-archio-card:nth-child(5) .service-icon-wrap svg { animation-delay: 2.0s; }
+    .services-grid .service-archio-card:nth-child(6) .service-icon-wrap,
+    .services-grid .service-archio-card:nth-child(6) .service-icon-wrap svg { animation-delay: 2.5s; }
+
+    .industries-grid .industry-archio-card:nth-child(2) .industry-icon-box,
+    .industries-grid .industry-archio-card:nth-child(2) .industry-icon-box svg { animation-delay: 0.6s; }
+    .industries-grid .industry-archio-card:nth-child(3) .industry-icon-box,
+    .industries-grid .industry-archio-card:nth-child(3) .industry-icon-box svg { animation-delay: 1.2s; }
+    .industries-grid .industry-archio-card:nth-child(4) .industry-icon-box,
+    .industries-grid .industry-archio-card:nth-child(4) .industry-icon-box svg { animation-delay: 1.8s; }
+    .industries-grid .industry-archio-card:nth-child(5) .industry-icon-box,
+    .industries-grid .industry-archio-card:nth-child(5) .industry-icon-box svg { animation-delay: 2.4s; }
+
+    .why-ga-grid .why-archio-card:nth-child(2) .why-icon-box,
+    .why-ga-grid .why-archio-card:nth-child(2) .why-icon-box svg { animation-delay: 0.5s; }
+    .why-ga-grid .why-archio-card:nth-child(3) .why-icon-box,
+    .why-ga-grid .why-archio-card:nth-child(3) .why-icon-box svg { animation-delay: 1.0s; }
+    .why-ga-grid .why-archio-card:nth-child(4) .why-icon-box,
+    .why-ga-grid .why-archio-card:nth-child(4) .why-icon-box svg { animation-delay: 1.5s; }
+    .why-ga-grid .why-archio-card:nth-child(5) .why-icon-box,
+    .why-ga-grid .why-archio-card:nth-child(5) .why-icon-box svg { animation-delay: 2.0s; }
+    .why-ga-grid .why-archio-card:nth-child(6) .why-icon-box,
+    .why-ga-grid .why-archio-card:nth-child(6) .why-icon-box svg { animation-delay: 2.5s; }
+
+    .trust-bar-item:nth-child(2) .trust-bar-icon,
+    .trust-bar-item:nth-child(2) .trust-bar-icon svg { animation-delay: 0.7s; }
+    .trust-bar-item:nth-child(3) .trust-bar-icon,
+    .trust-bar-item:nth-child(3) .trust-bar-icon svg { animation-delay: 1.4s; }
+    .trust-bar-item:nth-child(4) .trust-bar-icon,
+    .trust-bar-item:nth-child(4) .trust-bar-icon svg { animation-delay: 2.1s; }
+
+    /* Interactive Hover Elevation */
+    .service-archio-card:hover .service-icon-wrap,
+    .industry-archio-card:hover .industry-icon-box,
+    .why-archio-card:hover .why-icon-box,
+    .trust-bar-item:hover .trust-bar-icon {
+      transform: scale(1.14) translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 59, 122, 0.28) !important;
+      border-color: #0ea5e9;
+      background-color: #ffffff;
+    }
+
+    .service-archio-card:hover .service-icon-wrap svg,
+    .industry-archio-card:hover .industry-icon-box svg,
+    .why-archio-card:hover .why-icon-box svg,
+    .trust-bar-item:hover .trust-bar-icon svg {
+      transform: scale(1.18);
+      color: #0284c7;
+    }
+
+    /* Section Tag Pill Badge Icons */
+    .section-tag svg {
+      animation: iconSvgBreath 2.8s ease-in-out infinite;
+    }
+
+    /* Floating WhatsApp Icon Subtle Pulse */
+    .archio-wa-float svg {
+      animation: iconSvgBreath 2.2s ease-in-out infinite;
+    }
+
   </style>
   <!-- Unified Top Variant Switcher Preview Bar -->
   <style id="unified-variant-preview-css">
